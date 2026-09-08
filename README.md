@@ -1,9 +1,12 @@
 ---
 
 # DaBoyzApp
-
 VirusTotal installer hash: 382ea4a0c4c83a2cdcfe40690232f31d24dba808c3c092e2841edcf4da82f7e0
 VirusTotal source code hash: 9d2420c1a710267d9c9ba52390df4200546e349f09a14771af864021cb85269a
+
+---
+
+# DaBoyzApp
 
 ---
 
