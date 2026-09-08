@@ -64,7 +64,7 @@ The application will display the DaBoyz splash screen before loading the main ap
 - Windows 10 or newer
 - 64 bit Windows
 - 2 GB RAM
-- 250 MB Storage
+- 500 MB Storage
 - Microsoft Edge WebView2 Runtime
 
 --- 
