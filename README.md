@@ -18,9 +18,16 @@ VirusTotal source code hash: 9d2420c1a710267d9c9ba52390df4200546e349f09a14771af8
 
 ---
 
-> **Windows Application for the DaBoyz community.**
-
 The DaBoyzApp is a Windows desktop application built for the **DaBoyz** discord server, providing a more reliable location for gaming information, game guides, music projects, updates, and more. 
+
+---
+
+## Please turn off Windows Smart App Control
+
+### Smart app control prevents updates from installing.
+
+**Go to:** 
+> *Settings -> Privacy & Security -> Windows Security -> App & Browser Control -> Smart App Control Settings -> Turn off*
 
 ---
 
