@@ -1,0 +1,562 @@
+<Page x:Class="DaBoyzApp.Pages.CryptSecurityPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="clr-namespace:DaBoyzApp.Controls"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="DEEP STONE CRYPT  /  ENCOUNTER 01"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="CRYPT SECURITY"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="SECURITY SYSTEM"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+            <Button Grid.Column="1"
+                    Content="BACK TO DEEP STONE"
+                    Width="180"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="DISABLE THE CRYPT SECURITY SYSTEM"
+                                   FontSize="21"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Use the Scanner and Operator augments to expose the six security fuses and destroy them in the correct sequence before the security system resets."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+
+                <!-- ENCOUNTER FLOW -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="ENCOUNTER FLOW"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+
+
+                        <!-- STEP 1 -->
+                        <StackPanel Margin="0,15,0,0">
+
+                            <TextBlock Text="01  —  SPLIT THE TEAM"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Split the fireteam into two groups of three. One group occupies the Light side while the other occupies the Dark side. The basement below the encounter contains the panels used to disable the fuse shields."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,5,0,0"/>
+
+                        </StackPanel>
+
+
+
+                        <!-- STEP 2 -->
+                        <StackPanel Margin="0,15,0,0">
+
+                            <TextBlock Text="02  —  ASSIGN OPERATOR"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Pick up the red Operator augment from the terminal. The Operator is responsible for opening the route into the basement and shooting the correct panels when called out by the Scanner."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,5,0,0"/>
+
+                        </StackPanel>
+
+
+
+                        <!-- STEP 3 -->
+                        <StackPanel Margin="0,15,0,0">
+
+                            <TextBlock Text="03  —  FIND THE PANELS"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="The Scanner looks through the floor windows from above and identifies the correct panels in the basement. The Scanner calls out the locations while the Operator shoots them."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,5,0,0"/>
+
+                        </StackPanel>
+
+
+
+                        <!-- STEP 4 -->
+                        <StackPanel Margin="0,15,0,0">
+
+                            <TextBlock Text="04  —  OPEN THE FUSE SHIELDS"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Four correct basement panels must be activated — two associated with each side of the room. Shooting an incorrect panel triggers the basement purge and kills the Operator."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,5,0,0"/>
+
+                        </StackPanel>
+
+
+
+                        <!-- STEP 5 -->
+                        <StackPanel Margin="0,15,0,0">
+
+                            <TextBlock Text="05  —  ENTER DAMAGE PHASE"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Once the correct panels are activated, the shields around the six fuses drop. The team has a limited damage window to destroy the fuses."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,5,0,0"/>
+
+                        </StackPanel>
+
+
+
+                        <!-- STEP 6 -->
+                        <StackPanel Margin="0,15,0,0">
+
+                            <TextBlock Text="06  —  FOLLOW THE FUSE SEQUENCE"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="The Scanner in the basement identifies which fuse should be damaged next. Call out the correct fuse and have the players above destroy it. Damaging the wrong fuse causes a wipe."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,5,0,0"/>
+
+                        </StackPanel>
+
+
+
+                        <!-- STEP 7 -->
+                        <StackPanel Margin="0,15,0,0">
+
+                            <TextBlock Text="07  —  REPEAT"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="After the damage window closes, repeat the panel and fuse sequence. Continue until all six security fuses have been destroyed."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,5,0,0"/>
+
+                        </StackPanel>
+
+
+
+                        <!-- STEP 8 -->
+                        <StackPanel Margin="0,15,0,0">
+
+                            <TextBlock Text="08  —  COMPLETE THE ENCOUNTER"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Destroying the final fuse disables Crypt Security and completes the encounter."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,5,0,0"/>
+
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,0,0,15"/>
+
+                <UniformGrid Columns="3"
+                             Margin="0,0,0,20">
+
+
+
+                    <!-- OPERATOR -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,7,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="OPERATOR"
+                                       FontSize="14"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Shoot the correct basement panels when called out by the Scanner. Manage the route into and out of the basement."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="19"
+                                       Margin="0,7,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+
+                    <!-- SCANNER -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="7,0,7,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="SCANNER"
+                                       FontSize="14"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Identify the correct basement panels and later call out the correct fuse to damage. Communication is the most important responsibility."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="19"
+                                       Margin="0,7,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+
+                    <!-- DAMAGE TEAM -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="7,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="DAMAGE TEAM"
+                                       FontSize="14"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Stay on the upper floor, clear enemies, listen for the Scanner's fuse callouts, and destroy only the indicated fuse."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="19"
+                                       Margin="0,7,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+
+
+                <!-- IMPORTANT MECHANICS -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="IMPORTANT MECHANICS"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+
+
+                        <TextBlock Text="OPERATOR AUGMENT"
+                                   FontSize="13"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,15,0,0"/>
+
+                        <TextBlock Text="The Operator can interact with red-highlighted panels by shooting them. During Crypt Security, these panels are used to open the basement route and remove the shields from the security fuses."
+                                   FontSize="12"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="20"
+                                   Margin="0,5,0,0"/>
+
+
+
+                        <TextBlock Text="SCANNER AUGMENT"
+                                   FontSize="13"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,15,0,0"/>
+
+                        <TextBlock Text="The Scanner can see important targets highlighted in yellow. From the upper floor, the Scanner identifies which basement panels the Operator must shoot. From the basement, the Scanner identifies the correct fuse sequence."
+                                   FontSize="12"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="20"
+                                   Margin="0,5,0,0"/>
+
+
+
+                        <TextBlock Text="FUSE SEQUENCE"
+                                   FontSize="13"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,15,0,0"/>
+
+                        <TextBlock Text="The six fuses must be destroyed in the sequence called out by the Scanner. Do not damage another fuse while waiting for the next callout."
+                                   FontSize="12"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="20"
+                                   Margin="0,5,0,0"/>
+
+
+
+                        <TextBlock Text="BASEMENT PURGE"
+                                   FontSize="13"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,15,0,0"/>
+
+                        <TextBlock Text="The basement is dangerous and has a limited amount of time before the purge begins. The Operator must work quickly and communicate with the Scanner."
+                                   FontSize="12"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="20"
+                                   Margin="0,5,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+
+                <!-- CHALLENGE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="CHALLENGE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="RED ROVER"
+                                   FontSize="21"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Every member of the six-player fireteam must serve as the Operator and successfully shoot two correct basement panels during the encounter. Plan the Operator rotation across the damage phases so everyone gets their turn."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+
+                <!-- COMMON MISTAKES -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="COMMON MISTAKES"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+
+
+                        <TextBlock Text="•  Operator shoots the wrong basement panel."
+                                   FontSize="12"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,15,0,0"/>
+
+                        <TextBlock Text="•  Players damage a fuse before the Scanner calls it."
+                                   FontSize="12"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,8,0,0"/>
+
+                        <TextBlock Text="•  The Scanner gives unclear or incorrect fuse callouts."
+                                   FontSize="12"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,8,0,0"/>
+
+                        <TextBlock Text="•  The Operator remains in the basement too long."
+                                   FontSize="12"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,8,0,0"/>
+
+                        <TextBlock Text="•  Augments are not passed between players before the next sequence."
+                                   FontSize="12"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+
+                <!-- VIDEO GUIDE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="VIDEO GUIDE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"
+                                   Margin="0,0,0,15"/>
+
+                        <controls:YouTubePlayer VideoId="X34jfgnTl-8"
+                                                Height="400"/>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

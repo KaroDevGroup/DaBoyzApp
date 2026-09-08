@@ -1,0 +1,477 @@
+<Page x:Class="DaBoyzApp.Pages.ShuroChiPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:DaBoyzApp.Controls"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="LAST WISH  /  ENCOUNTER 02"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="SHURO CHI"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="THE CORRUPTED"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+
+            <Button Grid.Column="1"
+                    Content="BACK TO LAST WISH"
+                    Width="190"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="Defeat Shuro Chi, the Corrupted."
+                                   FontSize="23"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Clear the Taken, break Shuro Chi's shield with the three crystals, deal enough damage to stop her song, and solve the wall puzzles to climb through all three floors before the timer expires."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ENCOUNTER FLOW -->
+                <TextBlock Text="ENCOUNTER FLOW"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <!-- STEP 1 -->
+                        <TextBlock Text="1 — CLEAR THE TAKEN"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Enter the encounter and immediately begin clearing Taken enemies. An Eye of Riven Taken Captain will appear during the encounter and can drop a Taken Essence relic."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 2 -->
+                        <TextBlock Text="2 — FORM THE CRYSTAL TRIANGLE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Three crystals will appear around Shuro Chi. Three players pick them up, stand on the surrounding plates, and shoot the crystal beam toward the player to their right. All three beams connect to form a triangle and break her shield."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 3 -->
+                        <TextBlock Text="3 — DAMAGE SHURO CHI"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Once the shield is broken, immediately deal damage. Shuro Chi's health is divided into six sections, and each successful damage phase removes one section."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 4 -->
+                        <TextBlock Text="4 — INTERRUPT THE SONG"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Shuro Chi's Song acts as the encounter timer. If your team cannot remove enough of her health before the wipe sequence, the Taken Essence relic can be used with its Super ability to interrupt her and extend the encounter."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 5 -->
+                        <TextBlock Text="5 — SOLVE THE SYMBOL PUZZLE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="After reaching the next floor, enter the puzzle room. Three large symbols are displayed on the surrounding walls. Each symbol is divided into nine sections, corresponding to the nine plates on the floor. Four players stand on the plates required to complete each image."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 6 -->
+                        <TextBlock Text="6 — CLIMB TO THE NEXT FLOOR"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Complete all three wall images. Once the puzzle is finished, platforms appear and allow the team to climb to the next level. Repeat the encounter cycle until Shuro Chi is defeated."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <UniformGrid Columns="3"
+                             HorizontalAlignment="Stretch"
+                             Margin="0,0,0,15">
+
+
+                    <!-- CRYSTAL TEAM -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="CRYSTAL TEAM"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="3 PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Pick up the three crystals, stand on the plates, and form the triangle by connecting the beams in the same direction."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- PUZZLE TEAM -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="PUZZLE TEAM"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="4 PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Handle the four required plates in each symbol puzzle while the remaining two players focus on enemy clearing."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- ADD CLEAR -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="ADD CLEAR"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="2 PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Clear Taken enemies and especially watch for Phalanxes during the puzzle. They can knock players away from their plates."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+
+                <!-- IMPORTANT MECHANICS -->
+                <TextBlock Text="IMPORTANT MECHANICS"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="SHURO CHI'S SONG"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The encounter is controlled by Shuro Chi's Song. If the team fails to progress before the timer expires, the entire fireteam wipes. Completing encounter sections resets the timer."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="CRYSTAL TRIANGLE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Three players must stand on the plates while holding the crystals and shoot one another in the same direction. The three beams create a triangle around Shuro Chi and break her shield."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="TAKEN ESSENCE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Eye of Riven can drop Taken Essence. Its Super ability can be used against Shuro Chi to interrupt her wipe sequence if the team needs additional time. The relic also applies a stacking corruption effect, so do not hold it indefinitely."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="PUZZLE PLATES"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Each puzzle uses nine plates and three wall symbols. Four plates are required for each symbol. A plate cannot simply be reused repeatedly, so communicate your positions and rotate players when necessary."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- COMMON MISTAKES -->
+                <TextBlock Text="COMMON MISTAKES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="• Taking too long to clear enemies and falling behind the Song timer."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Crystal players shooting in different directions instead of completing the triangle."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Staying on the crystal plates longer than necessary and taking unnecessary damage."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Holding Taken Essence too long and dying from its stacking corruption."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Reusing the same puzzle plate or losing track of the team's previous positions."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Allowing Phalanxes to knock puzzle players away from their plates."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,20"/>
+
+
+                        <!-- VIDEO GUIDE -->
+                        <TextBlock Text="VIDEO GUIDE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"
+                                   Margin="0,5,0,12"/>
+
+                        <Border Background="#101010"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="15">
+
+                            <StackPanel>
+
+                                <TextBlock Text="SHURO CHI ENCOUNTER GUIDE"
+                                           FontSize="15"
+                                           FontWeight="Bold"
+                                           Foreground="White"
+                                           Margin="0,0,0,12"/>
+
+                                <local:YouTubePlayer VideoId="f5ARv1ULUoA"
+                                                     Height="400"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

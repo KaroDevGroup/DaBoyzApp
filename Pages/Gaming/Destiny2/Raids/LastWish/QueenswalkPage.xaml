@@ -1,0 +1,664 @@
+<Page x:Class="DaBoyzApp.Pages.QueenswalkPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:DaBoyzApp.Controls"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="LAST WISH  /  ENCOUNTER 06"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="QUEENSWALK"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="THE HEART OF RIVEN"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+
+            <Button Grid.Column="1"
+                    Content="BACK TO LAST WISH"
+                    Width="190"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="Return Riven's Heart to the Techeuns."
+                                   FontSize="23"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Carry Riven's Heart through the raid while protecting the carrier with its aura. Rotate carriers as the timer expires and use Taken Strength inside the Heart to extend the run until the Heart reaches the Techeuns."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ENCOUNTER FLOW -->
+                <TextBlock Text="ENCOUNTER FLOW"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+
+                        <!-- STEP 1 -->
+                        <TextBlock Text="1 — PICK UP RIVEN'S HEART"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="After defeating Riven, enter her mouth and destroy the Taken blight inside her. One player will be selected by Riven to carry her Heart. That player picks it up to begin Queenswalk."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 2 -->
+                        <TextBlock Text="2 — MOVE AS A GROUP"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Heart carrier provides a protective aura. Everyone outside the Heart must remain inside this aura to avoid building Creeping Darkness. Clear enemies while following the carrier."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 3 -->
+                        <TextBlock Text="3 — WATCH THE TIMER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Heart carrier has a Fate's Chosen timer. As the timer decreases, the protective aura becomes smaller. Call the timer clearly so everyone knows when the next Heart transfer is coming."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 4 -->
+                        <TextBlock Text="4 — ROTATE THE CARRIER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="When the timer expires, the current carrier is pulled inside the Heart and another player is chosen to carry it. The new carrier immediately continues forward while the team maintains the route."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 5 -->
+                        <TextBlock Text="5 — ENTER THE HEART"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Players pulled inside the Heart enter a separate Taken area. Taken Strength orbs appear inside. Collecting the appropriate Strength extends the Fate's Chosen timer for the player currently carrying the Heart outside."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 6 -->
+                        <TextBlock Text="6 — SAVE THE FINAL STRENGTH"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Do not blindly collect every Taken Strength immediately. The first player sent inside is responsible for the final Strength in the Heart so the relay can receive its last timer extension at the correct moment."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 7 -->
+                        <TextBlock Text="7 — FOLLOW THE ROUTE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Continue through the route toward the Vault. The exact path can branch, so keep the route caller communicating the next doorway and direction. Stay together and keep the Heart carrier moving."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 8 -->
+                        <TextBlock Text="8 — REACH THE VAULT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Continue through the Vault area and follow the route toward the central gravity lift. Maintain the same Heart rotation and timer discipline."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 9 -->
+                        <TextBlock Text="9 — TAKE THE GRAVITY LIFT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Enter the gravity lift and descend toward the final room. Follow the illuminated stairway after reaching the bottom."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 10 -->
+                        <TextBlock Text="10 — RETURN THE HEART"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Reach the Techeuns at the end of the route and return Riven's Heart to them. The Heart will be cleansed and the Last Wish raid will be completed."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <UniformGrid Columns="3"
+                             HorizontalAlignment="Stretch"
+                             Margin="0,0,0,15">
+
+
+                    <!-- HEART CARRIER -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="HEART CARRIER"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="1 PLAYER"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Carry Riven's Heart, maintain forward movement, and communicate the Fate's Chosen timer."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- OUTSIDE TEAM -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="OUTSIDE TEAM"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="REMAINING PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Stay inside the Heart's aura, clear enemies, follow the carrier, and prepare for each rotation."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- HEART REALM -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="HEART REALM"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="ROTATING PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Collect Taken Strength, defeat Mights of Riven, and extend the outside carrier's timer."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+
+                <!-- IMPORTANT MECHANICS -->
+                <TextBlock Text="IMPORTANT MECHANICS"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+
+                        <TextBlock Text="FATE'S CHOSEN"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Heart carrier receives Fate's Chosen. This timer determines how long the current carrier can continue before being pulled inside the Heart."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="HEART AURA"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Heart creates a protective aura around the carrier. Players outside the aura gain Creeping Darkness. At ten stacks, Creeping Darkness kills the player."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="CREEPING DARKNESS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Stay close enough to the Heart carrier to remain protected. If you fall behind, move back into the aura before your stacks become dangerous."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="TAKEN STRENGTH"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Players inside Riven's Heart collect Taken Strength to extend the Fate's Chosen timer. The timing of the final Strength is important, so communicate before picking it up."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="MIGHTS OF RIVEN"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Mights of Riven appear inside the Heart. They are dangerous close-range enemies, so clear them quickly while collecting Taken Strength."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- QUICK REFERENCE -->
+                <TextBlock Text="QUICK REFERENCE"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <UniformGrid Columns="2">
+
+                        <Border Background="#101010"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="18"
+                                Margin="0,0,6,6">
+
+                            <StackPanel>
+
+                                <TextBlock Text="OUTSIDE"
+                                           FontSize="13"
+                                           FontWeight="Bold"
+                                           Foreground="#FF1A1A"/>
+
+                                <TextBlock Text="Stay with Heart → Clear enemies → Watch timer → Rotate carrier"
+                                           FontSize="12"
+                                           Foreground="#B0B0B0"
+                                           TextWrapping="Wrap"
+                                           Margin="0,6,0,0"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+
+                        <Border Background="#101010"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="18"
+                                Margin="6,0,0,6">
+
+                            <StackPanel>
+
+                                <TextBlock Text="INSIDE"
+                                           FontSize="13"
+                                           FontWeight="Bold"
+                                           Foreground="#FF1A1A"/>
+
+                                <TextBlock Text="Kill Mights → Collect Strength → Extend timer → Preserve final Strength"
+                                           FontSize="12"
+                                           Foreground="#B0B0B0"
+                                           TextWrapping="Wrap"
+                                           Margin="0,6,0,0"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+
+                        <Border Background="#101010"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="18"
+                                Margin="0,6,6,0">
+
+                            <StackPanel>
+
+                                <TextBlock Text="DANGER"
+                                           FontSize="13"
+                                           FontWeight="Bold"
+                                           Foreground="#FF1A1A"/>
+
+                                <TextBlock Text="10 stacks of Creeping Darkness = death"
+                                           FontSize="12"
+                                           Foreground="#B0B0B0"
+                                           TextWrapping="Wrap"
+                                           Margin="0,6,0,0"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+
+                        <Border Background="#101010"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="18"
+                                Margin="6,6,0,0">
+
+                            <StackPanel>
+
+                                <TextBlock Text="FINISH"
+                                           FontSize="13"
+                                           FontWeight="Bold"
+                                           Foreground="#FF1A1A"/>
+
+                                <TextBlock Text="Vault → Gravity Lift → Stairs → Techeuns → Deposit Heart"
+                                           FontSize="12"
+                                           Foreground="#B0B0B0"
+                                           TextWrapping="Wrap"
+                                           Margin="0,6,0,0"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </UniformGrid>
+
+                </Border>
+
+
+                <!-- COMMON MISTAKES -->
+                <TextBlock Text="COMMON MISTAKES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="• Running too far away from the Heart carrier."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Ignoring Creeping Darkness stacks until they are too high."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Picking up Taken Strength too early inside the Heart."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Failing to communicate when the Heart carrier is about to rotate."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Losing the route through the Vault and wasting valuable timer."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Allowing Mights of Riven to overwhelm players inside the Heart."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,20"/>
+
+
+                        <!-- VIDEO -->
+                        <TextBlock Text="VIDEO GUIDE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"
+                                   Margin="0,5,0,12"/>
+
+                        <Border Background="#101010"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="15">
+
+                            <StackPanel>
+
+                                <TextBlock Text="QUEENSWALK GUIDE — GMEINERS"
+                                           FontSize="15"
+                                           FontWeight="Bold"
+                                           Foreground="White"
+                                           Margin="0,0,0,12"/>
+
+                                <local:YouTubePlayer VideoId="o-5hoQlnDkw"
+                                                     Height="400"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+                </Border>
+
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

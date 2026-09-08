@@ -1,0 +1,789 @@
+<Page x:Class="DaBoyzApp.Pages.DaughtersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:DaBoyzApp.Controls"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="KING'S FALL  /  ENCOUNTER 04"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="DAUGHTERS OF ORYX"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="THE DEATHSINGERS"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+            <Button Grid.Column="1"
+                    Content="BACK TO KING'S FALL"
+                    Width="190"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Defeat both Deathsingers, Ir Anûk and Ir Halak, by building three Ascendant paths, obtaining the Brand Claimer, stealing the protective aura from the vulnerable Daughter, and damaging her before the Deathsong completes."
+                                   FontSize="14"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,10,0,0"/>
+
+                        <TextBlock Text="CORE LOOP: ACTIVATE PLATES → BUILD ASCENDANT PATH → TORN PLAYER COLLECTS BLIGHTGUARD → REPEAT ×3 → STEAL AURA → DPS"
+                                   FontSize="12"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"
+                                   TextWrapping="Wrap"
+                                   Margin="0,15,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- ROOM LAYOUT -->
+                <TextBlock Text="ROOM LAYOUT"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="FOUR PLATES"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The arena has four corner plates. Use L1 and R1 for the plates closest to the entrance, and L2 and R2 for the plates closest to the Daughters."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="THE TWO DAUGHTERS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Ir Anûk and Ir Halak stand on the two large central platforms. One Daughter sings while the other attacks the fireteam."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="PLATE TERMINOLOGY"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Call plates consistently. A simple L1 / L2 / R1 / R2 system prevents confusion when the Torn player needs to identify the starting and destination plates."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- TEAM SETUP -->
+                <TextBlock Text="TEAM SETUP"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <UniformGrid Columns="3"
+                             Margin="0,0,0,15">
+
+                    <!-- PLATERS -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="4 × PLATE HOLDERS"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Each player owns one plate and activates it when called."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <!-- FLOATERS -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="2 × FLOATERS"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Clear enemies, assist plates, and cover a plate holder if they become Torn."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <!-- TORN -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="TORN PLAYER"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="A random player becomes Torn Between Dimensions and must navigate the Ascendant path."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+                <!-- STARTING THE ENCOUNTER -->
+                <TextBlock Text="STARTING THE ENCOUNTER"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="1 — CLEAR THE INITIAL ADDS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Before beginning the mechanic, clear enough enemies to make movement around the four plates safe."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="2 — KILL THE STARTING KNIGHT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="A Knight spawns on one of the four plates. Kill it to begin the encounter."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="3 — ACTIVATE THE STARTING PLATE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The plate where the Knight spawned becomes the starting plate. Its assigned player activates it."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- TORN BETWEEN DIMENSIONS -->
+                <TextBlock Text="TORN BETWEEN DIMENSIONS"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="THE FIRST PLATE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="When the starting plate is activated, a random player becomes Torn Between Dimensions. That player is responsible for navigating the temporary Ascendant path."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="FIND THE NEXT PLATE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The player standing on the starting plate looks for the floating green marker above another plate and calls it out."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="BUILD THE ASCENDANT PATH"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The player assigned to the called destination plate activates it. This creates the floating path that the Torn player must traverse."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="COLLECT THE BLIGHTGUARD"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Torn player follows the path and reaches the floating Blightguard piece. The first two runs build progress. On the third run, the player can collect it and receive Brand Claimer."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- THREE RUNS -->
+                <TextBlock Text="THE THREE TORN RUNS"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="RUN 1"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Activate the starting plate, build the first path, and have the Torn player traverse it. Do not collect the Blightguard yet."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="RUN 2"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Repeat the process with the newly selected starting plate and build the second path."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="RUN 3"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Build the third path. The Torn player reaches the end and collects the Blightguard, receiving Brand Claimer."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- BRAND CLAIMER -->
+                <TextBlock Text="BRAND CLAIMER AND AURA"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="IDENTIFY THE TARGET"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="After the third Blightguard is collected, the Brand Claimer must identify the Daughter who is currently shooting the team. This is the non-singing Daughter."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="STEAL THE AURA"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Move underneath the shooting Daughter and hold interact to steal her protective aura. The Brand Claimer becomes the center of the team's safe damage area."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="THE WRONG DAUGHTER = WIPE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="Do not steal from the Daughter who is singing. The singing Daughter's Deathsong continues toward the wipe."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- DAMAGE -->
+                <TextBlock Text="DAMAGE PHASE"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="GROUP INSIDE THE AURA"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Once the aura is stolen, everyone should immediately group inside the Brand Claimer's protective aura."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="DAMAGE THE VULNERABLE DAUGHTER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Daughter whose aura was stolen is now vulnerable. Focus the entire team's damage on her while staying inside the protective aura."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="USE THE FULL WINDOW"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The faster the three Torn runs were completed, the more time the team has to damage the Daughter before the Deathsong completes."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- DEATHSONG -->
+                <TextBlock Text="DEATHSONG"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="TWO-MINUTE TIMER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="When the encounter begins, the singing Daughter starts the Deathsong timer. The team must complete the mechanic and enter the damage phase before the song finishes."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="NO DAMAGE PHASE = WIPE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="If the team fails to steal the aura and begin damage before the Deathsong completes, the entire fireteam is killed."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="KILL ONE, THEN THE OTHER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="After one Daughter dies, repeat the mechanic to make the other Daughter vulnerable. The remaining Daughter must be defeated during the next damage opportunity."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <UniformGrid Columns="3"
+                             Margin="0,0,0,15">
+
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="PLATE HOLDERS"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Watch your assigned plate, activate it when called, and communicate the destination marker."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="FLOATERS"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Clear enemies and be ready to replace a plate holder who becomes Torn."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="TORN PLAYER"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Follow the Ascendant path, collect the Blightguard on the third run, and steal the correct Daughter's aura."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+                <!-- DPS -->
+                <TextBlock Text="DAMAGE RECOMMENDATION"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="ROCKETS / BURST DAMAGE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Daughters have relatively short damage windows, so high burst damage is valuable. Coordinate heavy ammo and avoid wasting shots before the aura is stolen."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="STAY TOGETHER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The entire team should remain inside the Brand Claimer's aura while damaging the target. Spreading out can leave players exposed to the singing Daughter."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- COMMON MISTAKES -->
+                <TextBlock Text="COMMON MISTAKES"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="• Calling the wrong plate"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• The destination plate activating too late"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Torn player missing the Ascendant path"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Brand Claimer stealing from the singing Daughter"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Players standing outside the protective aura during DPS"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Taking too long to complete the three Torn runs"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Failing to kill the second Daughter during the next damage cycle"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- CHALLENGE -->
+                <TextBlock Text="WEEKLY CHALLENGE — UNDER CONSTRUCTION"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="CHALLENGE REQUIREMENT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="During a single Blightguard-gathering phase, no player other than the Torn player can stand on the same plate more than once."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- VIDEO -->
+                <TextBlock Text="VIDEO GUIDE"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="15"
+                        Margin="0,0,0,25">
+
+                    <StackPanel>
+
+                        <TextBlock Text="GMEINERS — DAUGHTERS OF ORYX"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,0,0,12"/>
+
+                        <local:YouTubePlayer VideoId="ZnVpoOoHZeU"
+                                             Height="400"/>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

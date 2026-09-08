@@ -1,0 +1,416 @@
+<Page x:Class="DaBoyzApp.Pages.TotemsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:DaBoyzApp.Controls"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="KING'S FALL  /  ENCOUNTER 01"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="TOTEMS"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="BASILICA"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+            <Button Grid.Column="1"
+                    Content="BACK TO KING'S FALL"
+                    Width="190"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Charge the central plate by collecting and depositing Deathsinger's Power."
+                                   FontSize="14"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,10,0,0"/>
+
+                        <TextBlock Text="TOTAL REQUIRED: 200 DEATHSINGER'S POWER"
+                                   FontSize="12"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"
+                                   Margin="0,15,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- ENCOUNTER FLOW -->
+                <TextBlock Text="ENCOUNTER FLOW"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="1  —  SPLIT INTO TWO TEAMS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Three players go LEFT and three players go RIGHT. Each side performs the same relay independently."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="2  —  TAKE THE BRAND"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The first player on each side picks up the Brand and moves beneath their Annihilator Totem. The Brand protects the player from the room's poison and allows them to generate Deathsinger's Power by killing enemies."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="3  —  BUILD POWER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="While holding the Brand, kill enemies near the Totem to build Deathsinger's Power. The Brand holder must remain near the Totem so it does not activate its wipe."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="4  —  GET BRAND CLAIMER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="A player in the center kills the Hive Wizard on their side's balcony. A Blightguard Taken Knight then appears. Killing it produces Brand Claimer."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="5  —  STEAL THE BRAND"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Brand Claimer approaches the current Brand holder and uses the interaction prompt to steal the Brand. This resets the Brand timer and makes the Claimer the new Brand holder."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="6  —  DEPOSIT POWER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The player who lost the Brand keeps their Deathsinger's Power. They immediately return to the center and stand on the glowing plate to deposit their stacks."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="7  —  REPEAT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The previous Brand holder becomes the next Claimer. Continue rotating the Brand and depositing Power until the central door opens."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <UniformGrid Columns="3"
+                             Margin="0,0,0,15">
+
+                    <!-- BRAND HOLDER -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="BRAND HOLDER"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Stay beneath the Totem, survive, and generate Deathsinger's Power."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <!-- CLAIMER -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="BRAND CLAIMER"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Kill the Wizard and Blightguard, then steal the Brand before its timer expires."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <!-- DEPOSITOR -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="DEPOSITOR"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="After losing the Brand, return to center and deposit all Deathsinger's Power."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+                <!-- IMPORTANT MECHANICS -->
+                <TextBlock Text="IMPORTANT MECHANICS"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="BRAND TIMER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Brand lasts for 30 seconds. Do not allow the timer to expire. The incoming player should already have Brand Claimer before attempting the transfer."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="ANNIHILATOR TOTEMS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="A player must remain beneath each active Totem while the encounter is running. Leaving a Totem unattended for too long causes the fireteam to wipe."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="DEATHSINGER'S POWER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Deathsinger's Power is earned from kills while protected by the Brand. The player who generated the Power keeps it after their Brand is transferred and must take it to the center plate."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="CENTER DEPOSIT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Make sure all of your Deathsinger's Power has been deposited before leaving the center. The raid door progresses as Power is deposited."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- COMMON MISTAKES -->
+                <TextBlock Text="COMMON MISTAKES"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,25">
+
+                    <StackPanel>
+
+                        <TextBlock Text="• Waiting too long to transfer the Brand"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Leaving the Totem unattended"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Killing the Blightguard too slowly"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Forgetting to deposit Deathsinger's Power"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Returning to the Totem before completely depositing your Power"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"/>
+
+                        <TextBlock Text="VIDEO GUIDE"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,5,0,12"/>
+                        
+                        <Border Background="#161616"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="15"
+                                Margin="0,0,0,25">
+
+                            <StackPanel>
+
+                                <TextBlock Text="TOTEMS ENCOUNTER GUIDE"
+                                           FontSize="15"
+                                           FontWeight="Bold"
+                                           Foreground="White"
+                                           Margin="0,0,0,12"/>
+
+                                <local:YouTubePlayer VideoId="F4_apwMnyvo"
+                                                     Height="400"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

@@ -1,0 +1,471 @@
+<Page x:Class="DaBoyzApp.Pages.KalliPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:DaBoyzApp.Controls"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="LAST WISH  /  ENCOUNTER 01"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="KALLI"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="THE CORRUPTED"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+
+            <Button Grid.Column="1"
+                    Content="BACK TO LAST WISH"
+                    Width="190"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="Defeat Kalli, the Corrupted."
+                                   FontSize="23"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Identify the six active symbols in the center of the arena, cleanse their matching plates, defeat the Taken Knights that spawn, and then damage Kalli while using the doors beneath her to survive her wipe mechanic."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ENCOUNTER FLOW -->
+                <TextBlock Text="ENCOUNTER FLOW"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <!-- STEP 1 -->
+                        <TextBlock Text="1 — IDENTIFY THE SYMBOLS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="At the center of the arena, three pairs of symbols will appear. These six symbols determine which six of the nine plates around the arena must be cleansed. Call the symbols out clearly before spreading out."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 2 -->
+                        <TextBlock Text="2 — FIND YOUR PLATE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Find the plate around the arena that matches one of the six active symbols. Each plate is divided into three sections. Two sections will have Taken Blights above them. Stand in the section without a Blight."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 3 -->
+                        <TextBlock Text="3 — CLEANSE THE PLATE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Remain in the safe section while the Taken Blights rotate between sections. Survive the waves of Taken enemies until a Ravenous Taken Knight spawns. Kill the Knight to complete the plate."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 4 -->
+                        <TextBlock Text="4 — RETURN TO CENTER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Once your Knight is dead, leave the plate and return to the center. Once all six Knights have been defeated, Kalli becomes vulnerable."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 5 -->
+                        <TextBlock Text="5 — DAMAGE KALLI"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Group around Kalli and deal as much damage as possible. Kalli has multiple short damage windows before she begins her wipe mechanic."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 6 -->
+                        <TextBlock Text="6 — SURVIVE THE WIPE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="When Kalli begins charging her wipe attack, the doors beneath her will open. Quickly enter an available safe room before the attack finishes. The number of available doors depends on the Knights your team killed."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <UniformGrid Columns="3"
+                             HorizontalAlignment="Stretch"
+                             Margin="0,0,0,15">
+
+
+                    <!-- PLATE PLAYERS -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="PLATE PLAYERS"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="6 PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Each player takes one of the six active symbols, finds the matching plate, stands in the safe section, and kills the Knight that spawns."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- SYMBOL CALLER -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="SYMBOL CALLER"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="1 PLAYER"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Clearly calls out the six symbols shown in the center so everyone knows which plates are active."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- FLOATERS -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="FLOATERS"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="OPTIONAL"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Help pressured plates, clear enemies, assist with Knights, revive teammates, and support whichever side needs help."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+
+                <!-- IMPORTANT MECHANICS -->
+                <TextBlock Text="IMPORTANT MECHANICS"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="SIX ACTIVE SYMBOLS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="There are nine plates around the arena, but only six symbols are active during a normal clear. The three plates corresponding to the missing symbol are ignored."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="THE SAFE SECTION"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Each plate has three sections. Two will have Taken Blights above them. Stand in the section without a Blight. The safe section changes as the Blights move."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="RAVENOUS TAKEN KNIGHT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="A Taken Knight spawns after the plate has been successfully cleansed. Killing it completes that symbol and contributes to opening the safe doors during Kalli's wipe mechanic."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="KALLI'S WIPE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="After damaging Kalli, she begins preparing her wipe attack. Watch beneath her for the doors opening and immediately move into an available room. Do not wait until the final moment."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- COMMON MISTAKES -->
+                <TextBlock Text="COMMON MISTAKES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="• Standing in a Taken Blight section instead of the safe section."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Going to the wrong plate because the symbol was called incorrectly."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Leaving a plate before its Knight is killed."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Ignoring Kalli when she teleports onto your plate."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Waiting too long to enter the safe rooms during the wipe."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,20"/>
+
+
+                        <!-- VIDEO GUIDE -->
+                        <TextBlock Text="VIDEO GUIDE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"
+                                   Margin="0,5,0,12"/>
+
+                        <Border Background="#101010"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="15">
+
+                            <StackPanel>
+
+                                <TextBlock Text="KALLI ENCOUNTER GUIDE"
+                                           FontSize="15"
+                                           FontWeight="Bold"
+                                           Foreground="White"
+                                           Margin="0,0,0,12"/>
+
+                                <local:YouTubePlayer VideoId="Tl548eTlhpc"
+                                                     Height="400"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

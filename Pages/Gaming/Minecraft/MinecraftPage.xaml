@@ -1,0 +1,160 @@
+<Page x:Class="DaBoyzApp.Pages.MinecraftPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Background="Transparent">
+
+        <ScrollViewer VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel Margin="30,40,30,50">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Column="0">
+
+                        <TextBlock Text="MINECRAFT"
+                                   Foreground="{StaticResource DaBoyzText}"
+                                   FontSize="32"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="View mods on curseforge and available servers for your game version."
+                                   Foreground="{StaticResource DaBoyzTextSecondary}"
+                                   FontSize="14"
+                                   Margin="0,5,0,0"/>
+
+                        <Border Height="2"
+                                Width="80"
+                                Background="{StaticResource DaBoyzRed}"
+                                HorizontalAlignment="Left"
+                                Margin="0,18,0,0"/>
+
+                    </StackPanel>
+
+                    <Button Grid.Column="1"
+                            Content="BACK TO GAMING"
+                            Width="180"
+                            Height="40"
+                            VerticalAlignment="Top"
+                            Margin="20,5,0,0"
+                            Background="#161616"
+                            Foreground="{StaticResource DaBoyzTextSecondary}"
+                            BorderBrush="{StaticResource DaBoyzBorder}"
+                            BorderThickness="1"
+                            FontSize="11"
+                            FontWeight="SemiBold"
+                            Padding="18,10"
+                            Cursor="Hand"
+                            Click="BackButton_Click"/>
+
+                </Grid>
+
+                <TextBlock Text="MINECRAFT DATABASE"
+                           Style="{StaticResource SectionTitleStyle}"
+                           Margin="0,30,0,15"/>
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0"
+                            Grid.Column="0"
+                            Style="{StaticResource AdminDashboardButtonStyle}"
+                            Background="#161616"
+                            BorderBrush="#292929"
+                            Click="MinecraftMods_Click"
+                            BorderThickness="0"
+                            Padding="0"
+                            Margin="0,0,8,8"
+                            Cursor="Hand">
+
+                            <StackPanel>
+
+                                <TextBlock Text="◆"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="26"
+                                           FontWeight="Bold"/>
+
+                                <TextBlock Text="MODS"
+                                           Foreground="White"
+                                           FontSize="26"
+                                           FontWeight="Bold"/>
+
+                                <TextBlock Text="EXPLORE MODS  →"
+                                           Foreground="#FF1A1A"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           Margin="0,22,0,0"/>
+
+                            </StackPanel>
+
+                    </Button>
+
+                    <Button Grid.Row="0"
+                            Grid.Column="1"
+                            Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="MinecraftServers_Click"
+                            Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="0"
+                            Padding="0"
+                            Margin="8,0,0,8"
+                            Cursor="Hand">
+
+                            <StackPanel>
+
+                                <TextBlock Text="◆"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="26"
+                                           FontWeight="Bold"/>
+
+                                <TextBlock Text="SERVERS"
+                                           Foreground="White"
+                                           FontSize="26"
+                                           FontWeight="Bold"/>
+
+                                <TextBlock Text="EXPLORE SERVERS  →"
+                                           Foreground="#FF1A1A"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           Margin="0,22,0,0"/>
+
+                            </StackPanel>
+
+                    </Button>
+
+                </Grid>
+
+                <!-- FOOTER -->
+                <TextBlock Text="DA BOYZ • MINECRAFT"
+                           Foreground="{StaticResource DaBoyzTextMuted}"
+                           FontSize="11"
+                           HorizontalAlignment="Center"
+                           Margin="0,40,0,0"/>
+
+                <TextBlock Text="Created by: KaroDevGroup"
+                           Foreground="#666666"
+                           FontSize="10"
+                           HorizontalAlignment="Center"
+                           Margin="0,5,0,0"/>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

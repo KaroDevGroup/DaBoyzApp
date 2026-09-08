@@ -1,0 +1,608 @@
+<Page x:Class="DaBoyzApp.Pages.GolgorothPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:DaBoyzApp.Controls"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="KING'S FALL  /  ENCOUNTER 03"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="GOLGOROTH"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="GOLGOROTH'S CELLAR"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+            <Button Grid.Column="1"
+                    Content="BACK TO KING'S FALL"
+                    Width="190"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Control Golgoroth's Gaze while the damage team uses Pools of Reclaimed Light to expose and damage his stomach."
+                                   FontSize="14"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,10,0,0"/>
+
+                        <TextBlock Text="CORE LOOP: CLEAR ADDS → TAKE GAZE → DROP POOL → DAMAGE → SWAP GAZE → REPEAT"
+                                   FontSize="12"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"
+                                   TextWrapping="Wrap"
+                                   Margin="0,15,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- TEAM SETUP -->
+                <TextBlock Text="TEAM SETUP"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <UniformGrid Columns="2"
+                             Margin="0,0,0,15">
+
+                    <!-- GAZE HOLDERS -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="22"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="2 × GAZE HOLDERS"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Alternate Golgoroth's Gaze. Stand on opposite sides of the arena and be ready to take the Gaze before the timer expires."
+                                       FontSize="13"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <!-- POOL TEAM -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="22"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="4 × POOL PLAYERS"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Destroy the ceiling orb, enter the Pool of Reclaimed Light, and damage Golgoroth's exposed stomach."
+                                       FontSize="13"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+                <!-- STARTING PHASE -->
+                <TextBlock Text="STARTING THE ENCOUNTER"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="1 — CLEAR THE ROOM"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="When Golgoroth is awakened, Hive enemies fill the room. Clear the initial wave before committing to the damage phase."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="2 — ASSIGN THE GAZE HOLDERS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Two players take responsibility for Golgoroth's Gaze. They should position themselves on opposite sides so the transfer is predictable."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="3 — PREPARE THE FIRST POOL"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The damage team watches the ceiling. Shoot the active orb to create a Pool of Reclaimed Light."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- GAZE -->
+                <TextBlock Text="GOLGOROTH'S GAZE"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="CAPTURE THE GAZE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Shoot the large glowing weak point on Golgoroth's back. The player who breaks it receives Golgoroth's Gaze and becomes the boss's focus."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="POSITION THE BOSS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Gaze holder moves around the outside of the arena so Golgoroth faces the damage team. This exposes his stomach critical spot to the players inside the Pool."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="WATCH THE AXION DARTS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Golgoroth launches seeking projectiles at the player holding Gaze. Shoot them down before they reach you."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="TRANSFER THE GAZE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The second Gaze holder waits on the opposite side. When the current timer is nearly finished, the second holder shoots Golgoroth's back to take the Gaze."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- DAMAGE -->
+                <TextBlock Text="DAMAGE PHASE"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="POOL OF RECLAIMED LIGHT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Shoot a ceiling orb to create the current Pool of Reclaimed Light. The four damage players stand inside it and focus Golgoroth's exposed stomach."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="MOVE WITH THE POOLS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="There are six available pools during a damage phase. They alternate from left to right across the arena. Move together when the next pool is created."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="MAXIMIZE EACH POOL"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The Gaze holders should swap just before the timer expires. This keeps Golgoroth focused away from the damage team and allows the next pool to be used."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- UNSTABLE LIGHT -->
+                <TextBlock Text="UNSTABLE LIGHT"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="WATCH YOUR DEBUFF"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="A random player standing inside the Pool can receive Unstable Light. The player gets a countdown and will explode when it expires."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="GET OUT OF THE STACK"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Leave the damage group immediately when Unstable Light appears. Do not allow the explosion to hit your teammates."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="USE IT AGAINST GOLGOROTH"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="The explosion can damage Golgoroth. Once separated from the team, move toward the boss and allow the debuff to detonate near him."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- TABLET -->
+                <TextBlock Text="TABLET OF RUIN"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="DON'T WASTE POOLS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="If the Gaze chain fails before a ceiling orb is used, the unused pool contributes a mark to the Tablet of Ruin."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,18"/>
+
+                        <TextBlock Text="SIX MARKS = WIPE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="The Tablet can hold six marks. Allowing it to fill completes the Tablet and wipes the fireteam."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <UniformGrid Columns="3"
+                             Margin="0,0,0,15">
+
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="GAZE A"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Take Gaze, control Golgoroth's position, destroy Axion Darts, and call the timer."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="GAZE B"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Prepare for the transfer and immediately take Gaze when called."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="POOL TEAM"
+                                       FontSize="16"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="Drop pools, damage the stomach, watch for Unstable Light, and move together."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+                <!-- COMMON MISTAKES -->
+                <TextBlock Text="COMMON MISTAKES"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="• Missing the Gaze transfer"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Standing outside the Pool while attempting damage"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Ignoring Axion Darts"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Staying in the group with Unstable Light"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Losing track of which pool is next"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   Margin="0,0,0,8"/>
+
+                        <TextBlock Text="• Allowing unused pools to accumulate Tablet of Ruin marks"
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- CHALLENGE -->
+                <TextBlock Text="WEEKLY CHALLENGE — GAZE AMAZE"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="CHALLENGE REQUIREMENT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="The player losing Golgoroth's Gaze must be standing inside the active Pool of Reclaimed Light when the next player takes the Gaze."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,7,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- VIDEO -->
+                <TextBlock Text="VIDEO GUIDE"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,5,0,12"/>
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="15"
+                        Margin="0,0,0,25">
+
+                    <StackPanel>
+
+                        <TextBlock Text="KING'S FALL — COMPLETE RAID GUIDE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,0,0,12"/>
+
+                        <local:YouTubePlayer VideoId="6yl0RTl3TUQ"
+                                             Height="400"/>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

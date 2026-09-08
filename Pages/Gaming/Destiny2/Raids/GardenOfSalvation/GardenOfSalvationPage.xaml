@@ -1,0 +1,490 @@
+<Page x:Class="DaBoyzApp.Pages.GardenOfSalvationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="DESTINY 2  /  RAIDS"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="GARDEN OF SALVATION"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="THE BLACK GARDEN"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+
+            <Button Grid.Column="1"
+                    Content="BACK TO RAIDS"
+                    Width="160"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+
+                <!-- OVERVIEW -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="RAID OVERVIEW"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="Garden of Salvation"
+                                   FontSize="23"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Garden of Salvation takes place in the Black Garden and revolves around a small set of mechanics that become progressively more complicated throughout the raid."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,8,0,0"/>
+
+                        <Grid Margin="0,20,0,0">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0">
+                                <TextBlock Text="LOCATION"
+                                           FontSize="10"
+                                           FontWeight="Bold"
+                                           Foreground="#666666"/>
+
+                                <TextBlock Text="THE MOON"
+                                           FontSize="13"
+                                           FontWeight="SemiBold"
+                                           Foreground="White"
+                                           Margin="0,4,0,0"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Text="FIRETEAM"
+                                           FontSize="10"
+                                           FontWeight="Bold"
+                                           Foreground="#666666"/>
+
+                                <TextBlock Text="6 PLAYERS"
+                                           FontSize="13"
+                                           FontWeight="SemiBold"
+                                           Foreground="White"
+                                           Margin="0,4,0,0"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2">
+                                <TextBlock Text="ENCOUNTERS"
+                                           FontSize="10"
+                                           FontWeight="Bold"
+                                           Foreground="#666666"/>
+                                
+                                <TextBlock Text="6"
+                                           FontSize="13"
+                                           FontWeight="SemiBold"
+                                           Foreground="White"
+                                           Margin="0,4,0,0"/>
+
+                            </StackPanel>
+                        
+                        </Grid>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- RAID MECHANICS -->
+                <TextBlock Text="RAID MECHANICS"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,5,0,15"/>
+
+
+                <UniformGrid Columns="4"
+                             Margin="0,0,0,25">
+
+
+                    <!-- TETHER -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,6,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="TETHER"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="CORE MECHANIC"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Connect Guardians to Vex boxes and objectives to activate doors, relays, and other mechanics."
+                                       FontSize="11"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="19"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- VOLTAIC OVERFLOW -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="2,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="VOLTAIC OVERFLOW"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="ENCOUNTER 01"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Collect the charges dropped by the Consecrated Mind without allowing one player to collect multiple charges."
+                                       FontSize="11"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="19"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- ENLIGHTENED -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,2,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="ENLIGHTENED"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="RELAY MECHANIC"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Use tethered relays to gain Enlightened, allowing Guardians to destroy shielded Vex enemies."
+                                       FontSize="11"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="19"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- MOTES -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="6,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="MOTES"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="BOSS MECHANIC"
+                                       FontSize="10"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Kill specific Vex enemies, collect their motes, and deposit them into relays to progress the encounter."
+                                       FontSize="11"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="19"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+
+                <!-- ENCOUNTERS -->
+                <TextBlock Text="ENCOUNTERS"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,5,0,15"/>
+
+
+                <UniformGrid Columns="2"
+                             HorizontalAlignment="Stretch"
+                             Margin="0,0,0,15">
+
+
+                    <!-- ENCOUNTER 01 -->
+                    <Button Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="EvadeConsecratedMind_Click"
+                            Margin="0,0,8,8">
+
+                        <StackPanel>
+
+                            <TextBlock Text="⚙"
+                                       FontSize="12"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"/>
+
+                            <TextBlock Text="EVADE THE CONSECRATED MIND"
+                                       FontSize="19"
+                                       FontWeight="Bold"
+                                       Foreground="White"
+                                       Margin="0,6,0,0"/>
+
+                            <TextBlock Text="Track the Consecrated Mind through the Black Garden while opening barriers with tethers and managing Voltaic Overflow."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Button>
+
+
+                    <!-- ENCOUNTER 02 -->
+                    <Button Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="SummonConsecratedMind_Click"
+                            Margin="8,0,0,8">
+
+                        <StackPanel>
+
+                            <TextBlock Text="⚙"
+                                       FontSize="12"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"/>
+
+                            <TextBlock Text="SUMMON THE CONSECRATED MIND"
+                                       FontSize="19"
+                                       FontWeight="Bold"
+                                       Foreground="White"
+                                       Margin="0,6,0,0"/>
+
+                            <TextBlock Text="Defend the relays, maintain Enlightened, and prevent Vex from sacrificing themselves to the confluxes."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Button>
+
+
+                    <!-- ENCOUNTER 03 -->
+                    <Button Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="DefeatConsecratedMind_Click"
+                            Margin="0,8,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="⚙"
+                                       FontSize="12"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"/>
+
+                            <TextBlock Text="DEFEAT THE CONSECRATED MIND"
+                                       FontSize="19"
+                                       FontWeight="Bold"
+                                       Foreground="White"
+                                       Margin="0,6,0,0"/>
+
+                            <TextBlock Text="Collect and bank Voltaic Motes while the other team follows the boss and prepares the damage phase."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Button>
+
+
+                    <!-- ENCOUNTER 04 -->
+                    <Button Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="DefeatSanctifiedMind_Click"
+                            Margin="8,8,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="⚙"
+                                       FontSize="12"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"/>
+
+                            <TextBlock Text="DEFEAT THE SANCTIFIED MIND"
+                                       FontSize="19"
+                                       FontWeight="Bold"
+                                       Foreground="White"
+                                       Margin="0,6,0,0"/>
+
+                            <TextBlock Text="Manage motes, build and maintain tethers, repair relays, and damage the final boss."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Button>
+
+                </UniformGrid>
+
+
+                <!-- RAID NOTES -->
+                <TextBlock Text="RAID NOTES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,15,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="LEARN THE TETHER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The tether is the foundation of Garden of Salvation. A Guardian interacts with a Vex tether box and the beam can chain through nearby Guardians until it reaches the intended objective. Understanding spacing and positioning makes later encounters considerably easier."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="COMMUNICATION MATTERS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Most failures come from unclear role swaps, missed timers, or players activating mechanics at the wrong time. Call out who has Enlightened, who is carrying Voltaic Overflow, and when the team is ready to tether."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="DIVINITY"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Garden of Salvation contains the Divinity quest puzzles. If you're doing a Divinity run, the puzzle sequence begins before the first encounter and continues through seven raid puzzles."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

@@ -1,0 +1,380 @@
+<Page x:Class="DaBoyzApp.Pages.DeepStoneCryptPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="DESTINY 2  /  RAIDS"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="DEEP STONE CRYPT"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="Deep Stone Crypt — explore encounters, mechanics, recommended loadouts, loot, and video guides."
+                           FontSize="13"
+                           Foreground="#B0B0B0"
+                           Margin="0,5,0,0"/>
+
+            </StackPanel>
+
+            <Button Grid.Column="1"
+                    Content="BACK TO RAIDS"
+                    Width="180"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+                <!-- RAID OVERVIEW -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,25">
+
+                    <StackPanel>
+
+                        <TextBlock Text="RAID OVERVIEW"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="Deep Stone Crypt"
+                                   FontSize="24"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Descend into the Deep Stone Crypt beneath Europa and stop the House of Salvation from exploiting Clovis Bray's greatest secrets. Deep Stone Crypt combines the Operator, Scanner, and Suppressor augments with nuclear cores, replication mechanics, and intense encounters against Atraks-1 and Taniks."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,8,0,0"/>
+
+                        <Grid Margin="0,20,0,0">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0">
+
+                                <TextBlock Text="LOCATION"
+                                           FontSize="10"
+                                           FontWeight="Bold"
+                                           Foreground="#666666"/>
+
+                                <TextBlock Text="EUROPA"
+                                           FontSize="13"
+                                           FontWeight="SemiBold"
+                                           Foreground="White"
+                                           Margin="0,4,0,0"/>
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1">
+
+                                <TextBlock Text="FIRETEAM"
+                                           FontSize="10"
+                                           FontWeight="Bold"
+                                           Foreground="#666666"/>
+
+                                <TextBlock Text="6 PLAYERS"
+                                           FontSize="13"
+                                           FontWeight="SemiBold"
+                                           Foreground="White"
+                                           Margin="0,4,0,0"/>
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2">
+
+                                <TextBlock Text="ENCOUNTERS"
+                                           FontSize="10"
+                                           FontWeight="Bold"
+                                           Foreground="#666666"/>
+
+                                <TextBlock Text="4"
+                                           FontSize="13"
+                                           FontWeight="SemiBold"
+                                           Foreground="White"
+                                           Margin="0,4,0,0"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </StackPanel>
+
+                </Border>
+
+
+
+                <!-- ENCOUNTERS -->
+                <TextBlock Text="ENCOUNTERS"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,0,0,15"/>
+
+
+
+                <UniformGrid Columns="2"
+                             HorizontalAlignment="Stretch">
+
+
+
+                    <!-- CRYPT SECURITY -->
+                    <Button Margin="0,0,8,8"
+                            Height="165"
+                            Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="CryptSecurity_Click">
+
+                        <Grid Margin="20">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0"
+                                   Source="/Assets/Icons/deepstonecrypt.png"
+                                   Width="65"
+                                   Height="65"
+                                   Stretch="Uniform"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+
+                            <StackPanel Grid.Column="1"
+                                        VerticalAlignment="Center"
+                                        Margin="18,0,0,0">
+
+                                <TextBlock Text="CRYPT SECURITY"
+                                           FontSize="20"
+                                           FontWeight="Bold"
+                                           Foreground="White"/>
+
+                                <TextBlock Text="SECURITY SYSTEM"
+                                           FontSize="12"
+                                           Foreground="#B0B0B0"
+                                           Margin="0,5,0,12"/>
+
+                                <TextBlock Text="VIEW ENCOUNTER  →"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           Foreground="#FF1A1A"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </Button>
+
+
+
+                    <!-- ATRAKS-1 -->
+                    <Button Margin="8,0,0,8"
+                            Height="165"
+                            Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="Atraks1_Click">
+
+                        <Grid Margin="20">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0"
+                                   Source="/Assets/Icons/deepstonecrypt.png"
+                                   Width="65"
+                                   Height="65"
+                                   Stretch="Uniform"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+
+                            <StackPanel Grid.Column="1"
+                                        VerticalAlignment="Center"
+                                        Margin="18,0,0,0">
+
+                                <TextBlock Text="ATRAKS-1"
+                                           FontSize="20"
+                                           FontWeight="Bold"
+                                           Foreground="White"/>
+
+                                <TextBlock Text="FALLEN EXO"
+                                           FontSize="12"
+                                           Foreground="#B0B0B0"
+                                           Margin="0,5,0,12"/>
+
+                                <TextBlock Text="VIEW ENCOUNTER  →"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           Foreground="#FF1A1A"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </Button>
+
+
+
+                    <!-- TANIKS, REBORN -->
+                    <Button Margin="0,8,8,8"
+                            Height="165"
+                            Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="TaniksReborn_Click">
+
+                        <Grid Margin="20">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0"
+                                   Source="/Assets/Icons/deepstonecrypt.png"
+                                   Width="65"
+                                   Height="65"
+                                   Stretch="Uniform"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+
+                            <StackPanel Grid.Column="1"
+                                        VerticalAlignment="Center"
+                                        Margin="18,0,0,0">
+
+                                <TextBlock Text="TANIKS, REBORN"
+                                           FontSize="20"
+                                           FontWeight="Bold"
+                                           Foreground="White"/>
+
+                                <TextBlock Text="THE DESCENT"
+                                           FontSize="12"
+                                           Foreground="#B0B0B0"
+                                           Margin="0,5,0,12"/>
+
+                                <TextBlock Text="VIEW ENCOUNTER  →"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           Foreground="#FF1A1A"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </Button>
+
+
+
+                    <!-- TANIKS, THE ABOMINATION -->
+                    <Button Margin="8,8,0,8"
+                            Height="165"
+                            Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="TaniksAbomination_Click">
+
+                        <Grid Margin="20">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="90"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0"
+                                   Source="/Assets/Icons/deepstonecrypt.png"
+                                   Width="65"
+                                   Height="65"
+                                   Stretch="Uniform"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+
+                            <StackPanel Grid.Column="1"
+                                        VerticalAlignment="Center"
+                                        Margin="18,0,0,0">
+
+                                <TextBlock Text="TANIKS"
+                                           FontSize="20"
+                                           FontWeight="Bold"
+                                           Foreground="White"/>
+
+                                <TextBlock Text="THE ABOMINATION"
+                                           FontSize="12"
+                                           Foreground="#B0B0B0"
+                                           Margin="0,5,0,12"/>
+
+                                <TextBlock Text="VIEW ENCOUNTER  →"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           Foreground="#FF1A1A"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                    </Button>
+
+                </UniformGrid>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

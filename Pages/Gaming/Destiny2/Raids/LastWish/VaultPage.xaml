@@ -1,0 +1,628 @@
+<Page x:Class="DaBoyzApp.Pages.VaultPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:DaBoyzApp.Controls"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="LAST WISH  /  ENCOUNTER 04"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="THE VAULT"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="VAULT SECURITY"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+
+            <Button Grid.Column="1"
+                    Content="BACK TO LAST WISH"
+                    Width="190"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="Unlock the Vault."
+                                   FontSize="23"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Use Taken Essence dropped by the Eye of Riven Knights to unlock three plates per round. Read the symbols above the plates, determine whether each plate requires Penumbra or Antumbra, and stop the Taken Knights from locking the Vault."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ENCOUNTER FLOW -->
+                <TextBlock Text="ENCOUNTER FLOW"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+
+                        <!-- STEP 1 -->
+                        <TextBlock Text="1 — ACTIVATE THE VAULT"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Three players stand on the three plates surrounding the central Vault mechanism. This reveals a set of three symbols above each plate and begins the encounter."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 2 -->
+                        <TextBlock Text="2 — READ THE SYMBOLS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Each player calls out the middle symbol from their three-symbol sequence. Compare your middle symbols with the other two plates to determine which direction your sequence needs to rotate."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 3 -->
+                        <TextBlock Text="3 — DETERMINE PENUMBRA OR ANTUMBRA"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="If your matching symbol appears to the left of the middle symbol on another plate, your plate requires Penumbra. If it appears to the right, your plate requires Antumbra."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 4 -->
+                        <TextBlock Text="4 — KILL THE EYE OF RIVEN"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="An Eye of Riven Knight spawns in one of the open sections. Kill it and pick up the Taken Essence relic. The player carrying the relic is responsible for cleansing the assigned plate."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 5 -->
+                        <TextBlock Text="5 — TRAVEL TO THE ASSIGNED PLATE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The player carrying the relic must travel through the tunnels to the correct open section. Meanwhile, the plate player remains ready to communicate the correct symbol and direction."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 6 -->
+                        <TextBlock Text="6 — CLEANSE THE PLATE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Use the relic's grenade ability on the assigned plate to rotate its symbols. Penumbra rotates the symbols clockwise. Antumbra rotates them counterclockwise."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 7 -->
+                        <TextBlock Text="7 — STOP THE KNIGHTS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="While players solve the plates, Taken Knights spawn and attempt to slam their swords into the Vault mechanism. Kill them before they reach the plates."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 8 -->
+                        <TextBlock Text="8 — COMPLETE THREE PLATES"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Each round requires three successful plate activations. Once all three plates are unlocked, the Vault resets and a new set of symbols appears. Complete three rounds to finish the encounter."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <UniformGrid Columns="3"
+                             HorizontalAlignment="Stretch"
+                             Margin="0,0,0,15">
+
+
+                    <!-- PLATE PLAYERS -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="PLATE PLAYERS"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="3 PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Stand on the three Vault plates, call out the middle symbols, determine the required direction, and communicate the correct Penumbra or Antumbra."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- RELIC RUNNERS -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="RELIC RUNNERS"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="3 PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Kill the Eye of Riven, pick up the Taken Essence, travel through the tunnels, and cleanse the assigned plate."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- ADD CLEAR -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="ADD CLEAR"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="ALL PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Clear Taken enemies, protect the plate players, and prioritize Vault Knights before they can reach the mechanism."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+
+                <!-- IMPORTANT MECHANICS -->
+                <TextBlock Text="IMPORTANT MECHANICS"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+
+                        <TextBlock Text="PENUMBRA"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Penumbra rotates the three symbols clockwise. Use Penumbra when the matching symbol appears to the left of the middle symbol on another plate."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="ANTUMBRA"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Antumbra rotates the three symbols counterclockwise. Use Antumbra when the matching symbol appears to the right of the middle symbol on another plate."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="THE TOP SYMBOL"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The objective is to rotate the symbols until the symbol passing through the top position matches the middle symbol from another plate. Once the correct symbol reaches that position, the plate is successfully unlocked."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="THREE ROUNDS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The encounter contains three rounds. Each round requires three plates to be successfully unlocked, for a total of nine successful plate activations."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="VAULT KNIGHTS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Knights spawn throughout the encounter and attempt to slam their swords into the Vault mechanism. Every completed plate increases the pressure from these Knights, so team-wide add clear becomes increasingly important."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- QUICK REFERENCE -->
+                <TextBlock Text="QUICK REFERENCE"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <UniformGrid Columns="2"
+                             HorizontalAlignment="Stretch"
+                             Margin="0,0,0,15">
+
+
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="24"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="PENUMBRA"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="CLOCKWISE"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,5,0,0"/>
+
+                            <TextBlock Text="Matching symbol appears LEFT of the middle symbol."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="24"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="ANTUMBRA"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="COUNTERCLOCKWISE"
+                                       FontSize="13"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,5,0,0"/>
+
+                            <TextBlock Text="Matching symbol appears RIGHT of the middle symbol."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+
+                <!-- CHALLENGE -->
+                <TextBlock Text="CHALLENGE"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="KEEP OUT"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Complete the Vault encounter without anyone stepping on the central plates after the encounter begins."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- COMMON MISTAKES -->
+                <TextBlock Text="COMMON MISTAKES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="• Calling the wrong middle symbol and sending the relic to the wrong plate."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Mixing up Penumbra and Antumbra."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Forgetting that Penumbra is clockwise and Antumbra is counterclockwise."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Taking too long to travel through the tunnels with the Taken Essence."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Ignoring Vault Knights while everyone focuses on symbols."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Failing to communicate which side of the Vault is currently open."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,20"/>
+
+
+                        <!-- VIDEO GUIDE -->
+                        <TextBlock Text="VIDEO GUIDE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"
+                                   Margin="0,5,0,12"/>
+
+                        <Border Background="#101010"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="15">
+
+                            <StackPanel>
+
+                                <TextBlock Text="VAULT ENCOUNTER GUIDE"
+                                           FontSize="15"
+                                           FontWeight="Bold"
+                                           Foreground="White"
+                                           Margin="0,0,0,12"/>
+
+                                <local:YouTubePlayer VideoId="DJKyMuZflnk"
+                                                     Height="400"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

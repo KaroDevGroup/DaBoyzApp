@@ -1,0 +1,704 @@
+<Page x:Class="DaBoyzApp.Pages.RivenPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="clr-namespace:DaBoyzApp.Controls"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="LAST WISH  /  ENCOUNTER 05"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="RIVEN"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="RIVEN OF A THOUSAND VOICES"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+
+            <Button Grid.Column="1"
+                    Content="BACK TO LAST WISH"
+                    Width="190"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      Margin="0,25,0,0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"/>
+
+                        <TextBlock Text="Defeat Riven of a Thousand Voices."
+                                   FontSize="23"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Split the fireteam between two sides of Riven's chamber, stagger her using her weak points, communicate her glowing eyes, cleanse the correct symbols with Taken Essence, and repeat the process until Riven reaches her final stand."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ENCOUNTER FLOW -->
+                <TextBlock Text="ENCOUNTER FLOW"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+
+                        <!-- STEP 1 -->
+                        <TextBlock Text="1 — SPLIT INTO TWO TEAMS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Split the fireteam into two groups of three. One team takes the Tree side and the other takes the Crystal side. Each side has its own enemies, Eye of Riven Knight, symbol, and Riven interaction."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 2 -->
+                        <TextBlock Text="2 — IDENTIFY RIVEN'S SIDE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Riven will appear in one team's room first. That team performs the initial Riven mechanic while the opposite team handles enemies and prepares the Taken Essence cleanse."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 3 -->
+                        <TextBlock Text="3 — STAGGER RIVEN"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Riven has two main stagger interactions. If her tentacle extends, bait it into slamming the floor and shoot it. If her tentacles remain retracted, survive her attack and shoot her exposed mouth when it opens."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 4 -->
+                        <TextBlock Text="4 — RECORD HER EYES"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="When Riven is successfully staggered, several of her eyes become exposed and glow. Call out the eye locations clearly. The other team will need these locations when Riven appears in their room."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 5 -->
+                        <TextBlock Text="5 — COLLECT TAKEN ESSENCE"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Kill the Eye of Riven Knight and pick up the Taken Essence relic. A player in the opposite room communicates the correct cleansing location using the symbol shown by the pillar."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 6 -->
+                        <TextBlock Text="6 — CLEANSE THE SYMBOL"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="The relic carrier travels to the location called out by the symbol reader. Use the relic's grenade ability at the correct location to cleanse the plate and activate the lift to the next section."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 7 -->
+                        <TextBlock Text="7 — REPEAT ON THE NEXT FLOOR"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Repeat the split-room mechanics on the next level. Continue communicating Riven's eye locations and cleansing locations between the two teams."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 8 -->
+                        <TextBlock Text="8 — FINAL TOP-ROOM STAGGERS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="After reaching the top room, both teams regroup. Stagger Riven around the room and record the exposed eye locations. After enough staggers, Riven exposes her mouth and the team prepares for the final eye sequence."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 9 -->
+                        <TextBlock Text="9 — DESTROY THE FINAL EYES"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Riven exposes her mouth again. Damage her mouth while preparing to destroy the previously recorded eyes. The required eyes must be destroyed quickly and correctly before Riven completes her wipe."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 10 -->
+                        <TextBlock Text="10 — DESCEND THROUGH RIVEN"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Return to the starting plates and drop through the encounter. Riven exposes glowing Taken blights along her body. Destroy these weak points while descending and avoid the Axion Bolts that spawn around the arena."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 11 -->
+                        <TextBlock Text="11 — FINAL STAND"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Once Riven reaches her final health section, the entire team is transported into the Ascendant Realm. Climb the floating debris, collect the Taken Strength, and return to the boss arena."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,20"/>
+
+
+                        <!-- STEP 12 -->
+                        <TextBlock Text="12 — KILL RIVEN"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Finish Riven's remaining health. Once she reaches zero, enter her mouth and destroy the Taken blight inside to complete the encounter."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <UniformGrid Columns="3"
+                             HorizontalAlignment="Stretch"
+                             Margin="0,0,0,15">
+
+
+                    <!-- TREE TEAM -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="TREE TEAM"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="3 PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Handle the Tree-side room, communicate Riven's eyes, kill the Eye of Riven Knight, and perform the required stagger."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- CRYSTAL TEAM -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="CRYSTAL TEAM"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="3 PLAYERS"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Handle the Crystal-side room, communicate symbols, kill the Eye of Riven Knight, and perform the required stagger."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- EYE CALLER -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            Padding="20"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="EYE CALLER"
+                                       FontSize="15"
+                                       FontWeight="Bold"
+                                       Foreground="White"/>
+
+                            <TextBlock Text="ROTATING"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Foreground="#FF1A1A"
+                                       Margin="0,4,0,10"/>
+
+                            <TextBlock Text="Call out glowing eye locations immediately after each successful Riven stagger. Accuracy is critical during the final eye sequence."
+                                       FontSize="12"
+                                       Foreground="#B0B0B0"
+                                       TextWrapping="Wrap"
+                                       LineHeight="20"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+
+                <!-- IMPORTANT MECHANICS -->
+                <TextBlock Text="IMPORTANT MECHANICS"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+
+                        <TextBlock Text="TENTACLE STAGGER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="When Riven extends her tentacles, bait one into slamming the floor. Shoot the exposed tentacle while it is planted to stagger her."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="MOUTH STAGGER"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="If Riven's tentacles remain retracted, survive her attack and wait for her mouth to open. Damage her mouth during the opening to trigger the stagger."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="RIVEN'S EYES"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Successful staggers expose glowing eyes. These locations must be communicated because the other team may need to destroy them when Riven appears on their side."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="EYE OF RIVEN"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Eye of Riven Knights drop Taken Essence. The relic is used to cleanse the correct symbol location and activate the lift to the next room."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="AXION BOLTS"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="During the descent through Riven, shooting her green weak points can spawn Axion Bolts. Watch your surroundings and avoid shooting weak points when another player is directly in the path of the resulting projectiles."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,18"/>
+
+
+                        <TextBlock Text="ASCENDANT REALM"
+                                   FontSize="15"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="During final stand, health slowly drains while the team climbs through floating debris. Reach the Taken Strength at the top to transport the team back to the boss arena."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- EYE CALLOUTS -->
+                <TextBlock Text="EYE CALLOUTS"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="USE CONSISTENT CALLOUTS"
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   Foreground="White"/>
+
+                        <TextBlock Text="Riven's eyes are easiest to manage when the entire fireteam uses predetermined numbers or locations. Pick one system before starting the encounter and never change it mid-run."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   LineHeight="22"
+                                   Margin="0,6,0,15"/>
+
+
+                        <UniformGrid Columns="3">
+
+                            <Border Background="#101010"
+                                    BorderBrush="#292929"
+                                    BorderThickness="1"
+                                    Padding="15"
+                                    Margin="0,0,5,0">
+
+                                <StackPanel>
+
+                                    <TextBlock Text="01 — LEFT"
+                                               FontSize="13"
+                                               FontWeight="Bold"
+                                               Foreground="White"/>
+
+                                    <TextBlock Text="Use a simple numbered or positional callout system."
+                                               FontSize="11"
+                                               Foreground="#B0B0B0"
+                                               TextWrapping="Wrap"
+                                               Margin="0,5,0,0"/>
+
+                                </StackPanel>
+
+                            </Border>
+
+
+                            <Border Background="#101010"
+                                    BorderBrush="#292929"
+                                    BorderThickness="1"
+                                    Padding="15"
+                                    Margin="5,0,5,0">
+
+                                <StackPanel>
+
+                                    <TextBlock Text="02 — VERIFY"
+                                               FontSize="13"
+                                               FontWeight="Bold"
+                                               Foreground="White"/>
+
+                                    <TextBlock Text="Have a second player confirm critical eye callouts."
+                                               FontSize="11"
+                                               Foreground="#B0B0B0"
+                                               TextWrapping="Wrap"
+                                               Margin="0,5,0,0"/>
+
+                                </StackPanel>
+
+                            </Border>
+
+
+                            <Border Background="#101010"
+                                    BorderBrush="#292929"
+                                    BorderThickness="1"
+                                    Padding="15"
+                                    Margin="5,0,0,0">
+
+                                <StackPanel>
+
+                                    <TextBlock Text="03 — SHOOT"
+                                               FontSize="13"
+                                               FontWeight="Bold"
+                                               Foreground="White"/>
+
+                                    <TextBlock Text="Do not destroy an eye until the caller confirms the target."
+                                               FontSize="11"
+                                               Foreground="#B0B0B0"
+                                               TextWrapping="Wrap"
+                                               Margin="0,5,0,0"/>
+
+                                </StackPanel>
+
+                            </Border>
+
+                        </UniformGrid>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- COMMON MISTAKES -->
+                <TextBlock Text="COMMON MISTAKES"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="#FF1A1A"
+                           Margin="0,10,0,15"/>
+
+
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        Padding="24"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="• Failing to communicate which side Riven appeared on first."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Missing the tentacle stagger and allowing Riven to continue her attack."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Shooting Riven's mouth at the wrong time."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Calling an eye incorrectly or destroying the wrong eye."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Taking too long to cleanse the symbol and missing the lift."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Shooting green weak points while another player is directly underneath the resulting Axion Bolts."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="• Panicking during the Ascendant Realm instead of moving efficiently toward the Taken Strength."
+                                   FontSize="13"
+                                   Foreground="#B0B0B0"
+                                   TextWrapping="Wrap"
+                                   Margin="0,0,0,20"/>
+
+
+                        <!-- VIDEO GUIDE -->
+                        <TextBlock Text="VIDEO GUIDE"
+                                   FontSize="14"
+                                   FontWeight="Bold"
+                                   Foreground="#FF1A1A"
+                                   Margin="0,5,0,12"/>
+
+                        <Border Background="#101010"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                Padding="15">
+
+                            <StackPanel>
+
+                                <TextBlock Text="RIVEN ENCOUNTER GUIDE"
+                                           FontSize="15"
+                                           FontWeight="Bold"
+                                           Foreground="White"
+                                           Margin="0,0,0,12"/>
+
+                                <local:YouTubePlayer VideoId="gX8aRCCcWvk"
+                                                     Height="400"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>

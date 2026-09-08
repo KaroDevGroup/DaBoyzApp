@@ -1,0 +1,483 @@
+<Page x:Class="DaBoyzApp.Pages.SummonConsecratedMindPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Background="Transparent">
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+
+                <TextBlock Text="GARDEN OF SALVATION  /  ENCOUNTER 02"
+                           FontSize="13"
+                           FontWeight="SemiBold"
+                           Foreground="#B0B0B0"/>
+
+                <TextBlock Text="SUMMON THE CONSECRATED MIND"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,2,0,0"/>
+
+                <TextBlock Text="UNDERGROWTH"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#FF1A1A"
+                           Margin="0,4,0,0"/>
+
+            </StackPanel>
+
+
+            <Button Grid.Column="1"
+                    Content="BACK TO GARDEN"
+                    Width="170"
+                    Height="40"
+                    VerticalAlignment="Center"
+                    Background="#161616"
+                    Foreground="#B0B0B0"
+                    BorderBrush="#292929"
+                    BorderThickness="1"
+                    FontSize="11"
+                    FontWeight="SemiBold"
+                    Padding="18,10"
+                    Cursor="Hand"
+                    Click="BackButton_Click"/>
+
+        </Grid>
+
+        <!-- CONTENT -->
+        <ScrollViewer Grid.Row="1"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel>
+
+                <!-- OBJECTIVE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="OBJECTIVE"
+                                   Foreground="#E00000"
+                                   FontSize="13"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="Activate and defend all four outer relays while preventing Vex from sacrificing themselves. Once the outer relays are secured, regroup at the center and survive the final wave to summon the Consecrated Mind."
+                                   Foreground="White"
+                                   FontSize="15"
+                                   TextWrapping="Wrap"
+                                   Margin="0,10,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ENCOUNTER FLOW -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="ENCOUNTER FLOW"
+                                   Foreground="#E00000"
+                                   FontSize="13"
+                                   FontWeight="Bold"
+                                   Margin="0,0,0,15"/>
+
+                        <StackPanel>
+
+                            <TextBlock Text="01  Kill the initial Vex around the starting relay."
+                                       Foreground="White"
+                                       FontSize="14"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Text="02  Kill the Angelic Hydra protecting the tether source."
+                                       Foreground="White"
+                                       FontSize="14"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Text="03  Tether the source to the relay to activate it and give the team Enlightened."
+                                       Foreground="White"
+                                       FontSize="14"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Text="04  Split toward the left and right relays and clear the enemies there."
+                                       Foreground="White"
+                                       FontSize="14"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Text="05  Kill the Angelic at each new relay and activate its tether."
+                                       Foreground="White"
+                                       FontSize="14"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Text="06  Leave a defender at each activated relay while the remaining players continue forward."
+                                       Foreground="White"
+                                       FontSize="14"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Text="07  Use the portals between active relays to rotate, refresh Enlightened, and help defenders."
+                                       Foreground="White"
+                                       FontSize="14"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Text="08  Once all four relays are active, defeat the Angelics that appear and finish charging the relays."
+                                       Foreground="White"
+                                       FontSize="14"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Text="09  Regroup at the center relay once the barriers disappear."
+                                       Foreground="White"
+                                       FontSize="14"
+                                       Margin="0,0,0,10"/>
+
+                            <TextBlock Text="10  Refresh Enlightened at the center and defend the final relay until the encounter completes."
+                                       Foreground="White"
+                                       FontSize="14"/>
+
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ROLES -->
+                <TextBlock Text="ROLES"
+                           Foreground="#E00000"
+                           FontSize="13"
+                           FontWeight="Bold"
+                           Margin="0,5,0,12"/>
+
+                <UniformGrid Columns="3"
+                             Margin="0,0,0,15">
+
+                    <!-- DEFENDERS -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Padding="18"
+                            Margin="0,0,8,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="RELAY DEFENDERS"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       FontWeight="Bold"/>
+
+                            <TextBlock Text="Stay near your assigned relay and stop Vex from sacrificing. Call for help if enemies overwhelm the relay."
+                                       Foreground="#B0B0B0"
+                                       FontSize="13"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- FLOATERS -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Padding="18"
+                            Margin="4,0,4,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="FLOATERS"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       FontWeight="Bold"/>
+
+                            <TextBlock Text="Move between active relays using the portals. Help clear waves, refresh Enlightened, and assist with Angelics."
+                                       Foreground="#B0B0B0"
+                                       FontSize="13"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- EVERYONE -->
+                    <Border Background="#161616"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Padding="18"
+                            Margin="8,0,0,0">
+
+                        <StackPanel>
+
+                            <TextBlock Text="EVERYONE"
+                                       Foreground="White"
+                                       FontSize="16"
+                                       FontWeight="Bold"/>
+
+                            <TextBlock Text="Maintain Enlightened, kill shielded Vex before they reach the relay, and communicate whenever a relay needs assistance."
+                                       Foreground="#B0B0B0"
+                                       FontSize="13"
+                                       TextWrapping="Wrap"
+                                       Margin="0,8,0,0"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </UniformGrid>
+
+
+                <!-- IMPORTANT MECHANICS -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="IMPORTANT MECHANICS"
+                                   Foreground="#E00000"
+                                   FontSize="13"
+                                   FontWeight="Bold"
+                                   Margin="0,0,0,15"/>
+
+                        <TextBlock Text="ENLIGHTENED"
+                                   Foreground="White"
+                                   FontSize="15"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="The Enlightened buff lasts roughly 45 seconds. It allows weapon damage to remove the white immunity shields from Vex. Without it, shielded enemies can continue toward the relay."
+                                   Foreground="#B0B0B0"
+                                   FontSize="13"
+                                   TextWrapping="Wrap"
+                                   Margin="0,5,0,15"/>
+
+
+                        <TextBlock Text="TETHER SOURCES"
+                                   Foreground="White"
+                                   FontSize="15"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="After the nearby Angelic is killed, the tether source becomes available. Connect the source to its relay to activate the relay, open its connected portals, and distribute Enlightened."
+                                   Foreground="#B0B0B0"
+                                   FontSize="13"
+                                   TextWrapping="Wrap"
+                                   Margin="0,5,0,15"/>
+
+
+                        <TextBlock Text="VEX SACRIFICES"
+                                   Foreground="White"
+                                   FontSize="15"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="Vex will attempt to reach the relay and sacrifice themselves. Prioritize these enemies immediately. Too many successful sacrifices will cause the encounter to fail."
+                                   Foreground="#B0B0B0"
+                                   FontSize="13"
+                                   TextWrapping="Wrap"
+                                   Margin="0,5,0,15"/>
+
+
+                        <TextBlock Text="PORTALS"
+                                   Foreground="White"
+                                   FontSize="15"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="Activating a relay opens Warp Gates connecting it to nearby active relays. Use these portals to rotate between positions instead of taking the long route through the arena."
+                                   Foreground="#B0B0B0"
+                                   FontSize="13"
+                                   TextWrapping="Wrap"
+                                   Margin="0,5,0,15"/>
+
+
+                        <TextBlock Text="ANGELICS"
+                                   Foreground="White"
+                                   FontSize="15"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="Angelic Hydras block tether sources and appear during the relay defense. Kill them quickly so the team can access the tether and continue refreshing Enlightened."
+                                   Foreground="#B0B0B0"
+                                   FontSize="13"
+                                   TextWrapping="Wrap"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- QUICK REFERENCE -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="QUICK REFERENCE"
+                                   Foreground="#E00000"
+                                   FontSize="13"
+                                   FontWeight="Bold"
+                                   Margin="0,0,0,12"/>
+
+                        <TextBlock Text="• Kill Angelic → activate tether source"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Tether source → relay"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Keep Enlightened active"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Kill shielded Vex before they sacrifice"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Defend each active relay"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Use portals to rotate between relays"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Kill Angelics when they spawn"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Collapse to center once all four relays are secured"
+                                   Foreground="White"
+                                   FontSize="14"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- CHALLENGE -->
+                <Border Background="#161616"
+                        BorderBrush="#E00000"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20"
+                        Margin="0,0,0,15">
+
+                    <StackPanel>
+
+                        <TextBlock Text="CHALLENGE"
+                                   Foreground="#E00000"
+                                   FontSize="13"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="A LINK TO THE CHAIN"
+                                   Foreground="White"
+                                   FontSize="20"
+                                   FontWeight="Bold"
+                                   Margin="0,6,0,0"/>
+
+                        <TextBlock Text="Every member of the fireteam must receive the Enlightened buff simultaneously whenever the team refreshes it. Coordinate tether activations and use a countdown so all six players connect at the same time."
+                                   Foreground="#B0B0B0"
+                                   FontSize="13"
+                                   TextWrapping="Wrap"
+                                   Margin="0,8,0,0"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- COMMON MISTAKES -->
+                <Border Background="#161616"
+                        BorderBrush="#292929"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="20"
+                        Margin="0,0,0,20">
+
+                    <StackPanel>
+
+                        <TextBlock Text="COMMON MISTAKES"
+                                   Foreground="#E00000"
+                                   FontSize="13"
+                                   FontWeight="Bold"
+                                   Margin="0,0,0,12"/>
+
+                        <TextBlock Text="• Letting shielded Vex reach the relay"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Allowing Enlightened to expire during a wave"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Ignoring Angelics and losing access to tether sources"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Leaving a relay completely undefended"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Running through the arena instead of using active portals"
+                                   Foreground="White"
+                                   FontSize="14"
+                                   Margin="0,0,0,7"/>
+
+                        <TextBlock Text="• Starting the challenge tether before everyone is ready"
+                                   Foreground="White"
+                                   FontSize="14"/>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>
