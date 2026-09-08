@@ -1,0 +1,153 @@
+<Window x:Class="DaBoyzApp.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="False"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Width="700"
+        Height="400">
+
+    <Grid>
+
+        <!-- ========================================================= -->
+        <!-- BACKGROUND                                                -->
+        <!-- ========================================================= -->
+
+        <Border Background="#080808"
+                CornerRadius="12"
+                BorderBrush="#292929"
+                BorderThickness="1">
+
+            <Grid>
+
+                <!-- Subtle red glow -->
+
+                <Ellipse Width="420"
+                         Height="420"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Opacity="0.12">
+
+                    <Ellipse.Fill>
+
+                        <RadialGradientBrush>
+
+                            <GradientStop Color="#E00000"
+                                          Offset="0"/>
+
+                            <GradientStop Color="#E00000"
+                                          Offset="0.35"/>
+
+                            <GradientStop Color="#080808"
+                                          Offset="1"/>
+
+                        </RadialGradientBrush>
+
+                    </Ellipse.Fill>
+
+                </Ellipse>
+
+
+                <!-- ================================================= -->
+                <!-- CONTENT                                             -->
+                <!-- ================================================= -->
+
+                <StackPanel VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+
+                    <!-- Logo text -->
+
+                    <TextBlock x:Name="LogoText"
+                               Text="DA BOYZ"
+                               Foreground="White"
+                               FontSize="52"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               Opacity="0"
+                               RenderTransformOrigin="0.5,0.5">
+
+                        <TextBlock.RenderTransform>
+
+                            <TranslateTransform Y="15"/>
+
+                        </TextBlock.RenderTransform>
+
+                    </TextBlock>
+
+
+                    <!-- Subtitle -->
+
+                    <TextBlock x:Name="SubtitleText"
+                               Text="COMMUNITY HUB"
+                               Foreground="#E00000"
+                               FontSize="13"
+                               FontWeight="SemiBold"
+                               HorizontalAlignment="Center"
+                               Margin="0,4,0,0"
+                               Opacity="0"/>
+
+
+                    <!-- Divider -->
+
+                    <Border Width="280"
+                            Height="1"
+                            Background="#292929"
+                            Margin="0,25,0,20"/>
+
+
+                    <!-- Status -->
+
+                    <TextBlock x:Name="StatusText"
+                               Text="INITIALIZING..."
+                               Foreground="#B0B0B0"
+                               FontSize="11"
+                               HorizontalAlignment="Center"
+                               Opacity="0"/>
+
+
+                    <!-- Loading bar -->
+
+                    <Border Width="280"
+                            Height="4"
+                            Background="#161616"
+                            CornerRadius="2"
+                            Margin="0,10,0,0">
+
+                        <Border x:Name="LoadingBar"
+                                Width="0"
+                                Height="4"
+                                HorizontalAlignment="Left"
+                                Background="#E00000"
+                                CornerRadius="2"/>
+
+                    </Border>
+
+                </StackPanel>
+
+                <TextBlock Text="Created by: KaroDevGroup"
+                           Foreground="#666666"
+                           FontSize="10"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"
+                           Margin="0,0,0,40"/>
+
+                <!-- Version -->
+
+                <TextBlock x:Name="VersionText"
+                           Text="v0.0.0 BETA"
+                           Foreground="#444444"
+                           FontSize="9"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"
+                           Margin="0,0,0,18"/>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</Window>

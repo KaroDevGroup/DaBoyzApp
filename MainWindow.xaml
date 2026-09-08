@@ -1,0 +1,380 @@
+﻿<Window x:Class="DaBoyzApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Da Boyz"
+        Height="700"
+        Width="1100"
+        MinHeight="600"
+        MinWidth="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#080808">
+
+    <Window.Resources>
+
+        <!-- ========================================================= -->
+        <!-- NAVIGATION BUTTON STYLE                                  -->
+        <!-- ========================================================= -->
+
+        <Style x:Key="NavButtonStyle" TargetType="Button">
+
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#B0B0B0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="20,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Grid>
+
+                            <Border x:Name="ButtonBackground"
+                                    Background="{TemplateBinding Background}"
+                                    CornerRadius="8"
+                                    Margin="5,2"/>
+
+                            <Border x:Name="SelectedIndicator"
+                                    Width="4"
+                                    HorizontalAlignment="Left"
+                                    Background="#E00000"
+                                    CornerRadius="2"
+                                    Margin="5,8,0,8"
+                                    Visibility="Collapsed"/>
+
+                            <ContentPresenter
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="Center"
+                                Margin="{TemplateBinding Padding}"/>
+
+                        </Grid>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="Tag"
+                                     Value="Selected">
+
+                                <Setter TargetName="SelectedIndicator"
+                                        Property="Visibility"
+                                        Value="Visible"/>
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+            <Style.Triggers>
+
+                <Trigger Property="IsMouseOver"
+                         Value="True">
+
+                    <Setter Property="Background"
+                            Value="#292929"/>
+
+                    <Setter Property="Foreground"
+                            Value="White"/>
+
+                </Trigger>
+
+                <Trigger Property="Tag"
+                         Value="Selected">
+
+                    <Setter Property="Background"
+                            Value="#333333"/>
+
+                    <Setter Property="Foreground"
+                            Value="White"/>
+
+                </Trigger>
+
+            </Style.Triggers>
+
+        </Style>
+
+    </Window.Resources>
+
+
+    <!-- ============================================================= -->
+    <!-- ROOT                                                          -->
+    <!-- ============================================================= -->
+
+    <Grid>
+
+
+        <!-- ========================================================= -->
+        <!-- ANIMATED BACKGROUND                                       -->
+        <!-- ========================================================= -->
+
+        <Grid x:Name="BackgroundLayer"
+              Panel.ZIndex="0"
+              IsHitTestVisible="False">
+
+
+            <!-- Base -->
+            <Rectangle Fill="#080808"/>
+
+
+            <!-- ===================================================== -->
+            <!-- PRIMARY RED GLOW                                     -->
+            <!-- ===================================================== -->
+
+            <Ellipse x:Name="MainGlow"
+                     Width="850"
+                     Height="850"
+                     HorizontalAlignment="Right"
+                     VerticalAlignment="Top"
+                     Margin="0,-400,-250,0"
+                     Opacity="0.30">
+
+                <Ellipse.Fill>
+
+                    <RadialGradientBrush>
+
+                        <GradientStop Color="#FF0000"
+                                      Offset="0"/>
+
+                        <GradientStop Color="#D00000"
+                                      Offset="0.20"/>
+
+                        <GradientStop Color="#700000"
+                                      Offset="0.45"/>
+
+                        <GradientStop Color="#250000"
+                                      Offset="0.70"/>
+
+                        <GradientStop Color="#080808"
+                                      Offset="1"/>
+
+                    </RadialGradientBrush>
+
+                </Ellipse.Fill>
+
+            </Ellipse>
+
+
+            <!-- ===================================================== -->
+            <!-- SECONDARY RED GLOW                                   -->
+            <!-- ===================================================== -->
+
+            <Ellipse Width="650"
+                     Height="650"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Bottom"
+                     Margin="-300,0,0,-300"
+                     Opacity="0.18">
+
+                <Ellipse.Fill>
+
+                    <RadialGradientBrush>
+
+                        <GradientStop Color="#E00000"
+                                      Offset="0"/>
+
+                        <GradientStop Color="#800000"
+                                      Offset="0.35"/>
+
+                        <GradientStop Color="#300000"
+                                      Offset="0.65"/>
+
+                        <GradientStop Color="#080808"
+                                      Offset="1"/>
+
+                    </RadialGradientBrush>
+
+                </Ellipse.Fill>
+
+            </Ellipse>
+
+
+            <!-- ===================================================== -->
+            <!-- PARTICLE CONNECTIONS                                  -->
+            <!-- ===================================================== -->
+
+            <Canvas x:Name="ConnectionCanvas"/>
+
+
+            <!-- ===================================================== -->
+            <!-- PARTICLES                                             -->
+            <!-- ===================================================== -->
+
+            <Canvas x:Name="ParticleCanvas"/>
+
+
+        </Grid>
+
+
+        <!-- ========================================================= -->
+        <!-- APPLICATION UI                                            -->
+        <!-- ========================================================= -->
+
+        <Grid Panel.ZIndex="1">
+
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="220"/>
+
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+            <!-- ===================================================== -->
+            <!-- SIDEBAR                                               -->
+            <!-- ===================================================== -->
+
+            <Border Grid.Column="0"
+                    Background="#151515"
+                    BorderBrush="#252525"
+                    BorderThickness="0,0,1,0">
+
+                <Grid>
+
+
+                    <StackPanel>
+
+
+                        <!-- ================================================= -->
+                        <!-- BRAND                                            -->
+                        <!-- ================================================= -->
+
+                        <StackPanel Margin="25,30,25,40">
+
+                            <TextBlock Text="DA BOYZ"
+                                       Foreground="White"
+                                       FontSize="28"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Center"/>
+
+                            <TextBlock Text="COMMUNITY HUB"
+                                       Foreground="#E00000"
+                                       FontSize="11"
+                                       FontWeight="SemiBold"
+                                       HorizontalAlignment="Center"
+                                       Margin="2,2,0,0"/>
+
+                        </StackPanel>
+
+
+                        <!-- ================================================= -->
+                        <!-- NAVIGATION                                        -->
+                        <!-- ================================================= -->
+
+                        <Button x:Name="HomeButton"
+                                Content="HOME"
+                                Height="50"
+                                Margin="15,5"
+                                Click="HomeButton_Click"
+                                Style="{StaticResource NavButtonStyle}"/>
+
+
+                        <Button x:Name="GamingButton"
+                                Content="GAMING DATABASE"
+                                Height="50"
+                                Margin="15,5"
+                                Click="GamingButton_Click"
+                                Style="{StaticResource NavButtonStyle}"/>
+
+
+                        <Button x:Name="MusicButton"
+                                Content="MUSIC"
+                                Height="50"
+                                Margin="15,5"
+                                Click="MusicButton_Click"
+                                Style="{StaticResource NavButtonStyle}"/>
+
+
+                        <Button x:Name="PatchNotesButton"
+                                Content="PATCH NOTES"
+                                Height="50"
+                                Margin="15,5"
+                                Click="PatchNotesButton_Click"
+                                Style="{StaticResource NavButtonStyle}"/>
+
+
+                        <Button x:Name="AdminButton"
+                                Content="ADMIN PORTAL"
+                                Height="50"
+                                Margin="15,5"
+                                Click="AdminButton_Click"
+                                Style="{StaticResource NavButtonStyle}"/>
+
+                        <Button x:Name="SettingsButton"
+                                Content="SETTINGS"
+                                Height="50"
+                                Margin="15,5"
+                                Click="SettingsButton_Click"
+                                Style="{StaticResource NavButtonStyle}"/>
+
+                        <Button Content="EXIT"
+                                Click="ExitButton_Click"
+                                Style="{StaticResource NavButtonStyle}"
+                                Height="50"
+                                Margin="15,5"
+                                Cursor="Hand"/>
+                                
+                    </StackPanel>
+
+                    <!-- ================================================= -->
+                    <!-- FOOTER                                            -->
+                    <!-- ================================================= -->
+
+                    <StackPanel VerticalAlignment="Bottom"
+                                Margin="0,0,0,25">
+
+                        <Border Height="1"
+                                Background="#292929"
+                                Margin="20,0,20,15"/>
+
+                        <TextBlock Text="DA BOYZ"
+                                   Foreground="#555555"
+                                   FontSize="10"
+                                   FontWeight="SemiBold"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock Text="v0.1.0 BETA"
+                                   Foreground="#666666"
+                                   FontSize="11"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,3,0,0"/>
+
+                    </StackPanel>
+
+                </Grid>
+
+            </Border>
+
+
+            <!-- ===================================================== -->
+            <!-- CONTENT                                               -->
+            <!-- ===================================================== -->
+
+            <Grid Grid.Column="1">
+
+                <Border Background="#080808"
+                        Opacity="0.08"/>
+
+                <Frame x:Name="MainFrame"
+                       NavigationUIVisibility="Hidden"/>
+
+            </Grid>
+
+
+        </Grid>
+
+    </Grid>
+
+</Window>
