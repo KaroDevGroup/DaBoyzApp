@@ -1,6 +1,8 @@
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Web.WebView2.Core;
 
 namespace DaBoyzApp.Pages
 {
@@ -17,7 +19,26 @@ namespace DaBoyzApp.Pages
         {
             try
             {
-                await BuildsBrowser.EnsureCoreWebView2Async();
+                string userDataFolder =
+                    Path.Combine(
+                        Environment.GetFolderPath(
+                            Environment.SpecialFolder.LocalApplicationData
+                        ),
+                        "DaBoyzApp",
+                        "WebView2"
+                    );
+
+                Directory.CreateDirectory(userDataFolder);
+
+                CoreWebView2Environment environment =
+                    await CoreWebView2Environment.CreateAsync(
+                        null,
+                        userDataFolder
+                    );
+
+                await BuildsBrowser.EnsureCoreWebView2Async(
+                    environment
+                );
 
                 BuildsBrowser.CoreWebView2.Navigate(
                     "https://mobalytics.gg/destiny-2/builds"

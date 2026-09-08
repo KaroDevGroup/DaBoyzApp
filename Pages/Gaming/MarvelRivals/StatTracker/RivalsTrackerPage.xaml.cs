@@ -1,6 +1,8 @@
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Web.WebView2.Core;
 
 namespace DaBoyzApp.Pages
 {
@@ -19,7 +21,26 @@ namespace DaBoyzApp.Pages
         {
             try
             {
-                await RivalsTrackerBrowser.EnsureCoreWebView2Async();
+                string userDataFolder =
+                    Path.Combine(
+                        Environment.GetFolderPath(
+                            Environment.SpecialFolder.LocalApplicationData
+                        ),
+                        "DaBoyzApp",
+                        "WebView2"
+                    );
+
+                Directory.CreateDirectory(userDataFolder);
+
+                CoreWebView2Environment environment =
+                    await CoreWebView2Environment.CreateAsync(
+                        null,
+                        userDataFolder
+                    );
+
+                await RivalsTrackerBrowser.EnsureCoreWebView2Async(
+                    environment
+                );
 
                 RivalsTrackerBrowser.CoreWebView2.Navigate(
                     "https://tracker.gg/marvel-rivals"
@@ -28,10 +49,10 @@ namespace DaBoyzApp.Pages
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    $"Raid Report failed to load.\n\n" +
+                    $"Marvel Rivals Stat Tracker failed to load.\n\n" +
                     $"Error: {ex.Message}\n\n" +
                     $"HRESULT: 0x{ex.HResult:X8}",
-                    "Da Boyz - Raid Report Error",
+                    "Da Boyz - Marvel Rivals Stat Tracker Error",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error
                 );

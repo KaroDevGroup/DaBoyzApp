@@ -1,6 +1,8 @@
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Web.WebView2.Core;
 
 namespace DaBoyzApp.Pages
 {
@@ -13,11 +15,32 @@ namespace DaBoyzApp.Pages
             Loaded += SiegeTrackerPage_Loaded;
         }
 
-        private async void SiegeTrackerPage_Loaded(object sender, RoutedEventArgs e)
+        private async void SiegeTrackerPage_Loaded(
+            object sender,
+            RoutedEventArgs e)
         {
             try
             {
-                await SiegeTrackerBrowser.EnsureCoreWebView2Async();
+                string userDataFolder =
+                    Path.Combine(
+                        Environment.GetFolderPath(
+                            Environment.SpecialFolder.LocalApplicationData
+                        ),
+                        "DaBoyzApp",
+                        "WebView2"
+                    );
+
+                Directory.CreateDirectory(userDataFolder);
+
+                CoreWebView2Environment environment =
+                    await CoreWebView2Environment.CreateAsync(
+                        null,
+                        userDataFolder
+                    );
+
+                await SiegeTrackerBrowser.EnsureCoreWebView2Async(
+                    environment
+                );
 
                 SiegeTrackerBrowser.CoreWebView2.Navigate(
                     "https://r6.tracker.network/"
@@ -26,17 +49,19 @@ namespace DaBoyzApp.Pages
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    $"Mobalytics failed to load.\n\n" +
+                    $"Rainbow Six Siege Stat Tracker failed to load.\n\n" +
                     $"Error: {ex.Message}\n\n" +
                     $"HRESULT: 0x{ex.HResult:X8}",
-                    "Da Boyz - Mobalytics Error",
+                    "Da Boyz - Rainbow Six Siege Stat Tracker Error",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error
                 );
             }
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(
+            object sender,
+            RoutedEventArgs e)
         {
             NavigationService?.Navigate(new Rainbow6SiegePage());
         }

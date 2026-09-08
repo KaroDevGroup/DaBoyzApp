@@ -1,6 +1,8 @@
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using Microsoft.Web.WebView2.Core;
 
 namespace DaBoyzApp.Pages
 {
@@ -19,7 +21,26 @@ namespace DaBoyzApp.Pages
         {
             try
             {
-                await RaidReportBrowser.EnsureCoreWebView2Async();
+                string userDataFolder =
+                    Path.Combine(
+                        Environment.GetFolderPath(
+                            Environment.SpecialFolder.LocalApplicationData
+                        ),
+                        "DaBoyzApp",
+                        "WebView2"
+                    );
+
+                Directory.CreateDirectory(userDataFolder);
+
+                CoreWebView2Environment environment =
+                    await CoreWebView2Environment.CreateAsync(
+                        null,
+                        userDataFolder
+                    );
+
+                await RaidReportBrowser.EnsureCoreWebView2Async(
+                    environment
+                );
 
                 RaidReportBrowser.CoreWebView2.Navigate(
                     "https://raid.report/"
