@@ -31,12 +31,20 @@ public partial class UpdateWindow : Window
         }
     }
 
+    // =============================================================
+    // LATER
+    // =============================================================
+
     private void LaterButton_Click(
         object sender,
         RoutedEventArgs e)
     {
         Close();
     }
+
+    // =============================================================
+    // UPDATE NOW
+    // =============================================================
 
     private async void UpdateButton_Click(
         object sender,
@@ -47,10 +55,31 @@ public partial class UpdateWindow : Window
             UpdateButton.IsEnabled = false;
             LaterButton.IsEnabled = false;
 
-            UpdateButton.Content = "DOWNLOADING...";
+            // -----------------------------------------------------
+            // SHOW DOWNLOAD PROGRESS
+            // -----------------------------------------------------
+
+            DownloadProgressPanel.Visibility =
+                Visibility.Visible;
+
+            DownloadProgressBar.Width = 0;
+
+            DownloadPercentageText.Text =
+                "0%";
+
+            DownloadStatusText.Text =
+                "DOWNLOADING UPDATE...";
 
             ReleaseDescriptionText.Text =
                 "Downloading the latest version...";
+
+            UpdateButton.Content =
+                "DOWNLOADING...";
+
+
+            // -----------------------------------------------------
+            // DOWNLOAD UPDATE
+            // -----------------------------------------------------
 
             UpdateService updateService =
                 new UpdateService();
@@ -59,14 +88,36 @@ public partial class UpdateWindow : Window
                 new Progress<double>(
                     percentage =>
                     {
+                        // Update progress bar
+                        double maximumWidth =
+                            DownloadProgressBar
+                                .Parent is FrameworkElement parent
+                                ? parent.ActualWidth
+                                : 460;
+
+                        DownloadProgressBar.Width =
+                            maximumWidth *
+                            (percentage / 100.0);
+
+                        // Update percentage text
+                        DownloadPercentageText.Text =
+                            $"{percentage:0}%";
+
+                        // Update button text
                         UpdateButton.Content =
                             $"DOWNLOADING {percentage:0}%";
                     });
+
 
             string? installerPath =
                 await updateService.DownloadInstallerAsync(
                     _release,
                     progress);
+
+
+            // -----------------------------------------------------
+            // DOWNLOAD FAILED
+            // -----------------------------------------------------
 
             if (string.IsNullOrWhiteSpace(installerPath))
             {
@@ -79,6 +130,9 @@ public partial class UpdateWindow : Window
                     MessageBoxImage.Error
                 );
 
+                DownloadProgressPanel.Visibility =
+                    Visibility.Collapsed;
+
                 UpdateButton.Content =
                     "UPDATE NOW";
 
@@ -88,11 +142,34 @@ public partial class UpdateWindow : Window
                 return;
             }
 
+
+            // -----------------------------------------------------
+            // DOWNLOAD COMPLETE
+            // -----------------------------------------------------
+
+            DownloadProgressBar.Width =
+                460;
+
+            DownloadPercentageText.Text =
+                "100%";
+
+            DownloadStatusText.Text =
+                "DOWNLOAD COMPLETE";
+
+            UpdateButton.Content =
+                "STARTING...";
+
             ReleaseDescriptionText.Text =
                 "Update downloaded successfully. " +
                 "Starting the installer...";
 
+
             await Task.Delay(500);
+
+
+            // -----------------------------------------------------
+            // START INSTALLER
+            // -----------------------------------------------------
 
             Process.Start(
                 new ProcessStartInfo
@@ -113,6 +190,9 @@ public partial class UpdateWindow : Window
                 MessageBoxButton.OK,
                 MessageBoxImage.Error
             );
+
+            DownloadProgressPanel.Visibility =
+                Visibility.Collapsed;
 
             UpdateButton.Content =
                 "UPDATE NOW";

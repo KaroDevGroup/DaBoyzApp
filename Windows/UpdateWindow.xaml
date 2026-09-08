@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Da Boyz - Update Available"
         Width="520"
-        Height="390"
+        Height="430"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         WindowStyle="None"
@@ -86,7 +86,7 @@
                                    Foreground="#666666"/>
 
                         <TextBlock x:Name="CurrentVersionText"
-                                   Text="1.0.0"
+                                   Text="1.1.5"
                                    FontSize="18"
                                    FontWeight="Bold"
                                    Foreground="White"
@@ -137,6 +137,53 @@
                            Foreground="#666666"
                            TextWrapping="Wrap"
                            Margin="0,25,0,0"/>
+
+
+                <!-- ================================================= -->
+                <!-- DOWNLOAD STATUS                                  -->
+                <!-- ================================================= -->
+
+                <StackPanel x:Name="DownloadProgressPanel"
+                            Visibility="Collapsed"
+                            Margin="0,20,0,0">
+
+                    <Grid>
+
+                        <TextBlock x:Name="DownloadStatusText"
+                                   Text="DOWNLOADING UPDATE..."
+                                   FontSize="10"
+                                   FontWeight="SemiBold"
+                                   Foreground="#B0B0B0"
+                                   HorizontalAlignment="Left"/>
+
+                        <TextBlock x:Name="DownloadPercentageText"
+                                   Text="0%"
+                                   FontSize="10"
+                                   FontWeight="SemiBold"
+                                   Foreground="#E00000"
+                                   HorizontalAlignment="Right"/>
+
+                    </Grid>
+
+
+                    <!-- DOWNLOAD BAR -->
+
+                    <Border Width="460"
+                            Height="4"
+                            Background="#161616"
+                            CornerRadius="2"
+                            Margin="0,10,0,0">
+
+                        <Border x:Name="DownloadProgressBar"
+                                Width="0"
+                                Height="4"
+                                HorizontalAlignment="Left"
+                                Background="#E00000"
+                                CornerRadius="2"/>
+
+                    </Border>
+
+                </StackPanel>
 
             </StackPanel>
 
