@@ -446,7 +446,7 @@
                                    FontWeight="SemiBold"
                                    Margin="0,5,0,2"/>
 
-                        <TextBlock Text="Version 0.1.0 Beta • Application foundation is now being built."
+                        <TextBlock Text="Version 1.1.5 BETA • Application foundation is now being built."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"/>
 

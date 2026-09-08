@@ -60,7 +60,7 @@
 
                                 </Border>
 
-                                <TextBlock Text="  v0.1.0"
+                                <TextBlock Text="  v1.1.5"
                                            Foreground="White"
                                            FontSize="18"
                                            FontWeight="Bold"
@@ -68,12 +68,12 @@
 
                             </StackPanel>
 
-                            <TextBlock Text="Initial Release"
+                            <TextBlock Text="Updater, WebView2, and Gaming improvements"
                                        Foreground="{StaticResource DaBoyzTextSecondary}"
                                        FontSize="13"
                                        Margin="0,8,0,0"/>
 
-                            <TextBlock Text="August 27, 2026"
+                            <TextBlock Text="September 8th, 2026"
                                        Foreground="{StaticResource DaBoyzTextMuted}"
                                        FontSize="11"
                                        Margin="0,4,0,0"/>
@@ -113,7 +113,7 @@
                                    Margin="0,5,0,20"/>
 
 
-                        <!-- GAMING DATABASE -->
+                        <!-- AUTOMATIC UPDATES -->
 
                         <Grid Margin="0,0,0,16">
 
@@ -138,12 +138,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Gaming Database"
+                                <TextBlock Text="Automatic Updates"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Added the foundation for the Da Boyz Gaming Database, including game cards, search, and category filtering."
+                                <TextBlock Text="Added automatic GitHub release detection so DaBoyzApp can notify users when a newer version is available."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -154,7 +154,7 @@
                         </Grid>
 
 
-                        <!-- ADMIN PORTAL -->
+                        <!-- DOWNLOAD PROGRESS -->
 
                         <Grid Margin="0,0,0,16">
 
@@ -179,12 +179,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Admin Portal"
+                                <TextBlock Text="Download Progress"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Added the administrator login interface and authentication screen."
+                                <TextBlock Text="Added a live download progress bar that displays the real-time percentage while an update is being downloaded."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -195,7 +195,7 @@
                         </Grid>
 
 
-                        <!-- ANIMATED BACKGROUND -->
+                        <!-- EMBEDDED WEB CONTENT -->
 
                         <Grid Margin="0,0,0,16">
 
@@ -220,12 +220,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Animated Background"
+                                <TextBlock Text="Embedded Web Content"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Added the animated particle background system used throughout the application."
+                                <TextBlock Text="Expanded the Gaming Database with integrated web pages for Destiny 2, Warzone, FiveM, Minecraft, Rainbow Six Siege, Rocket League, and Marvel Rivals."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -236,7 +236,7 @@
                         </Grid>
 
 
-                        <!-- DASHBOARD NAVIGATION -->
+                        <!-- DESTINY GUIDES -->
 
                         <Grid>
 
@@ -261,12 +261,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Dashboard Navigation"
+                                <TextBlock Text="Destiny 2 Encounter Guides"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Added dashboard cards and improved navigation between application sections."
+                                <TextBlock Text="Added dedicated raid encounter pages with embedded video guides for multiple Destiny 2 raids and encounters."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -296,28 +296,28 @@
                                    FontSize="11"
                                    FontWeight="Bold"/>
 
-                        <TextBlock Text="UI &amp; Experience"
+                        <TextBlock Text="Performance &amp; Experience"
                                    Foreground="White"
                                    FontSize="21"
                                    FontWeight="Bold"
                                    Margin="0,5,0,20"/>
 
-                        <TextBlock Text="•  Refined the Da Boyz red, black, and white visual theme."
+                        <TextBlock Text="•  Improved WebView2 initialization for installed versions of DaBoyzApp."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"
                                    Margin="0,0,0,10"/>
 
-                        <TextBlock Text="•  Added elevated cards and shadows to improve depth."
+                        <TextBlock Text="•  Added a shared WebView2 environment using a writable per-user application data directory."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"
                                    Margin="0,0,0,10"/>
 
-                        <TextBlock Text="•  Improved sidebar selection states."
+                        <TextBlock Text="•  Improved the update experience with clearer download, completion, and installation states."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"
                                    Margin="0,0,0,10"/>
 
-                        <TextBlock Text="•  Added consistent application-wide color resources."
+                        <TextBlock Text="•  Expanded the Gaming Database with additional game-specific resources and tools."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"/>
 
@@ -347,17 +347,22 @@
                                    FontWeight="Bold"
                                    Margin="0,5,0,20"/>
 
-                        <TextBlock Text="•  Fixed sidebar highlighting when navigating from dashboard cards."
+                        <TextBlock Text="•  Fixed WebView2 pages failing to initialize correctly when DaBoyzApp was installed under Program Files."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"
                                    Margin="0,0,0,10"/>
 
-                        <TextBlock Text="•  Fixed search placeholder behavior on the Gaming Database."
+                        <TextBlock Text="•  Fixed YouTube embedded videos failing to load correctly due to missing request headers."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"
                                    Margin="0,0,0,10"/>
 
-                        <TextBlock Text="•  Improved text caret visibility in the Admin Portal."
+                        <TextBlock Text="•  Improved update detection when GitHub releases are unavailable or have been removed."
+                                   Foreground="{StaticResource DaBoyzTextSecondary}"
+                                   FontSize="12"
+                                   Margin="0,0,0,10"/>
+
+                        <TextBlock Text="•  Fixed various installed-build WebView2 initialization and access issues."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"/>
 
