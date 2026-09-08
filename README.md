@@ -32,16 +32,16 @@ The DaBoyzApp is a Windows desktop application built for the **DaBoyz** discord 
 
 The easiest way to install **DaBoyzApp** is through the official Github release.
 
-### Steo 1 — Open Releases
+### Step 1 — Open Releases
 
 Navigate to the **Releases** section of the repository and download the latest:
 
-**DaBoyzApp-Setup.exe**
+> *DaBoyzApp-Setup.exe*
 
 ### Step 2 — Run the Installer
 
 Open: 
-      **DaBoyzApp-Setup.exe**
+> *DaBoyzApp-Setup.exe*
       
 *Windows may display a security warning depending upon your system configuration.*
 
@@ -64,6 +64,7 @@ The application will display the DaBoyz splash screen before loading the main ap
 - Windows 10 or newer
 - 64 bit Windows
 - 2 GB RAM
+- 250 MB Storage
 - Microsoft Edge WebView2 Runtime
 
 --- 
@@ -79,6 +80,20 @@ The application will display the DaBoyz splash screen before loading the main ap
 - WebView webpages
 
 > The rest of the application may function normally without an available internet connection.
+
+---
+
+## File Locations
+
+> It is recommended to clear your cache folder every now and then.
+
+### Main Directory:
+
+*C:\Program Files\DaBoyzApp*
+
+### Cache Directory:
+
+*C:\Users\user\AppData\Local\DaBoyzApp*
 
 ---
 
