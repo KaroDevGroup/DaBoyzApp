@@ -1,0 +1,43 @@
+<Page x:Class="DaBoyzApp.Pages.MusicPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+        <Grid Background="Transparent">
+
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <ScrollViewer Grid.Row="0"
+                              VerticalScrollBarVisibility="Hidden"
+                              HorizontalScrollBarVisibility="Disabled">
+
+                        <TextBlock Text="COMING SOON"
+                                   Foreground="{StaticResource DaBoyzRed}"
+                                   FontSize="50"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"/>
+                </ScrollViewer>
+
+                <StackPanel Grid.Row="1"
+                            HorizontalAlignment="Center"
+                            Margin="0,0,0,30">
+
+                        <TextBlock Text="DA BOYZ • MUSIC"
+                                   Foreground="{StaticResource DaBoyzTextMuted}"
+                                   FontSize="11"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock Text="Created by: KaroDevGroup"
+                                   Foreground="#666666"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,5,0,0"/>
+
+                </StackPanel>
+
+        </Grid>
+
+</Page>

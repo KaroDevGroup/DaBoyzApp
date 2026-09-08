@@ -1,0 +1,182 @@
+<Page x:Class="DaBoyzApp.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Background="Transparent">
+
+        <Grid>
+
+            <!-- ================================================= -->
+            <!-- CENTER LOGIN CARD                                  -->
+            <!-- ================================================= -->
+
+            <Border Width="430"
+                    Padding="40"
+                    Background="#E8141414"
+                    BorderBrush="#333333"
+                    BorderThickness="1"
+                    CornerRadius="16"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+
+                <StackPanel>
+
+
+                    <!-- ================================================= -->
+                    <!-- BRANDING                                          -->
+                    <!-- ================================================= -->
+
+                    <StackPanel HorizontalAlignment="Center"
+                                Margin="0,0,0,30">
+
+                        <TextBlock Text="DA BOYZ"
+                                   Foreground="White"
+                                   FontSize="28"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock Text="ADMIN PORTAL"
+                                   Foreground="{StaticResource DaBoyzRed}"
+                                   FontSize="11"
+                                   FontWeight="SemiBold"
+                                   HorizontalAlignment="Center"
+                                   Margin="0,4,0,0"/>
+
+                    </StackPanel>
+
+
+                    <!-- ================================================= -->
+                    <!-- TITLE                                             -->
+                    <!-- ================================================= -->
+
+                    <TextBlock Text="Welcome back."
+                               Foreground="{StaticResource DaBoyzText}"
+                               FontSize="24"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="Sign in to access the administration panel."
+                               Foreground="{StaticResource DaBoyzTextSecondary}"
+                               FontSize="13"
+                               HorizontalAlignment="Center"
+                               TextAlignment="Center"
+                               Margin="0,6,0,30"/>
+
+
+                    <!-- ================================================= -->
+                    <!-- USERNAME                                          -->
+                    <!-- ================================================= -->
+
+                    <TextBlock Text="USERNAME"
+                               Foreground="{StaticResource DaBoyzTextSecondary}"
+                               FontSize="11"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,7"/>
+
+                    <Border Background="#111111"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Height="45"
+                            Margin="0,0,0,18">
+
+                        <TextBox x:Name="UsernameBox"
+                                 Background="Transparent"
+                                 BorderThickness="0"
+                                 Foreground="White"
+                                 FontSize="13"
+                                 Padding="14,0"
+                                 VerticalContentAlignment="Center"/>
+
+                    </Border>
+
+
+                    <!-- ================================================= -->
+                    <!-- PASSWORD                                          -->
+                    <!-- ================================================= -->
+
+                    <TextBlock Text="PASSWORD"
+                               Foreground="{StaticResource DaBoyzTextSecondary}"
+                               FontSize="11"
+                               FontWeight="SemiBold"
+                               Margin="0,0,0,7"/>
+
+                    <Border Background="#111111"
+                            BorderBrush="#292929"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Height="45"
+                            Margin="0,0,0,15">
+
+                        <PasswordBox x:Name="PasswordBox"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Foreground="White"
+                                     FontSize="13"
+                                     Padding="14,0"
+                                     VerticalContentAlignment="Center"/>
+
+                    </Border>
+
+
+                    <!-- ================================================= -->
+                    <!-- REMEMBER ME                                       -->
+                    <!-- ================================================= -->
+
+                    <CheckBox x:Name="RememberMeCheckBox"
+                              Content="Remember me"
+                              Foreground="{StaticResource DaBoyzTextSecondary}"
+                              FontSize="12"
+                              Margin="2,0,0,25"/>
+
+
+                    <!-- ================================================= -->
+                    <!-- SIGN IN                                            -->
+                    <!-- ================================================= -->
+
+                    <Button x:Name="SignInButton"
+                            Content="SIGN IN"
+                            Height="45"
+                            Background="{StaticResource DaBoyzRed}"
+                            Foreground="White"
+                            BorderThickness="0"
+                            FontSize="13"
+                            FontWeight="Bold"
+                            Cursor="Hand"
+                            IsDefault="True"
+                            Click="SignInButton_Click"/>
+
+
+                    <!-- ================================================= -->
+                    <!-- STATUS MESSAGE                                    -->
+                    <!-- ================================================= -->
+
+                    <TextBlock x:Name="StatusText"
+                               Foreground="{StaticResource DaBoyzRed}"
+                               FontSize="12"
+                               TextAlignment="Center"
+                               HorizontalAlignment="Center"
+                               TextWrapping="Wrap"
+                               Margin="0,15,0,0"/>
+
+
+                    <!-- ================================================= -->
+                    <!-- FOOTER                                            -->
+                    <!-- ================================================= -->
+
+                    <TextBlock Text="AUTHORIZED PERSONNEL ONLY"
+                               Foreground="{StaticResource DaBoyzTextMuted}"
+                               FontSize="9"
+                               FontWeight="SemiBold"
+                               HorizontalAlignment="Center"
+                               Margin="0,25,0,0"/>
+
+                </StackPanel>
+
+            </Border>
+
+        </Grid>
+
+    </Grid>
+
+</Page>

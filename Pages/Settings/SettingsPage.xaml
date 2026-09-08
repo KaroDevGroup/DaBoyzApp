@@ -1,0 +1,234 @@
+<Page x:Class="DaBoyzApp.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid Background="Transparent">
+
+        <ScrollViewer VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+
+            <StackPanel Margin="45,40,45,50">
+
+                <!-- ================================================= -->
+                <!-- HEADER                                            -->
+                <!-- ================================================= -->
+
+                <TextBlock Text="SETTINGS"
+                           Foreground="{StaticResource DaBoyzText}"
+                           FontSize="32"
+                           FontWeight="Bold"/>
+
+                <TextBlock Text="Customize your Da Boyz application experience."
+                           Foreground="{StaticResource DaBoyzTextSecondary}"
+                           FontSize="14"
+                           Margin="0,5,0,0"/>
+
+
+                <!-- RED ACCENT -->
+
+                <Border Height="2"
+                        Width="80"
+                        Background="{StaticResource DaBoyzRed}"
+                        HorizontalAlignment="Left"
+                        Margin="0,18,0,30"/>
+
+
+                <!-- ================================================= -->
+                <!-- APPEARANCE                                        -->
+                <!-- ================================================= -->
+
+                <!-- ================================================= -->
+                <!-- APPLICATION THEME                                -->
+                <!-- ================================================= -->
+
+                <Border Style="{StaticResource DashboardCardStyle}">
+
+                    <StackPanel>
+
+                        <TextBlock Text="APPLICATION THEME"
+                                    Foreground="{StaticResource DaBoyzText}"
+                                    FontSize="16"
+                                    FontWeight="Bold"/>
+
+                        <TextBlock Text="Choose how Da Boyz looks."
+                                    Foreground="{StaticResource DaBoyzTextSecondary}"
+                                    FontSize="12"
+                                    Margin="0,4,0,15"/>
+
+                        <ComboBox Width="180"
+                                    HorizontalAlignment="Left"
+                                    SelectedIndex="0">
+
+                            <ComboBoxItem Content="Da Boyz Dark"/>
+
+                            <ComboBoxItem Content="System Default"/>
+
+                        </ComboBox>
+
+
+                        <!-- ============================================= -->
+                        <!-- UI ANIMATIONS                                 -->
+                        <!-- ============================================= -->
+
+                        <Grid Margin="0,25,0,0">
+
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="*"/>
+
+                                <ColumnDefinition Width="Auto"/>
+
+                            </Grid.ColumnDefinitions>
+
+
+                            <StackPanel>
+
+                                <TextBlock Text="UI ANIMATIONS"
+                                            Foreground="{StaticResource DaBoyzText}"
+                                            FontSize="15"
+                                            FontWeight="SemiBold"/>
+
+                                <TextBlock Text="Enable animated transitions and interface effects."
+                                            Foreground="{StaticResource DaBoyzTextSecondary}"
+                                            FontSize="12"
+                                            Margin="0,4,0,0"/>
+
+                            </StackPanel>
+
+
+                            <CheckBox x:Name="UiAnimationsCheckBox"
+                                        Grid.Column="1"
+                                        IsChecked="True"
+                                        VerticalAlignment="Center"
+                                        Margin="20,0,0,0"
+                                        Checked="UiAnimationsCheckBox_Changed"
+                                        Unchecked="UiAnimationsCheckBox_Changed"/>
+
+                         </Grid>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!-- ================================================= -->
+                <!-- PERFORMANCE                                      -->
+                <!-- ================================================= -->
+
+                <TextBlock Text="PERFORMANCE"
+                           Style="{StaticResource SectionTitleStyle}"
+                           Margin="0,35,0,15"/>
+
+                <Border Style="{StaticResource DashboardCardStyle}">
+
+                    <StackPanel>
+
+                        <TextBlock Text="ANIMATION FPS"
+                                    Foreground="{StaticResource DaBoyzText}"
+                                    FontSize="16"
+                                    FontWeight="Bold"/>
+
+                        <TextBlock Text="Controls the frame rate of the animated background effects."
+                                    Foreground="{StaticResource DaBoyzTextSecondary}"
+                                    FontSize="12"
+                                    Margin="0,4,0,15"/>
+
+                        <ComboBox x:Name="FpsComboBox"
+                                    Width="180"
+                                    HorizontalAlignment="Left"
+                                    SelectedIndex="1"
+                                    SelectionChanged="FpsComboBox_SelectionChanged">
+
+                            <ComboBoxItem Content="30 FPS"/>
+
+                            <ComboBoxItem Content="60 FPS"/>
+
+                            <ComboBoxItem Content="120 FPS"/>
+
+                            <ComboBoxItem Content="144 FPS"/>
+
+                        </ComboBox>
+
+                    </StackPanel>
+
+                </Border>       
+
+                <!-- ================================================= -->
+                <!-- SAVE SETTINGS                                     -->
+                <!-- ================================================= -->
+
+                <Button Content="SAVE SETTINGS"
+                        Width="150"
+                        Height="40"
+                        HorizontalAlignment="Left"
+                        Margin="0,20,0,0"
+                        Style="{StaticResource AccentButtonStyle}"
+                        Click="SaveSettingsButton_Click"/>    
+
+                <!-- ================================================= -->
+                <!-- APPLICATION                                        -->
+                <!-- ================================================= -->
+
+                <TextBlock Text="APPLICATION"
+                           Style="{StaticResource SectionTitleStyle}"
+                           Margin="0,35,0,15"/>
+
+
+                <Border Style="{StaticResource DashboardCardStyle}">
+
+                    <StackPanel>
+
+                        <TextBlock Text="APPLICATION INFORMATION"
+                                   Foreground="{StaticResource DaBoyzText}"
+                                   FontSize="16"
+                                   FontWeight="Bold"/>
+
+                        <TextBlock Text="Version"
+                                   Foreground="{StaticResource DaBoyzTextMuted}"
+                                   FontSize="11"
+                                   Margin="0,15,0,2"/>
+
+                        <TextBlock Text="0.1.0 Beta"
+                                   Foreground="{StaticResource DaBoyzTextSecondary}"
+                                   FontSize="13"/>
+
+                        <TextBlock Text="Developer"
+                                   Foreground="{StaticResource DaBoyzTextMuted}"
+                                   FontSize="11"
+                                   Margin="0,15,0,2"/>
+
+                        <TextBlock Text="KaroDevGroup"
+                                   Foreground="{StaticResource DaBoyzTextSecondary}"
+                                   FontSize="13"/>
+
+                    </StackPanel>
+
+                </Border>
+
+
+                <!-- ================================================= -->
+                <!-- FOOTER                                            -->
+                <!-- ================================================= -->
+
+                <StackPanel HorizontalAlignment="Center"
+                            Margin="0,40,0,0">
+
+                    <TextBlock Text="DA BOYZ • SETTINGS"
+                               Foreground="{StaticResource DaBoyzTextMuted}"
+                               FontSize="11"
+                               HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="Created by: KaroDevGroup"
+                               Foreground="#666666"
+                               FontSize="10"
+                               HorizontalAlignment="Center"
+                               Margin="0,5,0,0"/>
+
+                </StackPanel>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+    </Grid>
+
+</Page>
