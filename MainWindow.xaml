@@ -10,7 +10,8 @@
         MinHeight="600"
         MinWidth="900"
         WindowStartupLocation="CenterScreen"
-        Background="#080808">
+        Background="#080808"
+        WindowState="Maximized">
 
     <Window.Resources>
 
@@ -345,7 +346,7 @@
                                    FontWeight="SemiBold"
                                    HorizontalAlignment="Center"/>
 
-                        <TextBlock Text="v0.1.0 BETA"
+                        <TextBlock Text="v1.1.5 BETA"
                                    Foreground="#666666"
                                    FontSize="11"
                                    HorizontalAlignment="Center"
