@@ -12,3 +12,7 @@ DaBoyzApp is a Windows desktop application built for the **DaBoyz** discord serv
 
 ---
 
+## Installation
+
+### Recommended Installation
+
