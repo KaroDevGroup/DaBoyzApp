@@ -5,10 +5,6 @@
 
     <Application.Resources>
 
-        <!-- ========================================================= -->
-        <!-- DA BOYZ COLOR PALETTE                                     -->
-        <!-- ========================================================= -->
-
         <Color x:Key="DaBoyzRedColor">#E00000</Color>
         <Color x:Key="DaBoyzRedBrightColor">#FF1A1A</Color>
 
@@ -23,11 +19,6 @@
         <Color x:Key="DaBoyzTextColor">#FFFFFF</Color>
         <Color x:Key="DaBoyzTextSecondaryColor">#B0B0B0</Color>
         <Color x:Key="DaBoyzTextMutedColor">#666666</Color>
-
-
-        <!-- ========================================================= -->
-        <!-- BRUSHES                                                   -->
-        <!-- ========================================================= -->
 
         <SolidColorBrush x:Key="DaBoyzRed"
                          Color="{StaticResource DaBoyzRedColor}"/>
@@ -59,21 +50,11 @@
         <SolidColorBrush x:Key="DaBoyzTextMuted"
                          Color="{StaticResource DaBoyzTextMutedColor}"/>
 
-
-        <!-- ========================================================= -->
-        <!-- CARD SHADOW                                               -->
-        <!-- ========================================================= -->
-
         <DropShadowEffect x:Key="DaBoyzCardShadow"
                           Color="#000000"
                           BlurRadius="18"
                           ShadowDepth="5"
                           Opacity="0.55"/>
-
-
-        <!-- ========================================================= -->
-        <!-- DASHBOARD CARD STYLE                                      -->
-        <!-- ========================================================= -->
 
         <Style x:Key="DashboardCardStyle"
                TargetType="Border">
@@ -97,15 +78,6 @@
                     Value="{StaticResource DaBoyzCardShadow}"/>
 
         </Style>
-
-
-        <!-- ========================================================= -->
-        <!-- 3D / ELEVATED CARD STYLE                                  -->
-        <!-- ========================================================= -->
-
-        <!-- ========================================================= -->
-        <!-- 3D / ELEVATED CARD STYLE                                  -->
-        <!-- ========================================================= -->
 
         <Style x:Key="DaBoyzCardStyle"
                 TargetType="Border">
@@ -158,11 +130,6 @@
                 <Setter Property="RenderTransformOrigin"
                         Value="0.5,0.5"/>
 
-
-                <!-- ===================================================== -->
-                <!-- HOVER EFFECT                                         -->
-                <!-- ===================================================== -->
-
                 <Style.Triggers>
 
                         <Trigger Property="IsMouseOver"
@@ -211,10 +178,6 @@
                 </Style.Triggers>
 
         </Style>
-
-        <!-- ========================================================= -->
-        <!-- DASHBOARD BUTTON STYLE                                    -->
-        <!-- ========================================================= -->
 
         <Style x:Key="DashboardButtonStyle"
                         TargetType="Button">
@@ -285,10 +248,6 @@
 
         </Style>
 
-        <!-- ========================================================= -->
-        <!-- SECTION TITLE                                             -->
-        <!-- ========================================================= -->
-
         <Style x:Key="SectionTitleStyle"
                TargetType="TextBlock">
 
@@ -302,10 +261,6 @@
                     Value="Bold"/>
 
         </Style>
-
-        <!-- ========================================================= -->
-        <!-- SECTION SUBTITLE                                          -->
-        <!-- ========================================================= -->
 
         <Style x:Key="AdminDashboardButtonStyle"
                 TargetType="Button">
@@ -384,10 +339,6 @@
                 </Setter>
 
         </Style>
-
-        <!-- ========================================================= -->
-        <!-- ACCENT BUTTON                                             -->
-        <!-- ========================================================= -->
 
         <Style x:Key="AccentButtonStyle"
                TargetType="Button">
