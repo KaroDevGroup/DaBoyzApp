@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "XRTSS/VDuog=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sweet Angel Baby\\Desktop\\CODING\\DaBoyzApp\\DaBoyzApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sweet Angel Baby\\.nuget\\packages\\microsoft.net.illink.tasks\\10.0.11\\microsoft.net.illink.tasks.10.0.11.nupkg.sha512",
+    "C:\\Users\\Sweet Angel Baby\\.nuget\\packages\\microsoft.web.webview2\\1.0.4191.47\\microsoft.web.webview2.1.0.4191.47.nupkg.sha512",
+    "C:\\Users\\Sweet Angel Baby\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.11\\microsoft.netcore.app.runtime.win-x64.10.0.11.nupkg.sha512",
+    "C:\\Users\\Sweet Angel Baby\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\10.0.11\\microsoft.windowsdesktop.app.runtime.win-x64.10.0.11.nupkg.sha512",
+    "C:\\Users\\Sweet Angel Baby\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\10.0.11\\microsoft.aspnetcore.app.runtime.win-x64.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
