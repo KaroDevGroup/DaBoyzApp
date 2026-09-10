@@ -79,13 +79,13 @@
                                    FontSize="11"
                                    FontWeight="Bold"/>
 
-                        <TextBlock Text="ALL COMMANDS MUST GO THROUGH PROBOT"
+                        <TextBlock Text="ALL COMMANDS GO THROUGH KARODEVGROUP BOT"
                                    Foreground="{StaticResource DaBoyzText}"
                                    FontSize="17"
                                    FontWeight="Bold"
                                    Margin="0,6,0,4"/>
 
-                        <TextBlock Text="These commands are intended to be executed through ProBot. Do not attempt to manually replicate or bypass ProBot's moderation systems."
+                        <TextBlock Text="These commands are intended to be executed through KaroDevGroup. Do not attempt to manually replicate or bypass KaroDevGroup's moderation systems."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="13"
                                    TextWrapping="Wrap"/>
@@ -96,10 +96,10 @@
 
 
                 <!-- ================================================= -->
-                <!-- MODERATION COMMANDS                               -->
+                <!-- GENERAL COMMANDS                                  -->
                 <!-- ================================================= -->
 
-                <TextBlock Text="MODERATION COMMANDS"
+                <TextBlock Text="GENERAL COMMANDS"
                            Style="{StaticResource SectionTitleStyle}"
                            Margin="0,0,0,15"/>
 
@@ -111,34 +111,107 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
 
+                    <!-- VERSION -->
 
-                    <!-- WARN -->
-
-                    <Border Grid.Row="0"
-                            Grid.Column="0"
+                    <Border Grid.Column="0"
                             Style="{StaticResource DashboardCardStyle}"
                             Margin="0,0,8,8">
 
                         <StackPanel>
 
-                            <TextBlock Text="/warn"
-                                       Foreground="{StaticResource DaBoyzRed}"
-                                       FontSize="18"
-                                       FontWeight="Bold"/>
+                            <WrapPanel VerticalAlignment="Center">
 
-                            <TextBlock Text="/warn [user] [reason]"
+                                <TextBlock Text="/version"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center"/>
+
+                                <!-- TRIAL STAFF -->
+
+                                <Border Background="#0BF4FC"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3"
+                                        VerticalAlignment="Center">
+
+                                    <TextBlock Text="TRIAL STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <!-- STAFF -->
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3"
+                                        VerticalAlignment="Center">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <!-- SENIOR STAFF -->
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3"
+                                        VerticalAlignment="Center">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <!-- MANAGEMENT -->
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3"
+                                        VerticalAlignment="Center">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <!-- OWNER -->
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Margin="0"
+                                        Padding="7,3"
+                                        VerticalAlignment="Center">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/version"
                                        Foreground="{StaticResource DaBoyzText}"
                                        FontFamily="Consolas"
                                        FontSize="13"
                                        Margin="0,8,0,6"/>
 
-                            <TextBlock Text="Warns a user and records the warning."
+                            <TextBlock Text="Displays the current version of the Da Boyz Discord bot."
                                        Foreground="{StaticResource DaBoyzTextSecondary}"
                                        FontSize="12"
                                        TextWrapping="Wrap"/>
@@ -148,27 +221,90 @@
                     </Border>
 
 
-                    <!-- REMOVE WARNING -->
+                    <!-- DOWNLOAD -->
 
-                    <Border Grid.Row="0"
-                            Grid.Column="1"
+                    <Border Grid.Column="1"
                             Style="{StaticResource DashboardCardStyle}"
                             Margin="8,0,0,8">
 
                         <StackPanel>
 
-                            <TextBlock Text="/warn_remove"
-                                       Foreground="{StaticResource DaBoyzRed}"
-                                       FontSize="18"
-                                       FontWeight="Bold"/>
+                            <WrapPanel VerticalAlignment="Center">
 
-                            <TextBlock Text="/warn_remove [input]"
+                                <TextBlock Text="/download"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center"/>
+
+                                <Border Background="#0BF4FC"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="TRIAL STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/download"
                                        Foreground="{StaticResource DaBoyzText}"
                                        FontFamily="Consolas"
                                        FontSize="13"
                                        Margin="0,8,0,6"/>
 
-                            <TextBlock Text="Removes a warning from a user's warning record."
+                            <TextBlock Text="Provides the current DaBoyzApp download or installation information."
                                        Foreground="{StaticResource DaBoyzTextSecondary}"
                                        FontSize="12"
                                        TextWrapping="Wrap"/>
@@ -177,118 +313,110 @@
 
                     </Border>
 
+                </Grid>
 
-                    <!-- VIEW WARNINGS -->
 
-                    <Border Grid.Row="1"
-                            Grid.Column="0"
+                <!-- ================================================= -->
+                <!-- VOICE COMMANDS                                    -->
+                <!-- ================================================= -->
+
+                <TextBlock Text="VOICE COMMANDS"
+                           Style="{StaticResource SectionTitleStyle}"
+                           Margin="0,35,0,15"/>
+
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <!-- JOIN CALL -->
+
+                    <Border Grid.Column="0"
                             Style="{StaticResource DashboardCardStyle}"
-                            Margin="0,8,8,8">
+                            Margin="0,0,8,8">
 
                         <StackPanel>
 
-                            <TextBlock Text="/warnings"
-                                       Foreground="{StaticResource DaBoyzRed}"
-                                       FontSize="18"
-                                       FontWeight="Bold"/>
+                            <WrapPanel VerticalAlignment="Center">
 
-                            <TextBlock Text="/warnings [user] [page]"
+                                <TextBlock Text="/joincall"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center"/>
+
+                                <Border Background="#0BF4FC"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="TRIAL STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/joincall"
                                        Foreground="{StaticResource DaBoyzText}"
                                        FontFamily="Consolas"
                                        FontSize="13"
                                        Margin="0,8,0,6"/>
 
-                            <TextBlock Text="Displays a user's recorded warnings."
-                                       Foreground="{StaticResource DaBoyzTextSecondary}"
-                                       FontSize="12"
-                                       TextWrapping="Wrap"/>
-
-                        </StackPanel>
-
-                    </Border>
-
-
-                    <!-- KICK -->
-
-                    <Border Grid.Row="1"
-                            Grid.Column="1"
-                            Style="{StaticResource DashboardCardStyle}"
-                            Margin="8,8,0,8">
-
-                        <StackPanel>
-
-                            <TextBlock Text="/kick"
-                                       Foreground="{StaticResource DaBoyzRed}"
-                                       FontSize="18"
-                                       FontWeight="Bold"/>
-
-                            <TextBlock Text="/kick [user] [reason]"
-                                       Foreground="{StaticResource DaBoyzText}"
-                                       FontFamily="Consolas"
-                                       FontSize="13"
-                                       Margin="0,8,0,6"/>
-
-                            <TextBlock Text="Kicks a user from the Discord server."
-                                       Foreground="{StaticResource DaBoyzTextSecondary}"
-                                       FontSize="12"
-                                       TextWrapping="Wrap"/>
-
-                        </StackPanel>
-
-                    </Border>
-
-
-                    <!-- BAN -->
-
-                    <Border Grid.Row="2"
-                            Grid.Column="0"
-                            Style="{StaticResource DashboardCardStyle}"
-                            Margin="0,8,8,0">
-
-                        <StackPanel>
-
-                            <TextBlock Text="/ban"
-                                       Foreground="{StaticResource DaBoyzRed}"
-                                       FontSize="18"
-                                       FontWeight="Bold"/>
-
-                            <TextBlock Text="/ban [user] [time] [reason] [bulk]"
-                                       Foreground="{StaticResource DaBoyzText}"
-                                       FontFamily="Consolas"
-                                       FontSize="13"
-                                       Margin="0,8,0,6"/>
-
-                            <TextBlock Text="Bans a user from the Discord server."
-                                       Foreground="{StaticResource DaBoyzTextSecondary}"
-                                       FontSize="12"
-                                       TextWrapping="Wrap"/>
-
-                        </StackPanel>
-
-                    </Border>
-
-
-                    <!-- UNBAN -->
-
-                    <Border Grid.Row="2"
-                            Grid.Column="1"
-                            Style="{StaticResource DashboardCardStyle}"
-                            Margin="8,8,0,0">
-
-                        <StackPanel>
-
-                            <TextBlock Text="/unban"
-                                       Foreground="{StaticResource DaBoyzRed}"
-                                       FontSize="18"
-                                       FontWeight="Bold"/>
-
-                            <TextBlock Text="/unban [input]"
-                                       Foreground="{StaticResource DaBoyzText}"
-                                       FontFamily="Consolas"
-                                       FontSize="13"
-                                       Margin="0,8,0,6"/>
-
-                            <TextBlock Text="Removes a ban from a user."
+                            <TextBlock Text="Joins the specified Discord voice channel."
                                        Foreground="{StaticResource DaBoyzTextSecondary}"
                                        FontSize="12"
                                        TextWrapping="Wrap"/>
@@ -331,12 +459,51 @@
 
                         <StackPanel>
 
-                            <TextBlock Text="/lock"
-                                       Foreground="{StaticResource DaBoyzRed}"
-                                       FontSize="18"
-                                       FontWeight="Bold"/>
+                            <WrapPanel>
 
-                            <TextBlock Text="/lock [channel] [reason]"
+                                <TextBlock Text="/lock"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/lock"
                                        Foreground="{StaticResource DaBoyzText}"
                                        FontFamily="Consolas"
                                        FontSize="13"
@@ -361,18 +528,57 @@
 
                         <StackPanel>
 
-                            <TextBlock Text="/unlock"
-                                       Foreground="{StaticResource DaBoyzRed}"
-                                       FontSize="18"
-                                       FontWeight="Bold"/>
+                            <WrapPanel>
 
-                            <TextBlock Text="/unlock [channel]"
+                                <TextBlock Text="/unlock"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/unlock"
                                        Foreground="{StaticResource DaBoyzText}"
                                        FontFamily="Consolas"
                                        FontSize="13"
                                        Margin="0,8,0,6"/>
 
-                            <TextBlock Text="Removes a channel lock."
+                            <TextBlock Text="Removes a channel lock and allows members to send messages again."
                                        Foreground="{StaticResource DaBoyzTextSecondary}"
                                        FontSize="12"
                                        TextWrapping="Wrap"/>
@@ -391,10 +597,61 @@
 
                         <StackPanel>
 
-                            <TextBlock Text="/clear"
-                                       Foreground="{StaticResource DaBoyzRed}"
-                                       FontSize="18"
-                                       FontWeight="Bold"/>
+                            <WrapPanel>
+
+                                <TextBlock Text="/clear"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
 
                             <TextBlock Text="/clear [number_of_messages]"
                                        Foreground="{StaticResource DaBoyzText}"
@@ -403,6 +660,681 @@
                                        Margin="0,8,0,6"/>
 
                             <TextBlock Text="Deletes a specified number of messages from a channel."
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- SLOWMODE -->
+
+                    <Border Grid.Row="1"
+                            Grid.Column="1"
+                            Style="{StaticResource DashboardCardStyle}"
+                            Margin="8,8,0,0">
+
+                        <StackPanel>
+
+                            <WrapPanel>
+
+                                <TextBlock Text="/slowmode"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/slowmode [time]"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontFamily="Consolas"
+                                       FontSize="13"
+                                       Margin="0,8,0,6"/>
+
+                            <TextBlock Text="Sets or changes the slowmode delay for a channel."
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </Grid>
+
+
+                <!-- ================================================= -->
+                <!-- MODERATION COMMANDS                               -->
+                <!-- ================================================= -->
+
+                <TextBlock Text="MODERATION COMMANDS"
+                           Style="{StaticResource SectionTitleStyle}"
+                           Margin="0,35,0,15"/>
+
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+
+                    <!-- TIMEOUT -->
+
+                    <Border Grid.Row="0"
+                            Grid.Column="0"
+                            Style="{StaticResource DashboardCardStyle}"
+                            Margin="0,0,8,8">
+
+                        <StackPanel>
+
+                            <WrapPanel>
+
+                                <TextBlock Text="/timeout"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#0BF4FC"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="TRIAL STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/timeout [user] [duration] [reason]"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontFamily="Consolas"
+                                       FontSize="13"
+                                       Margin="0,8,0,6"/>
+
+                            <TextBlock Text="Temporarily restricts a user from interacting in the Discord server."
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- KICK -->
+
+                    <Border Grid.Row="0"
+                            Grid.Column="1"
+                            Style="{StaticResource DashboardCardStyle}"
+                            Margin="8,0,0,8">
+
+                        <StackPanel>
+
+                            <WrapPanel>
+
+                                <TextBlock Text="/kick"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/kick [user] [reason]"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontFamily="Consolas"
+                                       FontSize="13"
+                                       Margin="0,8,0,6"/>
+
+                            <TextBlock Text="Kicks a user from the Discord server."
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- WARN -->
+
+                    <Border Grid.Row="1"
+                            Grid.Column="0"
+                            Style="{StaticResource DashboardCardStyle}"
+                            Margin="0,8,8,8">
+
+                        <StackPanel>
+
+                            <WrapPanel>
+
+                                <TextBlock Text="/warn"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#0BF4FC"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="TRIAL STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/warn [user] [reason]"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontFamily="Consolas"
+                                       FontSize="13"
+                                       Margin="0,8,0,6"/>
+
+                            <TextBlock Text="Warns a user and records the warning."
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- WARNINGS -->
+
+                    <Border Grid.Row="1"
+                            Grid.Column="1"
+                            Style="{StaticResource DashboardCardStyle}"
+                            Margin="8,8,0,8">
+
+                        <StackPanel>
+
+                            <WrapPanel>
+
+                                <TextBlock Text="/warnings"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#0BF4FC"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="TRIAL STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/warnings [user]"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontFamily="Consolas"
+                                       FontSize="13"
+                                       Margin="0,8,0,6"/>
+
+                            <TextBlock Text="Displays a user's recorded warnings."
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- REMOVE WARNING -->
+
+                    <Border Grid.Row="2"
+                            Grid.Column="0"
+                            Style="{StaticResource DashboardCardStyle}"
+                            Margin="0,8,8,8">
+
+                        <StackPanel>
+
+                            <WrapPanel>
+
+                                <TextBlock Text="/warn_remove"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#AF95E4"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="STAFF"
+                                               Foreground="#080808"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/warn_remove [user] [warning_number]"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontFamily="Consolas"
+                                       FontSize="13"
+                                       Margin="0,8,0,6"/>
+
+                            <TextBlock Text="Removes a warning from a user's warning record."
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- BAN -->
+
+                    <Border Grid.Row="2"
+                            Grid.Column="1"
+                            Style="{StaticResource DashboardCardStyle}"
+                            Margin="8,8,0,8">
+
+                        <StackPanel>
+
+                            <WrapPanel>
+
+                                <TextBlock Text="/ban"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#5B03C7"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="SENIOR STAFF"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="0,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/ban [user] [reason]"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontFamily="Consolas"
+                                       FontSize="13"
+                                       Margin="0,8,0,6"/>
+
+                            <TextBlock Text="Bans a user from the Discord server."
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       TextWrapping="Wrap"/>
+
+                        </StackPanel>
+
+                    </Border>
+
+
+                    <!-- UNBAN -->
+
+                    <Border Grid.Row="3"
+                            Grid.Column="0"
+                            Style="{StaticResource DashboardCardStyle}"
+                            Margin="0,8,8,8">
+
+                        <StackPanel>
+
+                            <WrapPanel>
+
+                                <TextBlock Text="/unban"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <Border Background="#e95505"
+                                        CornerRadius="4"
+                                        Margin="10,0,4,0"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="MANAGEMENT"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                                <Border Background="#E00000"
+                                        CornerRadius="4"
+                                        Padding="7,3">
+
+                                    <TextBlock Text="OWNER"
+                                               Foreground="White"
+                                               FontSize="9"
+                                               FontWeight="Bold"/>
+
+                                </Border>
+
+                            </WrapPanel>
+
+                            <TextBlock Text="/unban [user_id]"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontFamily="Consolas"
+                                       FontSize="13"
+                                       Margin="0,8,0,6"/>
+
+                            <TextBlock Text="Removes a ban from a user."
                                        Foreground="{StaticResource DaBoyzTextSecondary}"
                                        FontSize="12"
                                        TextWrapping="Wrap"/>

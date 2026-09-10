@@ -142,6 +142,153 @@
 
 
                 <!-- ================================================= -->
+                <!-- MANAGEMENT                                        -->
+                <!-- ================================================= -->
+
+                <TextBlock Text="MANAGEMENT"
+                           Foreground="{StaticResource DaBoyzText}"
+                           FontSize="20"
+                           FontWeight="Bold"
+                           Margin="0,30,0,15"/>
+
+
+                <!-- KARODEVGROUP -->
+
+                <Border Style="{StaticResource DashboardCardStyle}"
+                        Margin="0,0,0,10">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock Text="KaroDevGroup"
+                                           Foreground="{StaticResource DaBoyzText}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <TextBlock Text="MANAGEMENT"
+                                           Foreground="#e95505"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center"
+                                           Margin="12,2,0,0"/>
+
+                            </StackPanel>
+
+                            <TextBlock Text="Joined: 9/10/2026"
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       Margin="0,8,0,0"/>
+
+                            <TextBlock Text="User ID: 1547595786701766747"
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontFamily="Consolas"
+                                       FontSize="12"
+                                       Margin="0,3,0,0"/>
+
+                        </StackPanel>
+
+
+                        <StackPanel Grid.Column="1"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center">
+
+                            <TextBlock Text="STAFF STRIKES"
+                                       Foreground="{StaticResource DaBoyzTextMuted}"
+                                       FontSize="10"
+                                       FontWeight="SemiBold"
+                                       HorizontalAlignment="Right"/>
+
+                            <TextBlock Text="0"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontSize="24"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Right"
+                                       Margin="0,3,0,0"/>
+
+                        </StackPanel>
+
+                    </Grid>
+
+                </Border>
+
+
+                <!-- MRS. KARO -->
+
+                <Border Style="{StaticResource DashboardCardStyle}"
+                        Margin="0,0,0,10">
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock Text="Mrs. Karo"
+                                           Foreground="{StaticResource DaBoyzText}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <TextBlock Text="MANAGEMENT"
+                                           Foreground="#e95505"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center"
+                                           Margin="12,2,0,0"/>
+
+                            </StackPanel>
+
+                            <TextBlock Text="Joined: 2/27/2026"
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       Margin="0,8,0,0"/>
+
+                            <TextBlock Text="User ID: 706543925548024149"
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontFamily="Consolas"
+                                       FontSize="12"
+                                       Margin="0,3,0,0"/>
+
+                        </StackPanel>
+
+
+                        <StackPanel Grid.Column="1"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center">
+
+                            <TextBlock Text="STAFF STRIKES"
+                                       Foreground="{StaticResource DaBoyzTextMuted}"
+                                       FontSize="10"
+                                       FontWeight="SemiBold"
+                                       HorizontalAlignment="Right"/>
+
+                            <TextBlock Text="0"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontSize="24"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Right"
+                                       Margin="0,3,0,0"/>
+
+                        </StackPanel>
+
+                    </Grid>
+
+                </Border>
+
+
+                <!-- ================================================= -->
                 <!-- SENIOR STAFF                                      -->
                 <!-- ================================================= -->
 
@@ -360,6 +507,7 @@
 
                 </Border>
 
+
                 <!-- ================================================= -->
                 <!-- TRIAL STAFF                                       -->
                 <!-- ================================================= -->
@@ -371,71 +519,7 @@
                            Margin="0,30,0,15"/>
 
 
-                <Border Style="{StaticResource DashboardCardStyle}"
-                        Margin="0,0,0,10">
-
-                    <Grid>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-
-                        <StackPanel>
-
-                            <StackPanel Orientation="Horizontal">
-
-                                <TextBlock Text="Mrs. Karo"
-                                           Foreground="{StaticResource DaBoyzText}"
-                                           FontSize="18"
-                                           FontWeight="Bold"/>
-
-                                <TextBlock Text="TRIAL"
-                                           Foreground="#0BF4FC"
-                                           FontSize="11"
-                                           FontWeight="Bold"
-                                           VerticalAlignment="Center"
-                                           Margin="12,2,0,0"/>
-
-                            </StackPanel>
-
-                            <TextBlock Text="Joined: 2/27/2026"
-                                       Foreground="{StaticResource DaBoyzTextSecondary}"
-                                       FontSize="12"
-                                       Margin="0,8,0,0"/>
-
-                            <TextBlock Text="User ID: 706543925548024149"
-                                       Foreground="{StaticResource DaBoyzTextSecondary}"
-                                       FontFamily="Consolas"
-                                       FontSize="12"
-                                       Margin="0,3,0,0"/>
-
-                        </StackPanel>
-
-                        <StackPanel Grid.Column="1"
-                                    HorizontalAlignment="Right"
-                                    VerticalAlignment="Center">
-
-                            <TextBlock Text="STAFF STRIKES"
-                                       Foreground="{StaticResource DaBoyzTextMuted}"
-                                       FontSize="10"
-                                       FontWeight="SemiBold"
-                                       HorizontalAlignment="Right"/>
-
-                            <TextBlock Text="0"
-                                       Foreground="{StaticResource DaBoyzText}"
-                                       FontSize="24"
-                                       FontWeight="Bold"
-                                       HorizontalAlignment="Right"
-                                       Margin="0,3,0,0"/>
-
-                        </StackPanel>
-
-                    </Grid>
-
-                </Border>
-
-                <!-- GAGE -->
+                <!-- DIZZYESTBRUTE69 -->
 
                 <Border Style="{StaticResource DashboardCardStyle}"
                         Margin="0,0,0,10">
@@ -481,7 +565,7 @@
                         <StackPanel Grid.Column="1"
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Center">
-                                
+
                             <TextBlock Text="STAFF STRIKES"
                                        Foreground="{StaticResource DaBoyzTextMuted}"
                                        FontSize="10"
@@ -496,10 +580,11 @@
                                        Margin="0,3,0,0"/>
 
                         </StackPanel>
-                    
+
                     </Grid>
 
                 </Border>
+
 
                 <!-- ================================================= -->
                 <!-- FOOTER                                            -->

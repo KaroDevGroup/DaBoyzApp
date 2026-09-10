@@ -60,7 +60,7 @@
 
                                 </Border>
 
-                                <TextBlock Text="  v1.1.5"
+                                <TextBlock Text="  v1.1.6"
                                            Foreground="White"
                                            FontSize="18"
                                            FontWeight="Bold"
@@ -68,12 +68,12 @@
 
                             </StackPanel>
 
-                            <TextBlock Text="Updater, WebView2, and Gaming improvements"
+                            <TextBlock Text="Staff Page, Commands, and Bug improvements"
                                        Foreground="{StaticResource DaBoyzTextSecondary}"
                                        FontSize="13"
                                        Margin="0,8,0,0"/>
 
-                            <TextBlock Text="September 8th, 2026"
+                            <TextBlock Text="September 10th, 2026"
                                        Foreground="{StaticResource DaBoyzTextMuted}"
                                        FontSize="11"
                                        Margin="0,4,0,0"/>
