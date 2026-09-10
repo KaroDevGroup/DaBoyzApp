@@ -31,7 +31,7 @@ The DaBoyzApp is a Windows desktop application built for the **DaBoyz** discord 
 
 ---
 
-## Installation </>
+## </> Installation 
 
 > Simple install, you can't fuck this up.
 
@@ -62,7 +62,7 @@ The application will display the DaBoyz splash screen before loading the main ap
 
 ---
 
-## Requirements </>
+## </> Requirements
 
 > DaBoyzApp is currently designed for Windows x64 based systems.
 
@@ -76,7 +76,7 @@ The application will display the DaBoyz splash screen before loading the main ap
 
 --- 
 
-## Internet Requirements
+## </> Internet Requirements
 
 > Most of the application can operate using locally packaged resources, but certain features require an internet connection.
 
@@ -90,7 +90,7 @@ The application will display the DaBoyz splash screen before loading the main ap
 
 ---
 
-## File Locations
+## </> File Locations
 
 > It is recommended to clear your cache folder every now and then.
 
@@ -104,7 +104,7 @@ The application will display the DaBoyz splash screen before loading the main ap
 
 ---
 
-## Front/Back Stack
+## </> Front/Back Stack
 
 DaBoyzApp was created with the following stack:
 
