@@ -34,7 +34,8 @@
                 <!-- LATEST VERSION                                     -->
                 <!-- ================================================= -->
 
-                <Border Style="{StaticResource DaBoyzCardStyle}"
+                <Border x:Name="LatestVersionCard"
+                        Style="{StaticResource DaBoyzCardStyle}"
                         Padding="28"
                         Margin="0,0,0,18">
 
@@ -60,7 +61,7 @@
 
                                 </Border>
 
-                                <TextBlock Text="  v1.1.6"
+                                <TextBlock Text="  v1.1.7"
                                            Foreground="White"
                                            FontSize="18"
                                            FontWeight="Bold"
@@ -68,12 +69,12 @@
 
                             </StackPanel>
 
-                            <TextBlock Text="Staff Page, Commands, and Bug improvements"
+                            <TextBlock Text="UI Improvements, KDG, and QOL improvements"
                                        Foreground="{StaticResource DaBoyzTextSecondary}"
                                        FontSize="13"
                                        Margin="0,8,0,0"/>
 
-                            <TextBlock Text="September 10th, 2026"
+                            <TextBlock Text="September 11th, 2026"
                                        Foreground="{StaticResource DaBoyzTextMuted}"
                                        FontSize="11"
                                        Margin="0,4,0,0"/>
@@ -95,7 +96,8 @@
                 <!-- NEW FEATURES                                      -->
                 <!-- ================================================= -->
 
-                <Border Style="{StaticResource DaBoyzCardStyle}"
+                <Border x:Name="NewFeaturesCard"
+                        Style="{StaticResource DaBoyzCardStyle}"
                         Padding="28"
                         Margin="0,0,0,18">
 
@@ -138,12 +140,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Automatic Updates"
+                                <TextBlock Text="New KDG Tab"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Added automatic GitHub release detection so DaBoyzApp can notify users when a newer version is available."
+                                <TextBlock Text="New KaroDevGroup tab on the sidebar - includes KDG projects."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -179,12 +181,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Download Progress"
+                                <TextBlock Text="Remember Me"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Added a live download progress bar that displays the real-time percentage while an update is being downloaded."
+                                <TextBlock Text="Remember Me button in the admin portal is now functional."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -220,12 +222,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Embedded Web Content"
+                                <TextBlock Text="UI Improvements"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Expanded the Gaming Database with integrated web pages for Destiny 2, Warzone, FiveM, Minecraft, Rainbow Six Siege, Rocket League, and Marvel Rivals."
+                                <TextBlock Text="Various pages within the app now have transition animations."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -261,12 +263,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Destiny 2 Encounter Guides"
+                                <TextBlock Text="Compiler Update"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Added dedicated raid encounter pages with embedded video guides for multiple Destiny 2 raids and encounters."
+                                <TextBlock Text="Updated compiler to support audio and py files."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -285,7 +287,8 @@
                 <!-- IMPROVEMENTS                                      -->
                 <!-- ================================================= -->
 
-                <Border Style="{StaticResource DaBoyzCardStyle}"
+                <Border x:Name="ImprovementsCard"
+                        Style="{StaticResource DaBoyzCardStyle}"
                         Padding="28"
                         Margin="0,0,0,18">
 
@@ -330,7 +333,8 @@
                 <!-- FIXES                                             -->
                 <!-- ================================================= -->
 
-                <Border Style="{StaticResource DaBoyzCardStyle}"
+                <Border x:Name="FixesCard"
+                        Style="{StaticResource DaBoyzCardStyle}"
                         Padding="28"
                         Margin="0,0,0,18">
 

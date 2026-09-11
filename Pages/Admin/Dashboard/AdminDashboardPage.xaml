@@ -92,7 +92,8 @@
                 <!-- PUNISHMENT SLATE                                 -->
                 <!-- ================================================= -->
 
-                <Button Grid.Row="0"
+                <Button x:Name="PunishmentSlateButton"
+                        Grid.Row="0"
                         Grid.Column="0"
                         Style="{StaticResource AdminDashboardButtonStyle}"
                         Margin="0,0,8,8"
@@ -131,7 +132,8 @@
                 <!-- RULES                                             -->
                 <!-- ================================================= -->
 
-                <Button Grid.Row="0"
+                <Button x:Name="RulesButton"
+                        Grid.Row="0"
                         Grid.Column="1"
                         Style="{StaticResource AdminDashboardButtonStyle}"
                         Margin="8,0,0,8"
@@ -170,7 +172,8 @@
                 <!-- DISCORD COMMANDS                                 -->
                 <!-- ================================================= -->
 
-                <Button Grid.Row="1"
+                <Button x:Name="DiscordCommandsButton"
+                        Grid.Row="1"
                         Grid.Column="0"
                         Style="{StaticResource AdminDashboardButtonStyle}"
                         Margin="0,8,8,0"
@@ -209,7 +212,8 @@
                 <!-- STAFF MEMBERS                                    -->
                 <!-- ================================================= -->
 
-                <Button Grid.Row="1"
+                <Button x:Name="StaffMembersButton"
+                        Grid.Row="1"
                         Grid.Column="1"
                         Style="{StaticResource AdminDashboardButtonStyle}"
                         Margin="8,8,0,0"

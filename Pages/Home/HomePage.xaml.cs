@@ -1,6 +1,6 @@
 using System.Windows;
 using System.Windows.Controls;
-using DaBoyzApp;
+using DaBoyzApp.Services;
 
 namespace DaBoyzApp.Pages;
 
@@ -9,50 +9,53 @@ public partial class HomePage : Page
     public HomePage()
     {
         InitializeComponent();
+
+        Loaded += HomePage_Loaded;
     }
 
-    private void GamingCard_Click(object sender, RoutedEventArgs e)
+    private void HomePage_Loaded(
+        object sender,
+        RoutedEventArgs e)
     {
-        NavigateTo("Gaming");
-    }
-
-    private void MusicCard_Click(object sender, RoutedEventArgs e)
-    {
-        NavigateTo("Music");
-    }
-
-    private void PatchNotesCard_Click(object sender, RoutedEventArgs e)
-    {
-        NavigateTo("PatchNotes");
-    }
-
-    private void AdminCard_Click(object sender, RoutedEventArgs e)
-    {
-        NavigateTo("Admin");
-    }
-
-    private void NavigateTo(string page)
-    {
-        if (Application.Current.MainWindow is MainWindow mainWindow)
-        {
-            switch (page)
+        CardAnimationService.Stagger(
+            new[]
             {
-                case "Gaming":
-                    mainWindow.NavigateToGaming();
-                    break;
+                GamingCardButton,
+                MusicCardButton,
+                PatchNotesCardButton,
+                AdminCardButton
+            });
+    }
 
-                case "Music":
-                    mainWindow.NavigateToMusic();
-                    break;
+    private void GamingCard_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        (Window.GetWindow(this) as MainWindow)?
+            .NavigateToGaming();
+    }
 
-                case "PatchNotes":
-                    mainWindow.NavigateToPatchNotes();
-                    break;
+    private void MusicCard_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        (Window.GetWindow(this) as MainWindow)?
+            .NavigateToMusic();
+    }
 
-                case "Admin":
-                    mainWindow.NavigateToAdmin();
-                    break;
-            }
-        }
+    private void PatchNotesCard_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        (Window.GetWindow(this) as MainWindow)?
+            .NavigateToPatchNotes();
+    }
+
+    private void AdminCard_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        (Window.GetWindow(this) as MainWindow)?
+            .NavigateToAdmin();
     }
 }
