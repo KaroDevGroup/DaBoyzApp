@@ -1,6 +1,82 @@
+<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
 <Page x:Class="DaBoyzApp.Pages.PatchNotesPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Page.Resources>
+
+        <Style x:Key="DashboardButtonStyle"
+               TargetType="Button">
+
+            <Setter Property="Background"
+                    Value="#161616"/>
+
+            <Setter Property="Foreground"
+                    Value="White"/>
+
+            <Setter Property="BorderThickness"
+                    Value="0"/>
+
+            <Setter Property="Cursor"
+                    Value="Hand"/>
+
+            <Setter Property="Padding"
+                    Value="0"/>
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="Button">
+
+                        <Border x:Name="Card"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="#292929"
+                                BorderThickness="1"
+                                CornerRadius="12"
+                                Padding="24">
+
+                            <ContentPresenter/>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+
+                                <Setter TargetName="Card"
+                                        Property="Background"
+                                        Value="#1E1E1E"/>
+
+                                <Setter TargetName="Card"
+                                        Property="BorderBrush"
+                                        Value="#E00000"/>
+
+                            </Trigger>
+
+                            <Trigger Property="IsPressed"
+                                     Value="True">
+
+                                <Setter TargetName="Card"
+                                        Property="Background"
+                                        Value="#252525"/>
+
+                            </Trigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
+
+    </Page.Resources>
 
     <Grid Background="Transparent">
 
@@ -8,10 +84,6 @@
                       HorizontalScrollBarVisibility="Disabled">
 
             <StackPanel Margin="45,40,45,50">
-
-                <!-- ================================================= -->
-                <!-- HEADER                                            -->
-                <!-- ================================================= -->
 
                 <TextBlock Text="PATCH NOTES"
                            Foreground="{StaticResource DaBoyzText}"
@@ -29,13 +101,8 @@
                         HorizontalAlignment="Left"
                         Margin="0,18,0,30"/>
 
-
-                <!-- ================================================= -->
-                <!-- LATEST VERSION                                     -->
-                <!-- ================================================= -->
-
                 <Border x:Name="LatestVersionCard"
-                        Style="{StaticResource DaBoyzCardStyle}"
+                        Style="{StaticResource DashboardCardStyle}"
                         Padding="28"
                         Margin="0,0,0,18">
 
@@ -61,7 +128,7 @@
 
                                 </Border>
 
-                                <TextBlock Text="  v1.1.7"
+                                <TextBlock Text="  v1.1.8"
                                            Foreground="White"
                                            FontSize="18"
                                            FontWeight="Bold"
@@ -69,12 +136,12 @@
 
                             </StackPanel>
 
-                            <TextBlock Text="UI Improvements, KDG, and QOL improvements"
+                            <TextBlock Text="New Database, Rebranded UI, Music Page, and more!"
                                        Foreground="{StaticResource DaBoyzTextSecondary}"
                                        FontSize="13"
                                        Margin="0,8,0,0"/>
 
-                            <TextBlock Text="September 11th, 2026"
+                            <TextBlock Text="September 14th, 2026"
                                        Foreground="{StaticResource DaBoyzTextMuted}"
                                        FontSize="11"
                                        Margin="0,4,0,0"/>
@@ -91,13 +158,8 @@
 
                 </Border>
 
-
-                <!-- ================================================= -->
-                <!-- NEW FEATURES                                      -->
-                <!-- ================================================= -->
-
                 <Border x:Name="NewFeaturesCard"
-                        Style="{StaticResource DaBoyzCardStyle}"
+                        Style="{StaticResource DashboardCardStyle}"
                         Padding="28"
                         Margin="0,0,0,18">
 
@@ -114,8 +176,43 @@
                                    FontWeight="Bold"
                                    Margin="0,5,0,20"/>
 
+                        <Grid Margin="0,0,0,16">
 
-                        <!-- AUTOMATIC UPDATES -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Width="24"
+                                    Height="24"
+                                    CornerRadius="6"
+                                    Background="#2A0000">
+
+                                <TextBlock Text="+"
+                                           Foreground="{StaticResource DaBoyzRed}"
+                                           FontSize="16"
+                                           FontWeight="Bold"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"/>
+
+                            </Border>
+
+                            <StackPanel Grid.Column="1">
+
+                                <TextBlock Text="New Database"
+                                           Foreground="White"
+                                           FontSize="14"
+                                           FontWeight="SemiBold"/>
+
+                                <TextBlock Text="New Database backend for the DaBoyzApp - Used for authentification and discord integration."
+                                           Foreground="{StaticResource DaBoyzTextSecondary}"
+                                           FontSize="12"
+                                           TextWrapping="Wrap"
+                                           Margin="0,3,0,0"/>
+
+                            </StackPanel>
+
+                        </Grid>
 
                         <Grid Margin="0,0,0,16">
 
@@ -140,12 +237,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="New KDG Tab"
+                                <TextBlock Text="DaBoyzBot Integration"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="New KaroDevGroup tab on the sidebar - includes KDG projects."
+                                <TextBlock Text="DaBoyzApp and DaBoyzBot now integrated together."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -154,9 +251,6 @@
                             </StackPanel>
 
                         </Grid>
-
-
-                        <!-- DOWNLOAD PROGRESS -->
 
                         <Grid Margin="0,0,0,16">
 
@@ -181,12 +275,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Remember Me"
+                                <TextBlock Text="Updated Decisions System"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Remember Me button in the admin portal is now functional."
+                                <TextBlock Text="Discord staff can now issue punishments through the app."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -195,50 +289,6 @@
                             </StackPanel>
 
                         </Grid>
-
-
-                        <!-- EMBEDDED WEB CONTENT -->
-
-                        <Grid Margin="0,0,0,16">
-
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="32"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-                            <Border Width="24"
-                                    Height="24"
-                                    CornerRadius="6"
-                                    Background="#2A0000">
-
-                                <TextBlock Text="+"
-                                           Foreground="{StaticResource DaBoyzRed}"
-                                           FontSize="16"
-                                           FontWeight="Bold"
-                                           HorizontalAlignment="Center"
-                                           VerticalAlignment="Center"/>
-
-                            </Border>
-
-                            <StackPanel Grid.Column="1">
-
-                                <TextBlock Text="UI Improvements"
-                                           Foreground="White"
-                                           FontSize="14"
-                                           FontWeight="SemiBold"/>
-
-                                <TextBlock Text="Various pages within the app now have transition animations."
-                                           Foreground="{StaticResource DaBoyzTextSecondary}"
-                                           FontSize="12"
-                                           TextWrapping="Wrap"
-                                           Margin="0,3,0,0"/>
-
-                            </StackPanel>
-
-                        </Grid>
-
-
-                        <!-- DESTINY GUIDES -->
 
                         <Grid>
 
@@ -263,12 +313,12 @@
 
                             <StackPanel Grid.Column="1">
 
-                                <TextBlock Text="Compiler Update"
+                                <TextBlock Text="UI Rebrand"
                                            Foreground="White"
                                            FontSize="14"
                                            FontWeight="SemiBold"/>
 
-                                <TextBlock Text="Updated compiler to support audio and py files."
+                                <TextBlock Text="The entire DaBoyzApp UI has changed. New cards, new buttons, new designs."
                                            Foreground="{StaticResource DaBoyzTextSecondary}"
                                            FontSize="12"
                                            TextWrapping="Wrap"
@@ -282,13 +332,8 @@
 
                 </Border>
 
-
-                <!-- ================================================= -->
-                <!-- IMPROVEMENTS                                      -->
-                <!-- ================================================= -->
-
                 <Border x:Name="ImprovementsCard"
-                        Style="{StaticResource DaBoyzCardStyle}"
+                        Style="{StaticResource DashboardCardStyle}"
                         Padding="28"
                         Margin="0,0,0,18">
 
@@ -299,28 +344,28 @@
                                    FontSize="11"
                                    FontWeight="Bold"/>
 
-                        <TextBlock Text="Performance &amp; Experience"
+                        <TextBlock Text="Database &amp; Connectivity"
                                    Foreground="White"
                                    FontSize="21"
                                    FontWeight="Bold"
                                    Margin="0,5,0,20"/>
 
-                        <TextBlock Text="•  Improved WebView2 initialization for installed versions of DaBoyzApp."
+                        <TextBlock Text="•  The new Database is ran with Python, can be slow at times."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"
                                    Margin="0,0,0,10"/>
 
-                        <TextBlock Text="•  Added a shared WebView2 environment using a writable per-user application data directory."
+                        <TextBlock Text="•  Staff members who are required to sign in must create an account with the Owner."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"
                                    Margin="0,0,0,10"/>
 
-                        <TextBlock Text="•  Improved the update experience with clearer download, completion, and installation states."
+                        <TextBlock Text="•  Punishments made within the App may take a few seconds to register."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"
                                    Margin="0,0,0,10"/>
 
-                        <TextBlock Text="•  Expanded the Gaming Database with additional game-specific resources and tools."
+                        <TextBlock Text="•  Will be looked into again in the future, to hopefully speed up commands."
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="12"/>
 
@@ -328,13 +373,8 @@
 
                 </Border>
 
-
-                <!-- ================================================= -->
-                <!-- FIXES                                             -->
-                <!-- ================================================= -->
-
                 <Border x:Name="FixesCard"
-                        Style="{StaticResource DaBoyzCardStyle}"
+                        Style="{StaticResource DashboardCardStyle}"
                         Padding="28"
                         Margin="0,0,0,18">
 
@@ -373,11 +413,6 @@
                     </StackPanel>
 
                 </Border>
-
-
-                <!-- ================================================= -->
-                <!-- FOOTER                                            -->
-                <!-- ================================================= -->
 
                 <TextBlock Text="DA BOYZ • PATCH NOTES"
                            Foreground="{StaticResource DaBoyzTextMuted}"

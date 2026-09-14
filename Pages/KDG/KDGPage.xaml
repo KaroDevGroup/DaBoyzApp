@@ -1,12 +1,11 @@
+<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
 <Page x:Class="DaBoyzApp.Pages.KDGPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Page.Resources>
-
-        <!-- ========================================================= -->
-        <!-- DASHBOARD CARD HOVER STYLE                                -->
-        <!-- ========================================================= -->
 
         <Style x:Key="DashboardButtonStyle"
                TargetType="Button">
@@ -79,22 +78,12 @@
 
     </Page.Resources>
 
-
-    <!-- ============================================================= -->
-    <!-- ROOT                                                          -->
-    <!-- ============================================================= -->
-
     <Grid Background="Transparent">
 
         <ScrollViewer VerticalScrollBarVisibility="Hidden"
                       HorizontalScrollBarVisibility="Disabled">
 
             <StackPanel Margin="45,40,45,40">
-
-
-                <!-- ================================================= -->
-                <!-- HEADER                                            -->
-                <!-- ================================================= -->
 
                 <StackPanel>
 
@@ -116,26 +105,15 @@
 
                 </StackPanel>
 
-
-                <!-- ================================================= -->
-                <!-- ACCENT                                            -->
-                <!-- ================================================= -->
-
                 <Border Height="2"
                         Width="80"
                         Background="{StaticResource DaBoyzRed}"
                         HorizontalAlignment="Left"
                         Margin="0,18,0,30"/>
 
-
-                <!-- ================================================= -->
-                <!-- QUICK ACCESS                                      -->
-                <!-- ================================================= -->
-
                 <TextBlock Text="GITHUB PROJECTS"
                            Style="{StaticResource SectionTitleStyle}"
                            Margin="0,0,0,15"/>
-
 
                 <Grid>
 
@@ -152,9 +130,6 @@
                         <ColumnDefinition Width="*"/>
 
                     </Grid.ColumnDefinitions>
-
-
-                    <!-- KDG BOT -->
 
                     <Button x:Name="KDGBotButton"
                             Grid.Row="0"
@@ -191,9 +166,6 @@
 
                     </Button>
 
-
-                    <!-- KDG APP -->
-
                     <Button x:Name="KDGAppButton"
                             Grid.Row="0"
                             Grid.Column="1"
@@ -229,9 +201,6 @@
 
                     </Button>
 
-
-                    <!-- KDG TEXTURE -->
-
                     <Button x:Name="KDGTextureButton"
                             Grid.Row="1"
                             Grid.Column="0"
@@ -266,9 +235,6 @@
                         </StackPanel>
 
                     </Button>
-
-
-                    <!-- KDG POSTAL -->
 
                     <Button x:Name="KDGPostalButton"
                             Grid.Row="1"
@@ -306,15 +272,9 @@
 
                 </Grid>
 
-
-                <!-- ================================================= -->
-                <!-- COMMUNITY OVERVIEW                                -->
-                <!-- ================================================= -->
-
                 <TextBlock Text="PROJECT VERSIONS"
                            Style="{StaticResource SectionTitleStyle}"
                            Margin="0,35,0,15"/>
-
 
                 <Grid>
 
@@ -327,9 +287,6 @@
 
                     </Grid.ColumnDefinitions>
 
-
-                    <!-- KDG BOT -->
-
                     <Border Grid.Column="0"
                             Style="{StaticResource DashboardCardStyle}"
                             Margin="0,0,5,0">
@@ -341,7 +298,7 @@
                                        FontSize="11"
                                        FontWeight="SemiBold"/>
 
-                            <TextBlock Text="v1.1.0 ALPHA"
+                            <TextBlock Text="v1.1.1 ALPHA"
                                        Foreground="#F59E0B"
                                        FontSize="25"
                                        FontWeight="Bold"
@@ -350,9 +307,6 @@
                         </StackPanel>
 
                     </Border>
-
-
-                    <!-- KDG APP -->
 
                     <Border Grid.Column="1"
                             Style="{StaticResource DashboardCardStyle}"
@@ -365,7 +319,7 @@
                                        FontSize="11"
                                        FontWeight="SemiBold"/>
 
-                            <TextBlock Text="v1.1.7 BETA"
+                            <TextBlock Text="v1.1.8 BETA"
                                        Foreground="#3B82F6"
                                        FontSize="25"
                                        FontWeight="Bold"
@@ -374,9 +328,6 @@
                         </StackPanel>
 
                     </Border>
-
-
-                    <!-- KDG TEXTURE -->
 
                     <Border Grid.Column="2"
                             Style="{StaticResource DashboardCardStyle}"
@@ -398,9 +349,6 @@
                         </StackPanel>
 
                     </Border>
-
-
-                    <!-- KDG POSTAL -->
 
                     <Border Grid.Column="3"
                             Style="{StaticResource DashboardCardStyle}"
@@ -424,10 +372,6 @@
                     </Border>
 
                 </Grid>
-
-                <!-- ================================================= -->
-                <!-- FOOTER                                            -->
-                <!-- ================================================= -->
 
                 <StackPanel HorizontalAlignment="Center"
                             Margin="0,35,0,0">

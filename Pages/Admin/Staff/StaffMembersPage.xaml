@@ -1,3 +1,6 @@
+<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
 <Page x:Class="DaBoyzApp.Pages.StaffMembersPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -8,10 +11,6 @@
                       HorizontalScrollBarVisibility="Disabled">
 
             <StackPanel Margin="45,40,45,50">
-
-                <!-- ================================================= -->
-                <!-- HEADER                                            -->
-                <!-- ================================================= -->
 
                 <Grid>
 
@@ -34,9 +33,6 @@
 
                     </StackPanel>
 
-
-                    <!-- BACK BUTTON -->
-
                     <Button Grid.Column="1"
                             Content="BACK TO ADMIN DASHBOARD"
                             Width="220"
@@ -55,19 +51,11 @@
 
                 </Grid>
 
-
-                <!-- RED ACCENT -->
-
                 <Border Height="2"
                         Width="80"
                         Background="{StaticResource DaBoyzRed}"
                         HorizontalAlignment="Left"
                         Margin="0,18,0,30"/>
-
-
-                <!-- ================================================= -->
-                <!-- OWNER                                              -->
-                <!-- ================================================= -->
 
                 <TextBlock Text="OWNER"
                            Foreground="{StaticResource DaBoyzText}"
@@ -151,9 +139,6 @@
                            FontWeight="Bold"
                            Margin="0,30,0,15"/>
 
-
-                <!-- KARODEVGROUP -->
-
                 <Border Style="{StaticResource DashboardCardStyle}"
                         Margin="0,0,0,10">
 
@@ -195,7 +180,6 @@
 
                         </StackPanel>
 
-
                         <StackPanel Grid.Column="1"
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Center">
@@ -218,9 +202,6 @@
                     </Grid>
 
                 </Border>
-
-
-                <!-- MRS. KARO -->
 
                 <Border Style="{StaticResource DashboardCardStyle}"
                         Margin="0,0,0,10">
@@ -263,7 +244,6 @@
 
                         </StackPanel>
 
-
                         <StackPanel Grid.Column="1"
                                     HorizontalAlignment="Right"
                                     VerticalAlignment="Center">
@@ -287,10 +267,6 @@
 
                 </Border>
 
-
-                <!-- ================================================= -->
-                <!-- SENIOR STAFF                                      -->
-                <!-- ================================================= -->
 
                 <TextBlock Text="SENIOR STAFF"
                            Foreground="{StaticResource DaBoyzText}"
@@ -362,19 +338,11 @@
 
                 </Border>
 
-
-                <!-- ================================================= -->
-                <!-- STAFF                                              -->
-                <!-- ================================================= -->
-
                 <TextBlock Text="STAFF"
                            Foreground="{StaticResource DaBoyzText}"
                            FontSize="20"
                            FontWeight="Bold"
                            Margin="0,30,0,15"/>
-
-
-                <!-- EMPLOYEE OF THE MONTH -->
 
                 <Border Style="{StaticResource DashboardCardStyle}"
                         Margin="0,0,0,10">
@@ -440,9 +408,6 @@
 
                 </Border>
 
-
-                <!-- DADDY CHEEZ -->
-
                 <Border Style="{StaticResource DashboardCardStyle}"
                         Margin="0,0,0,10">
 
@@ -507,19 +472,75 @@
 
                 </Border>
 
-
-                <!-- ================================================= -->
-                <!-- TRIAL STAFF                                       -->
-                <!-- ================================================= -->
-
                 <TextBlock Text="TRIAL"
                            Foreground="{StaticResource DaBoyzText}"
                            FontSize="20"
                            FontWeight="Bold"
                            Margin="0,30,0,15"/>
+                
+                <Border Style="{StaticResource DashboardCardStyle}"
+                        Margin="0,0,0,10">
 
+                    <Grid>
 
-                <!-- DIZZYESTBRUTE69 -->
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <TextBlock Text="Dusty"
+                                           Foreground="{StaticResource DaBoyzText}"
+                                           FontSize="18"
+                                           FontWeight="Bold"/>
+
+                                <TextBlock Text="TRIAL"
+                                           Foreground="#0BF4FC"
+                                           FontSize="11"
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center"
+                                           Margin="12,2,0,0"/>
+
+                            </StackPanel>
+
+                            <TextBlock Text="Joined: 2/26/2026"
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontSize="12"
+                                       Margin="0,8,0,0"/>
+
+                            <TextBlock Text="User ID: 192144180158398464"
+                                       Foreground="{StaticResource DaBoyzTextSecondary}"
+                                       FontFamily="Consolas"
+                                       FontSize="12"
+                                       Margin="0,3,0,0"/>
+
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1"
+                                    HorizontalAlignment="Right"
+                                    VerticalAlignment="Center">
+
+                            <TextBlock Text="STAFF STRIKES"
+                                       Foreground="{StaticResource DaBoyzTextMuted}"
+                                       FontSize="10"
+                                       FontWeight="SemiBold"
+                                       HorizontalAlignment="Right"/>
+
+                            <TextBlock Text="0"
+                                       Foreground="{StaticResource DaBoyzText}"
+                                       FontSize="24"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Right"
+                                       Margin="0,3,0,0"/>
+
+                        </StackPanel>
+
+                    </Grid>
+
+                </Border>
 
                 <Border Style="{StaticResource DashboardCardStyle}"
                         Margin="0,0,0,10">
@@ -584,11 +605,6 @@
                     </Grid>
 
                 </Border>
-
-
-                <!-- ================================================= -->
-                <!-- FOOTER                                            -->
-                <!-- ================================================= -->
 
                 <StackPanel HorizontalAlignment="Center"
                             Margin="0,40,0,0">

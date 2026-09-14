@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System.Windows;
 using System.Windows.Controls;
 using DaBoyzApp.Services;
@@ -23,7 +26,8 @@ public partial class AdminDashboardPage : Page
                 PunishmentSlateButton,
                 DiscordCommandsButton,
                 StaffMembersButton,
-                RulesButton
+                RulesButton,
+                DecisionsButton
             });
     }
 
@@ -66,5 +70,13 @@ public partial class AdminDashboardPage : Page
         {
             mainWindow.NavigateToRules();
         }
+    }
+
+    private void Decisions_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        NavigationService?.Navigate(
+            new DecisionsPage());
     }
 }

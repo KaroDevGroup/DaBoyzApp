@@ -1,3 +1,6 @@
+<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
 <Page x:Class="DaBoyzApp.Pages.AdminDashboardPage"
    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -74,17 +77,14 @@
             <Grid>
 
                 <Grid.ColumnDefinitions>
-
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
-
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
-
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
 
@@ -249,6 +249,45 @@
 
             </Grid>
 
+            <!-- ================================================= -->
+            <!-- DECISIONS                                         -->
+            <!-- ================================================= -->
+
+            <Button x:Name="DecisionsButton"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource AdminDashboardButtonStyle}"
+                    Margin="0,16,0,0"
+                    Click="Decisions_Click">
+
+                <StackPanel>
+
+                    <TextBlock Text="⚠"
+                               Foreground="{StaticResource DaBoyzRed}"
+                               FontSize="30"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="DECISIONS"
+                               Foreground="{StaticResource DaBoyzText}"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Margin="0,10,0,3"/>
+
+                    <TextBlock Text="Issue Moderation Commands."
+                               Foreground="{StaticResource DaBoyzTextSecondary}"
+                               FontSize="13"
+                               TextWrapping="Wrap"/>
+
+                    <TextBlock Text="OPEN DECISIONS  →"
+                               Foreground="{StaticResource DaBoyzRed}"
+                               FontSize="11"
+                               FontWeight="Bold"
+                               Margin="0,18,0,0"/>
+
+                </StackPanel>
+            
+            </Button>
 
             <!-- ================================================= -->
             <!-- FOOTER                                            -->

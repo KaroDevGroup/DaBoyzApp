@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System.Windows;
 using System.Windows.Controls;
 using DaBoyzApp.Services;
@@ -13,11 +16,6 @@ public partial class AdminPage : Page
         LoadRememberedCredentials();
     }
 
-
-    // =========================================================
-    // LOAD REMEMBERED LOGIN
-    // =========================================================
-
     private void LoadRememberedCredentials()
     {
         var credentials =
@@ -28,7 +26,7 @@ public partial class AdminPage : Page
             return;
         }
 
-        UsernameBox.Text =
+        EmailBox.Text =
             credentials.Value.Username;
 
         PasswordBox.Password =
@@ -41,37 +39,29 @@ public partial class AdminPage : Page
             "Remembered login found.";
     }
 
-
-    // =========================================================
-    // SIGN IN
-    // =========================================================
-
-    private void SignInButton_Click(
+    private async void SignInButton_Click(
         object sender,
         RoutedEventArgs e)
     {
-        string username =
-            UsernameBox.Text.Trim();
+        string email =
+            EmailBox.Text.Trim();
 
         string password =
             PasswordBox.Password;
 
-
-        // =====================================================
-        // VALIDATE INPUT
-        // =====================================================
-
-        if (string.IsNullOrWhiteSpace(username))
+        if (string.IsNullOrWhiteSpace(
+                email))
         {
             StatusText.Text =
-                "Please enter your username.";
+                "Please enter your email.";
 
-            UsernameBox.Focus();
+            EmailBox.Focus();
 
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(password))
+        if (string.IsNullOrWhiteSpace(
+                password))
         {
             StatusText.Text =
                 "Please enter your password.";
@@ -81,27 +71,40 @@ public partial class AdminPage : Page
             return;
         }
 
+        SignInButton.IsEnabled =
+            false;
 
-        // =====================================================
-        // AUTHENTICATE
-        // =====================================================
+        SignInButton.Content =
+            "SIGNING IN...";
 
-        if (IsValidAdmin(
-                username,
-                password))
+        StatusText.Text =
+            "Authenticating...";
+
+
+        try
         {
-            StatusText.Text =
-                "Authentication successful.";
+
+            AuthResult result =
+                await SupabaseAuthService.SignInAsync(
+                    email,
+                    password);
 
 
-            // =================================================
-            // REMEMBER ME
-            // =================================================
+            if (!result.Success)
+            {
+                StatusText.Text =
+                    result.Message;
 
-            if (RememberMeCheckBox.IsChecked == true)
+                PasswordBox.Focus();
+
+                return;
+            }
+
+            if (RememberMeCheckBox.IsChecked ==
+                true)
             {
                 AdminAuthService.SaveCredentials(
-                    username,
+                    email,
                     password);
             }
             else
@@ -109,92 +112,26 @@ public partial class AdminPage : Page
                 AdminAuthService.ClearCredentials();
             }
 
-
-            // =================================================
-            // OPEN ADMIN DASHBOARD
-            // =================================================
+            StatusText.Text =
+                result.Message;
 
             NavigationService?.Navigate(
                 new AdminDashboardPage());
-
-            return;
         }
-
-
-        // =====================================================
-        // INVALID LOGIN
-        // =====================================================
-
-        StatusText.Text =
-            "Invalid username or password.";
-
-        PasswordBox.Clear();
-        PasswordBox.Focus();
-    }
-
-
-    // =========================================================
-    // ADMIN AUTHENTICATION
-    // =========================================================
-
-    private static bool IsValidAdmin(
-        string username,
-        string password)
-    {
-        // MASTER ACCOUNT
-
-        if (username == "admin" &&
-            password == "admin123")
+        catch (Exception ex)
         {
-            return true;
+            SupabaseAuthService.ClearSession();
+
+            StatusText.Text =
+                $"Sign-in failed: {ex.Message}";
         }
-
-
-        // GAVIN
-
-        if (username == "Jesusisking" &&
-            password == "hailhitler9")
+        finally
         {
-            return true;
+            SignInButton.IsEnabled =
+                true;
+
+            SignInButton.Content =
+                "SIGN IN";
         }
-
-
-        // JESS
-
-        if (username == "MrsKaro" &&
-            password == "Karo0325")
-        {
-            return true;
-        }
-
-
-        // REED
-
-        if (username == "Rugerwhite123" &&
-            password == "Greenwave#1")
-        {
-            return true;
-        }
-
-
-        // RUDY
-
-        if (username == "Zen" &&
-            password == "zeniseverything")
-        {
-            return true;
-        }
-
-
-        // GAGE
-
-        if (username == "Dizzy.kco" &&
-            password == "Cumshooter67")
-        {
-            return true;
-        }
-
-
-        return false;
     }
 }

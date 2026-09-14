@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System.Windows;
 using System.Windows.Controls;
 using DaBoyzApp;
@@ -13,24 +16,14 @@ public partial class SettingsPage : Page
         LoadSettings();
     }
 
-
-    // ================================================================
-    // LOAD SETTINGS
-    // ================================================================
-
     private void LoadSettings()
     {
-        // ------------------------------------------------------------
-        // UI ANIMATIONS
-        // ------------------------------------------------------------
 
         UiAnimationsCheckBox.IsChecked =
             SettingsManager.UiAnimationsEnabled;
 
-
-        // ------------------------------------------------------------
-        // FPS
-        // ------------------------------------------------------------
+        LaunchMaximizedCheckBox.IsChecked =
+            SettingsManager.LaunchMaximized;
 
         switch (SettingsManager.AnimationFPS)
         {
@@ -56,11 +49,6 @@ public partial class SettingsPage : Page
         }
     }
 
-
-    // ================================================================
-    // FPS SETTING
-    // ================================================================
-
     private void FpsComboBox_SelectionChanged(
         object sender,
         SelectionChangedEventArgs e)
@@ -74,9 +62,7 @@ public partial class SettingsPage : Page
         if (selectedFps == null)
             return;
 
-
         int fps = 60;
-
 
         switch (selectedFps)
         {
@@ -97,22 +83,13 @@ public partial class SettingsPage : Page
                 break;
         }
 
-
         SettingsManager.AnimationFPS = fps;
-
-
-        // Apply immediately to MainWindow
 
         if (Application.Current.MainWindow is MainWindow mainWindow)
         {
             mainWindow.SetParticleFPS(fps);
         }
     }
-
-
-    // ================================================================
-    // UI ANIMATIONS
-    // ================================================================
 
     private void UiAnimationsCheckBox_Changed(
         object sender,
@@ -121,12 +98,8 @@ public partial class SettingsPage : Page
         bool animationsEnabled =
             UiAnimationsCheckBox.IsChecked == true;
 
-
         SettingsManager.UiAnimationsEnabled =
             animationsEnabled;
-
-
-        // Apply immediately to MainWindow
 
         if (Application.Current.MainWindow is MainWindow mainWindow)
         {
@@ -135,17 +108,19 @@ public partial class SettingsPage : Page
         }
     }
 
-
-    // ================================================================
-    // SAVE SETTINGS
-    // ================================================================
+    private void LaunchMaximizedCheckBox_Changed(
+        object sender, 
+        RoutedEventArgs e)
+    {
+        SettingsManager.LaunchMaximized =
+            LaunchMaximizedCheckBox.IsChecked == true;
+    }
 
     private void SaveSettingsButton_Click(
         object sender,
         RoutedEventArgs e)
     {
         SettingsManager.Save();
-
 
         MessageBox.Show(
             "Settings saved successfully.",

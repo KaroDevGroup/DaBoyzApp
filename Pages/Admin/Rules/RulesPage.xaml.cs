@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System.Windows;
 using System.Windows.Controls;
 
@@ -9,11 +12,6 @@ public partial class RulesPage : Page
     {
         InitializeComponent();
     }
-
-
-    // ================================================================
-    // BACK BUTTON
-    // ================================================================
 
     private void BackButton_Click(
         object sender,

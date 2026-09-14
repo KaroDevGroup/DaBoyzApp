@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System.Windows.Controls;
 using System.Windows;
 
