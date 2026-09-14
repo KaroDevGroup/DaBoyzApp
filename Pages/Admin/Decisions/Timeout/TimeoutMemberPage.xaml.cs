@@ -14,11 +14,6 @@ public partial class TimeoutMemberPage : Page
         InitializeComponent();
     }
 
-
-    // ================================================================
-    // BACK
-    // ================================================================
-
     private void BackButton_Click(
         object sender,
         RoutedEventArgs e)
@@ -26,11 +21,6 @@ public partial class TimeoutMemberPage : Page
         NavigationService?.Navigate(
             new DecisionsPage());
     }
-
-
-    // ================================================================
-    // ISSUE TIMEOUT
-    // ================================================================
 
     private async void TimeoutButton_Click(
         object sender,
@@ -45,7 +35,6 @@ public partial class TimeoutMemberPage : Page
         string reason =
             ReasonBox.Text.Trim();
 
-
         if (string.IsNullOrWhiteSpace(memberId))
         {
             StatusText.Text =
@@ -56,7 +45,6 @@ public partial class TimeoutMemberPage : Page
             return;
         }
 
-
         if (string.IsNullOrWhiteSpace(duration))
         {
             StatusText.Text =
@@ -66,7 +54,6 @@ public partial class TimeoutMemberPage : Page
 
             return;
         }
-
 
         TimeoutButton.IsEnabled =
             false;
@@ -85,10 +72,8 @@ public partial class TimeoutMemberPage : Page
                     duration,
                     reason);
 
-
             StatusText.Text =
                 result.Message;
-
 
             if (result.Success)
             {

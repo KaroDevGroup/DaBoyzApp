@@ -14,7 +14,6 @@ public partial class ClearMessagesPage : Page
         InitializeComponent();
     }
 
-
     private void BackButton_Click(
         object sender,
         RoutedEventArgs e)
@@ -22,7 +21,6 @@ public partial class ClearMessagesPage : Page
         NavigationService?.Navigate(
             new DecisionsPage());
     }
-
 
     private async void ClearButton_Click(
         object sender,
@@ -34,7 +32,6 @@ public partial class ClearMessagesPage : Page
         string amountText =
             AmountBox.Text.Trim();
 
-
         if (string.IsNullOrWhiteSpace(channelId))
         {
             StatusText.Text =
@@ -44,7 +41,6 @@ public partial class ClearMessagesPage : Page
 
             return;
         }
-
 
         if (!int.TryParse(
                 amountText,
@@ -58,7 +54,6 @@ public partial class ClearMessagesPage : Page
             return;
         }
 
-
         if (amount < 1 || amount > 100)
         {
             StatusText.Text =
@@ -69,7 +64,6 @@ public partial class ClearMessagesPage : Page
             return;
         }
 
-
         ClearButton.IsEnabled =
             false;
 
@@ -79,14 +73,12 @@ public partial class ClearMessagesPage : Page
         StatusText.Text =
             "Sending clear request...";
 
-
         try
         {
             ModerationResult result =
                 await ModerationService.ClearMessagesAsync(
                     channelId,
                     amount);
-
 
             StatusText.Text =
                 result.Message;

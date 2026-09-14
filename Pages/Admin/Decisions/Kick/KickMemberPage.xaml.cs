@@ -14,7 +14,6 @@ public partial class KickMemberPage : Page
         InitializeComponent();
     }
 
-
     private void BackButton_Click(
         object sender,
         RoutedEventArgs e)
@@ -22,7 +21,6 @@ public partial class KickMemberPage : Page
         NavigationService?.Navigate(
             new DecisionsPage());
     }
-
 
     private async void KickButton_Click(
         object sender,
@@ -34,7 +32,6 @@ public partial class KickMemberPage : Page
         string reason =
             ReasonBox.Text.Trim();
 
-
         if (string.IsNullOrWhiteSpace(memberId))
         {
             StatusText.Text =
@@ -45,7 +42,6 @@ public partial class KickMemberPage : Page
             return;
         }
 
-
         KickButton.IsEnabled =
             false;
 
@@ -54,7 +50,6 @@ public partial class KickMemberPage : Page
 
         StatusText.Text =
             "Sending kick request...";
-
 
         try
         {

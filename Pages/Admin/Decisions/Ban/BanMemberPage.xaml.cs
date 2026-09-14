@@ -14,7 +14,6 @@ public partial class BanMemberPage : Page
         InitializeComponent();
     }
 
-
     private void BackButton_Click(
         object sender,
         RoutedEventArgs e)
@@ -22,7 +21,6 @@ public partial class BanMemberPage : Page
         NavigationService?.Navigate(
             new DecisionsPage());
     }
-
 
     private async void BanButton_Click(
         object sender,
@@ -34,7 +32,6 @@ public partial class BanMemberPage : Page
         string reason =
             ReasonBox.Text.Trim();
 
-
         if (string.IsNullOrWhiteSpace(memberId))
         {
             StatusText.Text =
@@ -45,7 +42,6 @@ public partial class BanMemberPage : Page
             return;
         }
 
-
         BanButton.IsEnabled =
             false;
 
@@ -55,14 +51,12 @@ public partial class BanMemberPage : Page
         StatusText.Text =
             "Sending ban request...";
 
-
         try
         {
             ModerationResult result =
                 await ModerationService.BanMemberAsync(
                     memberId,
                     reason);
-
 
             StatusText.Text =
                 result.Message;

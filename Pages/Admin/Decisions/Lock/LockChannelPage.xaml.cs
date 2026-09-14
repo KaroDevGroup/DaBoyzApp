@@ -14,7 +14,6 @@ public partial class LockChannelPage : Page
         InitializeComponent();
     }
 
-
     private void BackButton_Click(
         object sender,
         RoutedEventArgs e)
@@ -23,14 +22,12 @@ public partial class LockChannelPage : Page
             new DecisionsPage());
     }
 
-
     private async void LockButton_Click(
         object sender,
         RoutedEventArgs e)
     {
         string channelId =
             ChannelIdBox.Text.Trim();
-
 
         if (string.IsNullOrWhiteSpace(channelId))
         {
@@ -42,7 +39,6 @@ public partial class LockChannelPage : Page
             return;
         }
 
-
         LockButton.IsEnabled =
             false;
 
@@ -51,7 +47,6 @@ public partial class LockChannelPage : Page
 
         StatusText.Text =
             "Sending lock request...";
-
 
         try
         {

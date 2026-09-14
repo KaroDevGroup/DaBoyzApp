@@ -14,7 +14,6 @@ public partial class UnbanMemberPage : Page
         InitializeComponent();
     }
 
-
     private void BackButton_Click(
         object sender,
         RoutedEventArgs e)
@@ -22,7 +21,6 @@ public partial class UnbanMemberPage : Page
         NavigationService?.Navigate(
             new DecisionsPage());
     }
-
 
     private async void UnbanButton_Click(
         object sender,
@@ -45,7 +43,6 @@ public partial class UnbanMemberPage : Page
             return;
         }
 
-
         UnbanButton.IsEnabled =
             false;
 
@@ -54,7 +51,6 @@ public partial class UnbanMemberPage : Page
 
         StatusText.Text =
             "Sending unban request...";
-
 
         try
         {

@@ -21,11 +21,6 @@ public partial class WarnMemberPage : Page
         NavigationService?.Navigate(
             new DecisionsPage());
     }
-
-    // ================================================================
-    // ISSUE WARNING
-    // ================================================================
-
     private async void WarnButton_Click(
         object sender,
         RoutedEventArgs e)
@@ -35,7 +30,6 @@ public partial class WarnMemberPage : Page
 
         string reason =
             ReasonBox.Text.Trim();
-
 
         if (string.IsNullOrWhiteSpace(memberId))
         {
@@ -47,7 +41,6 @@ public partial class WarnMemberPage : Page
             return;
         }
 
-
         WarnButton.IsEnabled =
             false;
 
@@ -57,7 +50,6 @@ public partial class WarnMemberPage : Page
         StatusText.Text =
             "Sending warning request...";
 
-
         try
         {
             ModerationResult result =
@@ -65,10 +57,8 @@ public partial class WarnMemberPage : Page
                     memberId,
                     reason);
 
-
             StatusText.Text =
                 result.Message;
-
 
             if (result.Success)
             {

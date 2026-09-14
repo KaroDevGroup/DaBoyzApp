@@ -13,12 +13,6 @@ public partial class DecisionsPage : Page
 
         Loaded += DecisionsPage_Loaded;
     }
-
-
-    // ================================================================
-    // CARD ANIMATION
-    // ================================================================
-
     private void DecisionsPage_Loaded(
         object sender,
         RoutedEventArgs e)
@@ -37,11 +31,6 @@ public partial class DecisionsPage : Page
             });
     }
 
-
-    // ================================================================
-    // WARN
-    // ================================================================
-
     private void Warn_Click(
         object sender,
         RoutedEventArgs e)
@@ -49,11 +38,6 @@ public partial class DecisionsPage : Page
         NavigationService?.Navigate(
             new WarnMemberPage());
     }
-
-
-    // ================================================================
-    // COMING SOON ACTIONS
-    // ================================================================
 
     private void BackButton_Click(
         object sender,
@@ -121,11 +105,6 @@ public partial class DecisionsPage : Page
         NavigationService?.Navigate(
             new UnlockChannelPage());
     }
-
-
-    // ================================================================
-    // COMING SOON
-    // ================================================================
 
     private static void ShowComingSoon(
         string action)
