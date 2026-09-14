@@ -20,11 +20,9 @@ VirusTotal source code hash: 9d2420c1a710267d9c9ba52390df4200546e349f09a14771af8
 
 # Disclaimer
 
-This project contains certain assets that were created by artificial intelligence tools. This includes icons and visual graphics. 
-
-The application's source code, architecture, features, and bot integration were written and developed by me solely. 
-
-AI tools were used strictly as visual assistance. 
+- This project contains certain assets that were created by artificial intelligence tools. This includes icons and visual graphics. 
+- The application's source code, architecture, features, and bot integration were written and developed by me solely. 
+- AI tools were used strictly as visual assistance. 
 
 ---
 
