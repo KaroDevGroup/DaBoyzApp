@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -31,20 +34,12 @@ public partial class UpdateWindow : Window
         }
     }
 
-    // =============================================================
-    // LATER
-    // =============================================================
-
     private void LaterButton_Click(
         object sender,
         RoutedEventArgs e)
     {
         Close();
     }
-
-    // =============================================================
-    // UPDATE NOW
-    // =============================================================
 
     private async void UpdateButton_Click(
         object sender,
@@ -54,10 +49,6 @@ public partial class UpdateWindow : Window
         {
             UpdateButton.IsEnabled = false;
             LaterButton.IsEnabled = false;
-
-            // -----------------------------------------------------
-            // SHOW DOWNLOAD PROGRESS
-            // -----------------------------------------------------
 
             DownloadProgressPanel.Visibility =
                 Visibility.Visible;
@@ -75,11 +66,6 @@ public partial class UpdateWindow : Window
 
             UpdateButton.Content =
                 "DOWNLOADING...";
-
-
-            // -----------------------------------------------------
-            // DOWNLOAD UPDATE
-            // -----------------------------------------------------
 
             UpdateService updateService =
                 new UpdateService();
@@ -108,16 +94,10 @@ public partial class UpdateWindow : Window
                             $"DOWNLOADING {percentage:0}%";
                     });
 
-
             string? installerPath =
                 await updateService.DownloadInstallerAsync(
                     _release,
                     progress);
-
-
-            // -----------------------------------------------------
-            // DOWNLOAD FAILED
-            // -----------------------------------------------------
 
             if (string.IsNullOrWhiteSpace(installerPath))
             {
@@ -142,11 +122,6 @@ public partial class UpdateWindow : Window
                 return;
             }
 
-
-            // -----------------------------------------------------
-            // DOWNLOAD COMPLETE
-            // -----------------------------------------------------
-
             DownloadProgressBar.Width =
                 460;
 
@@ -165,11 +140,6 @@ public partial class UpdateWindow : Window
 
 
             await Task.Delay(500);
-
-
-            // -----------------------------------------------------
-            // START INSTALLER
-            // -----------------------------------------------------
 
             Process.Start(
                 new ProcessStartInfo

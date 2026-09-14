@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System;
 using System.IO;
 using System.Net.Http;
@@ -49,10 +52,6 @@ namespace DaBoyzApp.Services
             );
         }
 
-        // ---------------------------------------------------------
-        // GET LATEST GITHUB RELEASE
-        // ---------------------------------------------------------
-
         public async Task<GitHubRelease?> GetLatestReleaseAsync()
         {
             try
@@ -81,10 +80,6 @@ namespace DaBoyzApp.Services
                 return null;
             }
         }
-
-        // ---------------------------------------------------------
-        // CHECK IF UPDATE IS AVAILABLE
-        // ---------------------------------------------------------
 
         public async Task<GitHubRelease?> GetAvailableUpdateAsync()
         {
@@ -122,10 +117,6 @@ namespace DaBoyzApp.Services
             return release;
         }
 
-        // ---------------------------------------------------------
-        // FIND INSTALLER
-        // ---------------------------------------------------------
-
         public GitHubAsset? GetInstallerAsset(
             GitHubRelease release)
         {
@@ -147,10 +138,6 @@ namespace DaBoyzApp.Services
 
             return null;
         }
-
-        // ---------------------------------------------------------
-        // DOWNLOAD INSTALLER
-        // ---------------------------------------------------------
 
         public async Task<string?> DownloadInstallerAsync(
             GitHubRelease release,
@@ -252,10 +239,6 @@ namespace DaBoyzApp.Services
         }
     }
 
-    // =============================================================
-    // GITHUB RELEASE
-    // =============================================================
-
     public class GitHubRelease
     {
         public string? Tag_Name { get; set; }
@@ -270,10 +253,6 @@ namespace DaBoyzApp.Services
 
         public GitHubAsset[]? Assets { get; set; }
     }
-
-    // =============================================================
-    // GITHUB RELEASE ASSET
-    // =============================================================
 
     public class GitHubAsset
     {

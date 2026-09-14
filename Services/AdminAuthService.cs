@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -17,11 +20,6 @@ public static class AdminAuthService
         Path.Combine(
             CredentialsFolder,
             "admin_credentials.dat");
-
-
-    // =========================================================
-    // SAVE REMEMBERED CREDENTIALS
-    // =========================================================
 
     public static void SaveCredentials(
         string username,
@@ -53,11 +51,6 @@ public static class AdminAuthService
             // Remember Me should never prevent login.
         }
     }
-
-
-    // =========================================================
-    // LOAD REMEMBERED CREDENTIALS
-    // =========================================================
 
     public static (
         string Username,
@@ -107,11 +100,6 @@ public static class AdminAuthService
             return null;
         }
     }
-
-
-    // =========================================================
-    // CLEAR REMEMBERED CREDENTIALS
-    // =========================================================
 
     public static void ClearCredentials()
     {

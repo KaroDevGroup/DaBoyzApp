@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -14,6 +17,23 @@ public static class CardAnimationService
         double durationMilliseconds = 500,
         double staggerMilliseconds = 100)
     {
+        if (!SettingsManager.UiAnimationsEnabled)
+        {
+            foreach (UIElement element in elements)
+            {
+                element.BeginAnimation(
+                    UIElement.OpacityProperty,
+                    null);
+
+                element.Opacity = 1;
+
+                element.RenderTransform =
+                    Transform.Identity;
+            }
+
+            return;
+        }
+
         int index = 0;
 
         foreach (UIElement element in elements)
@@ -21,9 +41,12 @@ public static class CardAnimationService
             element.Opacity = 0;
 
             TranslateTransform transform =
-                new TranslateTransform(0, slideDistance);
+                new TranslateTransform(
+                    0,
+                    slideDistance);
 
-            element.RenderTransform = transform;
+            element.RenderTransform =
+                transform;
 
             DoubleAnimation opacityAnimation =
                 new DoubleAnimation
