@@ -128,7 +128,7 @@
 
                                 </Border>
 
-                                <TextBlock Text="  v1.1.8"
+                                <TextBlock Text="  v1.1.9"
                                            Foreground="White"
                                            FontSize="18"
                                            FontWeight="Bold"

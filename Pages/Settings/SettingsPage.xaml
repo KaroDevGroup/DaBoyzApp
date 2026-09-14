@@ -189,7 +189,7 @@
                                    FontSize="11"
                                    Margin="0,15,0,2"/>
 
-                        <TextBlock Text="1.1.8 BETA"
+                        <TextBlock Text="1.1.9 BETA"
                                    Foreground="{StaticResource DaBoyzTextSecondary}"
                                    FontSize="13"/>
 

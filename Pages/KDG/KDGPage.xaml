@@ -319,7 +319,7 @@
                                        FontSize="11"
                                        FontWeight="SemiBold"/>
 
-                            <TextBlock Text="v1.1.8 BETA"
+                            <TextBlock Text="v1.1.9 BETA"
                                        Foreground="#3B82F6"
                                        FontSize="25"
                                        FontWeight="Bold"
