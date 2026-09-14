@@ -26,7 +26,8 @@ public partial class HomePage : Page
                 GamingCardButton,
                 MusicCardButton,
                 PatchNotesCardButton,
-                AdminCardButton
+                AdminCardButton,
+                KdgCardButton
             });
     }
 
@@ -60,5 +61,13 @@ public partial class HomePage : Page
     {
         (Window.GetWindow(this) as MainWindow)?
             .NavigateToAdmin();
+    }
+
+    private void KdgCard_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        (Window.GetWindow(this) as MainWindow)?
+            .NavigateToKDG();
     }
 }
