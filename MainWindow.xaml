@@ -315,7 +315,7 @@
                                    FontWeight="SemiBold"
                                    HorizontalAlignment="Center"/>
 
-                        <TextBlock Text="v1.1.8 BETA"
+                        <TextBlock Text="v1.1.9 BETA"
                                    Foreground="#888888"
                                    FontSize="11"
                                    HorizontalAlignment="Center"
