@@ -1,13 +1,13 @@
-﻿<Application x:Class="DaBoyzApp.App"
+﻿<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
+<Application x:Class="DaBoyzApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:DaBoyzApp">
+             xmlns:local="clr-namespace:DaBoyzApp"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime">
 
     <Application.Resources>
-
-        <!-- ========================================================= -->
-        <!-- DA BOYZ COLOR PALETTE                                     -->
-        <!-- ========================================================= -->
 
         <Color x:Key="DaBoyzRedColor">#E00000</Color>
         <Color x:Key="DaBoyzRedBrightColor">#FF1A1A</Color>
@@ -23,11 +23,6 @@
         <Color x:Key="DaBoyzTextColor">#FFFFFF</Color>
         <Color x:Key="DaBoyzTextSecondaryColor">#B0B0B0</Color>
         <Color x:Key="DaBoyzTextMutedColor">#666666</Color>
-
-
-        <!-- ========================================================= -->
-        <!-- BRUSHES                                                   -->
-        <!-- ========================================================= -->
 
         <SolidColorBrush x:Key="DaBoyzRed"
                          Color="{StaticResource DaBoyzRedColor}"/>
@@ -59,10 +54,53 @@
         <SolidColorBrush x:Key="DaBoyzTextMuted"
                          Color="{StaticResource DaBoyzTextMutedColor}"/>
 
+        <ImageBrush x:Key="DaBoyzCardBackgroundImage"
+                    ImageSource="/Assets/CardBackground.png"
+                    Stretch="UniformToFill"
+                    AlignmentX="Center"
+                    AlignmentY="Center"/>
 
-        <!-- ========================================================= -->
-        <!-- CARD SHADOW                                               -->
-        <!-- ========================================================= -->
+        <ImageBrush x:Key="DaBoyzSmallCardBackgroundImage"
+                    ImageSource="/Assets/SmallCardBackground.png"
+                    Stretch="UniformToFill"
+                    AlignmentX="Center"
+                    AlignmentY="Center"/>
+
+        <ImageBrush x:Key="DaBoyzPassiveCardBackgroundImage"
+                    ImageSource="/Assets/SmallCardBackground.png"
+                    Stretch="UniformToFill"
+                    AlignmentX="Center"
+                    AlignmentY="Center"
+                    Opacity="0.22"/>
+
+        <ImageBrush x:Key="FormCardBackgroundImage"
+                    ImageSource="/Assets/FormCardBackground.png"
+                    Stretch="UniformToFill"
+                    AlignmentX="Center"
+                    AlignmentY="Center"/>
+
+        <Style x:Key="FormCardStyle"
+                TargetType="Border">
+
+                <Setter Property="Background"
+                        Value="{StaticResource FormCardBackgroundImage}"/>
+
+                <Setter Property="BorderBrush"
+                        Value="#333333"/>
+
+                <Setter Property="BorderThickness"
+                        Value="1"/>
+
+                <Setter Property="CornerRadius"
+                        Value="16"/>
+
+                <Setter Property="Padding"
+                        Value="40"/>
+
+                <Setter Property="ClipToBounds"
+                        Value="True"/>
+
+        </Style>
 
         <DropShadowEffect x:Key="DaBoyzCardShadow"
                           Color="#000000"
@@ -70,47 +108,92 @@
                           ShadowDepth="5"
                           Opacity="0.55"/>
 
-
-        <!-- ========================================================= -->
-        <!-- DASHBOARD CARD STYLE                                      -->
-        <!-- ========================================================= -->
-
         <Style x:Key="DashboardCardStyle"
                TargetType="Border">
 
-            <Setter Property="Background"
-                    Value="{StaticResource DaBoyzPanel}"/>
+                <Setter Property="Background"
+                        Value="{StaticResource DaBoyzPassiveCardBackgroundImage}"/>
 
-            <Setter Property="BorderBrush"
-                    Value="{StaticResource DaBoyzBorder}"/>
 
-            <Setter Property="BorderThickness"
-                    Value="1"/>
+                <Setter Property="BorderBrush"
+                        Value="{StaticResource DaBoyzBorder}"/>
 
-            <Setter Property="CornerRadius"
-                    Value="12"/>
+                <Setter Property="BorderThickness"
+                        Value="1"/>
 
-            <Setter Property="Padding"
-                    Value="24"/>
+                <Setter Property="CornerRadius"
+                        Value="12"/>
 
-            <Setter Property="Effect"
-                    Value="{StaticResource DaBoyzCardShadow}"/>
+                <Setter Property="Padding"
+                        Value="24"/>
+
+                <Setter Property="Effect">
+
+                        <Setter.Value>
+
+                                <DropShadowEffect Color="#000000"
+                                                  BlurRadius="16"
+                                                  ShadowDepth="4"
+                                                  Opacity="0.45"/>
+
+                        </Setter.Value>
+
+                </Setter>
+
+                <Setter Property="RenderTransformOrigin"
+                        Value="0.5,0.5"/>
+
+                <Setter Property="RenderTransform">
+
+                        <Setter.Value>
+
+                                <TranslateTransform X="0"
+                                                    Y="0"/>
+
+                        </Setter.Value>
+
+                </Setter>
+
+                <Style.Triggers>
+
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+
+                                <Setter Property="BorderBrush"
+                                        Value="{StaticResource DaBoyzRed}"/>
+
+                                <Setter Property="Effect">
+
+                                        <Setter.Value>
+
+                                                <DropShadowEffect Color="#E00000"
+                                                                  BlurRadius="22"
+                                                                  ShadowDepth="5"
+                                                                  Opacity="0.45"/>
+
+                                        </Setter.Value>
+
+                                </Setter>
+
+                                <Setter Property="RenderTransform">
+
+                                        <Setter.Value>
+
+                                                <TranslateTransform X="0"
+                                                                    Y="-4"/>
+
+                                        </Setter.Value>
+
+                                </Setter>
+
+                        </Trigger>
+
+                </Style.Triggers>
 
         </Style>
 
-
-        <!-- ========================================================= -->
-        <!-- 3D / ELEVATED CARD STYLE                                  -->
-        <!-- ========================================================= -->
-
-        <!-- ========================================================= -->
-        <!-- 3D / ELEVATED CARD STYLE                                  -->
-        <!-- ========================================================= -->
-
         <Style x:Key="DaBoyzCardStyle"
                 TargetType="Border">
-
-                <!-- NORMAL CARD -->
 
                 <Setter Property="Background"
                         Value="{StaticResource DaBoyzPanel}"/>
@@ -127,8 +210,6 @@
                 <Setter Property="Padding"
                         Value="24"/>
 
-                <!-- Shadow -->
-
                 <Setter Property="Effect">
 
                         <Setter.Value>
@@ -141,8 +222,6 @@
                         </Setter.Value>
 
                 </Setter>
-
-                <!-- Position -->
 
                 <Setter Property="RenderTransform">
 
@@ -158,27 +237,16 @@
                 <Setter Property="RenderTransformOrigin"
                         Value="0.5,0.5"/>
 
-
-                <!-- ===================================================== -->
-                <!-- HOVER EFFECT                                         -->
-                <!-- ===================================================== -->
-
                 <Style.Triggers>
 
                         <Trigger Property="IsMouseOver"
                                 Value="True">
 
-                                <!-- Brighter surface -->
-
                                 <Setter Property="Background"
                                         Value="#202020"/>
 
-                                <!-- Red border -->
-
                                 <Setter Property="BorderBrush"
                                         Value="{StaticResource DaBoyzRed}"/>
-
-                                <!-- Red ambient glow -->
 
                                 <Setter Property="Effect">
 
@@ -192,8 +260,6 @@
                                         </Setter.Value>
 
                                 </Setter>
-
-                                <!-- Lift card -->
 
                                 <Setter Property="RenderTransform">
 
@@ -212,21 +278,17 @@
 
         </Style>
 
-        <!-- ========================================================= -->
-        <!-- DASHBOARD BUTTON STYLE                                    -->
-        <!-- ========================================================= -->
-
-        <Style x:Key="DashboardButtonStyle"
-                        TargetType="Button">
-
-                <Setter Property="Background"
-                        Value="#161616"/>
+        <Style x:Key="SmallCardButtonStyle"
+               TargetType="Button">
 
                 <Setter Property="Foreground"
-                        Value="White"/>
+                        Value="{StaticResource DaBoyzText}"/>
 
                 <Setter Property="BorderThickness"
                         Value="0"/>
+
+                <Setter Property="Background"
+                        Value="Transparent"/>
 
                 <Setter Property="Cursor"
                         Value="Hand"/>
@@ -241,37 +303,94 @@
                                 <ControlTemplate TargetType="Button">
 
                                         <Border x:Name="Card"
-                                                Background="{TemplateBinding Background}"
-                                                BorderBrush="#292929"
+                                                BorderBrush="{StaticResource DaBoyzBorder}"
                                                 BorderThickness="1"
-                                                CornerRadius="12"
-                                                Padding="24">
+                                                CornerRadius="8"
+                                                ClipToBounds="True">
 
-                                                <ContentPresenter/>
+                                                <Border.RenderTransform>
+
+                                                        <TranslateTransform X="0"
+                                                                            Y="0"/>
+
+                                                </Border.RenderTransform>
+
+                                                <Grid>
+
+                                                        <Border Background="#141414"/>
+
+                                                        <Border Opacity="0.38">
+
+                                                                <Border.Background>
+
+                                                                        <ImageBrush ImageSource="/Assets/SmallCardBackground.png"
+                                                                                    Stretch="UniformToFill"
+                                                                                    AlignmentX="Center"
+                                                                                    AlignmentY="Center"/>
+
+                                                                </Border.Background>
+
+                                                        </Border>
+
+                                                        <Border x:Name="DarkOverlay"
+                                                                Background="#60000000"/>
+
+                                                        <Border x:Name="HoverOverlay"
+                                                                Background="Transparent"/>
+
+                                                        <ContentPresenter Margin="16"
+                                                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Grid>
 
                                         </Border>
 
                                         <ControlTemplate.Triggers>
 
                                                 <Trigger Property="IsMouseOver"
-                                                        Value="True">
-
-                                                        <Setter TargetName="Card"
-                                                                Property="Background"
-                                                                Value="#1E1E1E"/>
+                                                         Value="True">
 
                                                         <Setter TargetName="Card"
                                                                 Property="BorderBrush"
-                                                                Value="#E00000"/>
+                                                                Value="{StaticResource DaBoyzRed}"/>
+
+                                                        <Setter TargetName="HoverOverlay"
+                                                                Property="Background"
+                                                                Value="#18E00000"/>
+
+                                                        <Setter TargetName="Card"
+                                                                Property="RenderTransform">
+
+                                                                <Setter.Value>
+
+                                                                        <TranslateTransform X="0"
+                                                                                            Y="-3"/>
+
+                                                                </Setter.Value>
+
+                                                        </Setter>
 
                                                 </Trigger>
 
                                                 <Trigger Property="IsPressed"
-                                                        Value="True">
+                                                         Value="True">
+
+                                                        <Setter TargetName="HoverOverlay"
+                                                                Property="Background"
+                                                                Value="#30000000"/>
 
                                                         <Setter TargetName="Card"
-                                                                Property="Background"
-                                                                Value="#252525"/>
+                                                                Property="RenderTransform">
+
+                                                                <Setter.Value>
+
+                                                                        <TranslateTransform X="0"
+                                                                                            Y="-1"/>
+
+                                                                </Setter.Value>
+
+                                                        </Setter>
 
                                                 </Trigger>
 
@@ -285,9 +404,131 @@
 
         </Style>
 
-        <!-- ========================================================= -->
-        <!-- SECTION TITLE                                             -->
-        <!-- ========================================================= -->
+        <Style x:Key="DashboardButtonStyle"
+               TargetType="Button">
+
+                <Setter Property="Foreground"
+                        Value="White"/>
+
+                <Setter Property="BorderThickness"
+                        Value="0"/>
+
+                <Setter Property="Cursor"
+                        Value="Hand"/>
+
+                <Setter Property="Padding"
+                        Value="0"/>
+
+                <Setter Property="Background"
+                        Value="Transparent"/>
+
+                <Setter Property="Template">
+
+                        <Setter.Value>
+
+                                <ControlTemplate TargetType="Button">
+
+                                        <Border x:Name="Card"
+                                                BorderBrush="{StaticResource DaBoyzBorder}"
+                                                BorderThickness="1"
+                                                CornerRadius="12"
+                                                ClipToBounds="True">
+
+                                                <Border.RenderTransform>
+
+                                                        <TranslateTransform X="0"
+                                                                            Y="0"/>
+
+                                                </Border.RenderTransform>
+
+                                                <Grid>
+
+                                                        <Border Background="#161616"/>
+
+                                                        <Border Opacity="0.45">
+
+                                                                <Border.Background>
+
+                                                                        <ImageBrush ImageSource="/Assets/CardBackground.png"
+                                                                                    Stretch="UniformToFill"
+                                                                                    AlignmentX="Center"
+                                                                                    AlignmentY="Center"/>
+
+                                                                </Border.Background>
+
+                                                        </Border>
+
+                                                        <Border x:Name="DarkOverlay"
+                                                                Background="#50000000"/>
+
+                                                        <Border x:Name="HoverOverlay"
+                                                                Background="Transparent"/>
+
+                                                        <ContentPresenter Margin="24"
+                                                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                                                </Grid>
+
+                                        </Border>
+
+                                        <ControlTemplate.Triggers>
+
+                                                <Trigger Property="IsMouseOver"
+                                                                Value="True">
+
+                                                        <Setter TargetName="Card"
+                                                                Property="BorderBrush"
+                                                                Value="{StaticResource DaBoyzRed}"/>
+
+                                                        <Setter TargetName="HoverOverlay"
+                                                                Property="Background"
+                                                                Value="#20E00000"/>
+
+                                                        <Setter TargetName="Card"
+                                                                Property="RenderTransform">
+
+                                                                <Setter.Value>
+
+                                                                        <TranslateTransform X="0"
+                                                                                            Y="-4"/>
+
+                                                                </Setter.Value>
+
+                                                        </Setter>
+
+                                                </Trigger>
+
+                                                <Trigger Property="IsPressed"
+                                                        Value="True">
+
+                                                        <Setter TargetName="HoverOverlay"
+                                                                Property="Background"
+                                                                Value="#35000000"/>
+
+                                                        <Setter TargetName="Card"
+                                                                Property="RenderTransform">
+
+                                                                <Setter.Value>
+
+                                                                        <TranslateTransform X="0"
+                                                                                            Y="-1"/>
+
+                                                                </Setter.Value>
+
+                                                        </Setter>
+
+                                                </Trigger>
+
+                                        </ControlTemplate.Triggers>
+
+                                </ControlTemplate>
+
+                        </Setter.Value>
+
+                </Setter>
+
+        </Style>
 
         <Style x:Key="SectionTitleStyle"
                TargetType="TextBlock">
@@ -303,27 +544,23 @@
 
         </Style>
 
-        <!-- ========================================================= -->
-        <!-- SECTION SUBTITLE                                          -->
-        <!-- ========================================================= -->
-
         <Style x:Key="AdminDashboardButtonStyle"
-                TargetType="Button">
-
-                <Setter Property="Background"
-                        Value="#161616"/>
+               TargetType="Button">
 
                 <Setter Property="Foreground"
                         Value="{StaticResource DaBoyzText}"/>
-                
+
                 <Setter Property="BorderThickness"
                         Value="0"/>
-                
+
                 <Setter Property="Cursor"
                         Value="Hand"/>
 
                 <Setter Property="Padding"
                         Value="0"/>
+
+                <Setter Property="Background"
+                        Value="Transparent"/>
 
                 <Setter Property="Template">
 
@@ -332,49 +569,95 @@
                                 <ControlTemplate TargetType="Button">
 
                                         <Border x:Name="Card"
-                                                Background="{TemplateBinding Background}"
                                                 BorderBrush="{StaticResource DaBoyzBorder}"
                                                 BorderThickness="1"
                                                 CornerRadius="12"
-                                                Padding="24">
+                                                ClipToBounds="True">
 
-                                            <ContentPresenter/>
+                                                <Border.RenderTransform>
+
+                                                        <TranslateTransform X="0"
+                                                                            Y="0"/>
+
+                                                </Border.RenderTransform>
+
+                                                <Grid>
+
+                                                        <Border Background="#161616"/>
+
+                                                        <Border Opacity="0.45">
+
+                                                                <Border.Background>
+
+                                                                        <ImageBrush ImageSource="/Assets/CardBackground.png"
+                                                                                    Stretch="UniformToFill"
+                                                                                    AlignmentX="Center"
+                                                                                    AlignmentY="Center"/>
+
+                                                                </Border.Background>
+
+                                                        </Border>
+
+                                                        <Border x:Name="DarkOverlay"
+                                                                Background="#50000000"/>
+
+                                                        <Border x:Name="HoverOverlay"
+                                                                Background="Transparent"/>
+
+                                                        <ContentPresenter Margin="24"/>
+
+                                                </Grid>
 
                                         </Border>
 
                                         <ControlTemplate.Triggers>
 
                                                 <Trigger Property="IsMouseOver"
-                                                        Value="True">
-                                                
-                                                        <Setter TargetName="Card"
-                                                                Property="Background"
-                                                                Value="#202020"/>
+                                                         Value="True">
 
                                                         <Setter TargetName="Card"
                                                                 Property="BorderBrush"
                                                                 Value="{StaticResource DaBoyzRed}"/>
 
+                                                        <Setter TargetName="HoverOverlay"
+                                                                Property="Background"
+                                                                Value="#20E00000"/>
+
                                                         <Setter TargetName="Card"
                                                                 Property="RenderTransform">
 
-                                                            <Setter.Value>
-                                                                <TranslateTransform X="0" Y="-6"/>
-                                                            </Setter.Value>
-                                                        
+                                                                <Setter.Value>
+
+                                                                        <TranslateTransform X="0"
+                                                                                            Y="-6"/>
+
+                                                                </Setter.Value>
+
                                                         </Setter>
-                                                
+
                                                 </Trigger>
 
                                                 <Trigger Property="IsPressed"
-                                                        Value="True">
+                                                         Value="True">
 
-                                                    <Setter TargetName="Card"
-                                                        Property="Background"
-                                                        Value="#252525"/>
-                                                
+                                                        <Setter TargetName="HoverOverlay"
+                                                                Property="Background"
+                                                                Value="#35000000"/>
+
+                                                        <Setter TargetName="Card"
+                                                                Property="RenderTransform">
+
+                                                                <Setter.Value>
+
+                                                                        <TranslateTransform X="0"
+                                                                                            Y="-2"/>
+
+                                                                </Setter.Value>
+
+                                                        </Setter>
+
                                                 </Trigger>
-                                        
+
                                         </ControlTemplate.Triggers>
 
                                 </ControlTemplate>
@@ -384,10 +667,6 @@
                 </Setter>
 
         </Style>
-
-        <!-- ========================================================= -->
-        <!-- ACCENT BUTTON                                             -->
-        <!-- ========================================================= -->
 
         <Style x:Key="AccentButtonStyle"
                TargetType="Button">
@@ -411,8 +690,6 @@
                     Value="Hand"/>
 
         </Style>
-
-        <!-- WHITE TEXT CARET -->
 
         <Style TargetType="TextBox">
         

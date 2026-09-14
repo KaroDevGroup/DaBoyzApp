@@ -1,4 +1,7 @@
-﻿using System;
+﻿// KaroDevGroup
+// Josh Karo
+
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,30 +22,31 @@ public partial class MainWindow : Window
     private const int ParticleCount = 45;
     private const double ConnectionDistance = 135.0;
 
-
     public MainWindow()
     {
         InitializeComponent();
 
-        // Start on Home
-        NavigateToHome();
+        SettingsManager.Load();
 
-        // Start background particles
+        WindowState =
+            SettingsManager.LaunchMaximized
+                ? WindowState.Maximized
+                : WindowState.Normal;
+
         CreateParticles();
 
-        particleTimer = new DispatcherTimer
-        {
-            Interval = TimeSpan.FromMilliseconds(33)
-        };
+        particleTimer = new DispatcherTimer();
 
         particleTimer.Tick += AnimateParticles;
-        particleTimer.Start();
+
+        SetParticleFPS(
+            SettingsManager.AnimationFPS);
+
+        SetUIAnimationsEnabled(
+            SettingsManager.UiAnimationsEnabled);
+
+        NavigateToHome();
     }
-
-
-    // ================================================================
-    // CREATE PARTICLES
-    // ================================================================
 
     private void CreateParticles()
     {
@@ -124,11 +128,6 @@ public partial class MainWindow : Window
         }
     }
 
-
-    // ================================================================
-    // ANIMATE PARTICLES
-    // ================================================================
-
     private void AnimateParticles(
         object? sender,
         EventArgs e)
@@ -144,12 +143,9 @@ public partial class MainWindow : Window
 
         foreach (Particle particle in particles)
         {
-            // Movement
             particle.X += particle.SpeedX;
             particle.Y += particle.SpeedY;
 
-
-            // Wrap around edges
             if (particle.X < -10)
                 particle.X = width + 10;
 
@@ -162,8 +158,6 @@ public partial class MainWindow : Window
             if (particle.Y > height + 10)
                 particle.Y = -10;
 
-
-            // Position
             Canvas.SetLeft(
                 particle.Visual,
                 particle.X
@@ -174,8 +168,6 @@ public partial class MainWindow : Window
                 particle.Y
             );
 
-
-            // Gentle pulsing
             double pulse =
                 Math.Sin(
                     time * 0.7 +
@@ -192,11 +184,6 @@ public partial class MainWindow : Window
 
         UpdateConnections();
     }
-
-
-    // ================================================================
-    // UPDATE PARTICLE CONNECTIONS
-    // ================================================================
 
     private void UpdateConnections()
     {
@@ -268,18 +255,12 @@ public partial class MainWindow : Window
         }
     }
 
-
-    // ================================================================
-    // NAVIGATION
-    // ================================================================
-
     private void HomeButton_Click(
         object sender,
         RoutedEventArgs e)
     {
         NavigateToHome();
     }
-
 
     private void GamingButton_Click(
         object sender,
@@ -288,7 +269,6 @@ public partial class MainWindow : Window
         NavigateToGaming();
     }
 
-
     private void MusicButton_Click(
         object sender,
         RoutedEventArgs e)
@@ -296,14 +276,18 @@ public partial class MainWindow : Window
         NavigateToMusic();
     }
 
-
     private void PatchNotesButton_Click(
         object sender,
         RoutedEventArgs e)
     {
         NavigateToPatchNotes();
     }
-
+    private void KDGButton_Click(
+        object sender,
+        RoutedEventArgs e)
+    {
+        NavigateToKDG();
+    }
 
     private void AdminButton_Click(
         object sender,
@@ -324,16 +308,11 @@ public partial class MainWindow : Window
         Application.Current.Shutdown();
     }
 
-    // ================================================================
-    // NAVIGATION METHODS
-    // ================================================================
-
     public void NavigateToHome()
     {
         MainFrame.Navigate(new HomePage());
         SetSelectedButton(HomeButton);
     }
-
 
     public void NavigateToGaming()
     {
@@ -341,20 +320,22 @@ public partial class MainWindow : Window
         SetSelectedButton(GamingButton);
     }
 
-
     public void NavigateToMusic()
     {
         MainFrame.Navigate(new MusicPage());
         SetSelectedButton(MusicButton);
     }
 
-
     public void NavigateToPatchNotes()
     {
         MainFrame.Navigate(new PatchNotesPage());
         SetSelectedButton(PatchNotesButton);
     }
-
+    public void NavigateToKDG()
+    {
+        MainFrame.Navigate(new KDGPage());
+        SetSelectedButton(KDGButton);
+    }
 
     public void NavigateToAdmin()
     {
@@ -428,9 +409,10 @@ public partial class MainWindow : Window
         MainFrame.Navigate(new MarvelRivalsPage());
     }
 
-    // ================================================================
-    // PARTICLE FPS
-    // ================================================================
+    public void NavigateToDecisions()
+    {
+        MainFrame.Navigate(new DecisionsPage());
+    }
 
     public void SetParticleFPS(int fps)
     {
@@ -441,21 +423,36 @@ public partial class MainWindow : Window
             TimeSpan.FromSeconds(1.0 / fps);
     }
 
-    // ================================================================
-    // UI ANIMATIONS
-    // ================================================================
-
     public void SetUIAnimationsEnabled(
         bool enabled)
     {
-        // UI animation system will use this setting.
-        // We will connect page transitions and other
-        // interface animations here.
-    }
+        SettingsManager.UiAnimationsEnabled =
+            enabled;
+        
+        if (enabled)
+        {
+            ParticleCanvas.Visibility =
+                Visibility.Visible;
+            
+            ConnectionCanvas.Visibility =
+                Visibility.Visible;
 
-    // ================================================================
-    // SIDEBAR SELECTION
-    // ================================================================
+            if (!particleTimer.IsEnabled)
+            {
+                particleTimer.Start();
+            }
+        }
+        else
+        {
+            particleTimer.Stop();
+
+            ParticleCanvas.Visibility =
+                Visibility.Collapsed;
+
+            ConnectionCanvas.Visibility =
+                Visibility.Collapsed;
+        }
+    }
 
     private void SetSelectedButton(
         Button selectedButton)
@@ -464,16 +461,12 @@ public partial class MainWindow : Window
         GamingButton.Tag = null;
         MusicButton.Tag = null;
         PatchNotesButton.Tag = null;
+        KDGButton.Tag = null;
         AdminButton.Tag = null;
         SettingsButton.Tag = null;
 
         selectedButton.Tag = "Selected";
     }
-
-
-    // ================================================================
-    // PARTICLE DATA
-    // ================================================================
 
     private class Particle
     {

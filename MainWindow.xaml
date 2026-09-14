@@ -1,4 +1,7 @@
-﻿<Window x:Class="DaBoyzApp.MainWindow"
+﻿<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
+<Window x:Class="DaBoyzApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,25 +13,36 @@
         MinHeight="600"
         MinWidth="900"
         WindowStartupLocation="CenterScreen"
-        Background="#080808"
-        WindowState="Maximized">
+        Background="#080808">
 
     <Window.Resources>
 
-        <!-- ========================================================= -->
-        <!-- NAVIGATION BUTTON STYLE                                  -->
-        <!-- ========================================================= -->
+        <Style x:Key="NavButtonStyle"
+               TargetType="Button">
 
-        <Style x:Key="NavButtonStyle" TargetType="Button">
+            <Setter Property="Background"
+                    Value="Transparent"/>
 
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="Foreground" Value="#B0B0B0"/>
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="FontWeight" Value="SemiBold"/>
-            <Setter Property="HorizontalContentAlignment" Value="Left"/>
-            <Setter Property="Padding" Value="20,0"/>
-            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Foreground"
+                    Value="#B0B0B0"/>
+
+            <Setter Property="BorderThickness"
+                    Value="0"/>
+
+            <Setter Property="FontSize"
+                    Value="14"/>
+
+            <Setter Property="FontWeight"
+                    Value="SemiBold"/>
+
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Left"/>
+
+            <Setter Property="Padding"
+                    Value="20,0"/>
+
+            <Setter Property="Cursor"
+                    Value="Hand"/>
 
             <Setter Property="Template">
 
@@ -83,7 +97,7 @@
                          Value="True">
 
                     <Setter Property="Background"
-                            Value="#292929"/>
+                            Value="#80292929"/>
 
                     <Setter Property="Foreground"
                             Value="White"/>
@@ -94,7 +108,7 @@
                          Value="Selected">
 
                     <Setter Property="Background"
-                            Value="#333333"/>
+                            Value="#A0333333"/>
 
                     <Setter Property="Foreground"
                             Value="White"/>
@@ -107,30 +121,13 @@
 
     </Window.Resources>
 
-
-    <!-- ============================================================= -->
-    <!-- ROOT                                                          -->
-    <!-- ============================================================= -->
-
     <Grid>
-
-
-        <!-- ========================================================= -->
-        <!-- ANIMATED BACKGROUND                                       -->
-        <!-- ========================================================= -->
 
         <Grid x:Name="BackgroundLayer"
               Panel.ZIndex="0"
               IsHitTestVisible="False">
 
-
-            <!-- Base -->
             <Rectangle Fill="#080808"/>
-
-
-            <!-- ===================================================== -->
-            <!-- PRIMARY RED GLOW                                     -->
-            <!-- ===================================================== -->
 
             <Ellipse x:Name="MainGlow"
                      Width="850"
@@ -165,11 +162,6 @@
 
             </Ellipse>
 
-
-            <!-- ===================================================== -->
-            <!-- SECONDARY RED GLOW                                   -->
-            <!-- ===================================================== -->
-
             <Ellipse Width="650"
                      Height="650"
                      HorizontalAlignment="Left"
@@ -199,30 +191,13 @@
 
             </Ellipse>
 
-
-            <!-- ===================================================== -->
-            <!-- PARTICLE CONNECTIONS                                  -->
-            <!-- ===================================================== -->
-
             <Canvas x:Name="ConnectionCanvas"/>
-
-
-            <!-- ===================================================== -->
-            <!-- PARTICLES                                             -->
-            <!-- ===================================================== -->
 
             <Canvas x:Name="ParticleCanvas"/>
 
-
         </Grid>
 
-
-        <!-- ========================================================= -->
-        <!-- APPLICATION UI                                            -->
-        <!-- ========================================================= -->
-
         <Grid Panel.ZIndex="1">
-
 
             <Grid.ColumnDefinitions>
 
@@ -232,25 +207,26 @@
 
             </Grid.ColumnDefinitions>
 
-
-            <!-- ===================================================== -->
-            <!-- SIDEBAR                                               -->
-            <!-- ===================================================== -->
-
             <Border Grid.Column="0"
-                    Background="#151515"
                     BorderBrush="#252525"
-                    BorderThickness="0,0,1,0">
+                    BorderThickness="0,0,1,0"
+                    ClipToBounds="True">
+
+                <Border.Background>
+
+                    <ImageBrush ImageSource="/Assets/SidebarBackground.png"
+                                Stretch="UniformToFill"
+                                AlignmentX="Center"
+                                AlignmentY="Center"/>
+
+                </Border.Background>
 
                 <Grid>
 
+                    <Border Background="#85080808"
+                            IsHitTestVisible="False"/>
 
                     <StackPanel>
-
-
-                        <!-- ================================================= -->
-                        <!-- BRAND                                            -->
-                        <!-- ================================================= -->
 
                         <StackPanel Margin="25,30,25,40">
 
@@ -269,18 +245,12 @@
 
                         </StackPanel>
 
-
-                        <!-- ================================================= -->
-                        <!-- NAVIGATION                                        -->
-                        <!-- ================================================= -->
-
                         <Button x:Name="HomeButton"
                                 Content="HOME"
                                 Height="50"
                                 Margin="15,5"
                                 Click="HomeButton_Click"
                                 Style="{StaticResource NavButtonStyle}"/>
-
 
                         <Button x:Name="GamingButton"
                                 Content="GAMING DATABASE"
@@ -289,14 +259,12 @@
                                 Click="GamingButton_Click"
                                 Style="{StaticResource NavButtonStyle}"/>
 
-
                         <Button x:Name="MusicButton"
                                 Content="MUSIC"
                                 Height="50"
                                 Margin="15,5"
                                 Click="MusicButton_Click"
                                 Style="{StaticResource NavButtonStyle}"/>
-
 
                         <Button x:Name="PatchNotesButton"
                                 Content="PATCH NOTES"
@@ -305,6 +273,12 @@
                                 Click="PatchNotesButton_Click"
                                 Style="{StaticResource NavButtonStyle}"/>
 
+                        <Button x:Name="KDGButton"
+                                Content="KDG"
+                                Height="50"
+                                Margin="15,5"
+                                Click="KDGButton_Click"
+                                Style="{StaticResource NavButtonStyle}"/>
 
                         <Button x:Name="AdminButton"
                                 Content="ADMIN PORTAL"
@@ -321,33 +295,28 @@
                                 Style="{StaticResource NavButtonStyle}"/>
 
                         <Button Content="EXIT"
-                                Click="ExitButton_Click"
-                                Style="{StaticResource NavButtonStyle}"
                                 Height="50"
                                 Margin="15,5"
-                                Cursor="Hand"/>
-                                
-                    </StackPanel>
+                                Click="ExitButton_Click"
+                                Style="{StaticResource NavButtonStyle}"/>
 
-                    <!-- ================================================= -->
-                    <!-- FOOTER                                            -->
-                    <!-- ================================================= -->
+                    </StackPanel>
 
                     <StackPanel VerticalAlignment="Bottom"
                                 Margin="0,0,0,25">
 
                         <Border Height="1"
-                                Background="#292929"
+                                Background="#50292929"
                                 Margin="20,0,20,15"/>
 
                         <TextBlock Text="DA BOYZ"
-                                   Foreground="#555555"
+                                   Foreground="#777777"
                                    FontSize="10"
                                    FontWeight="SemiBold"
                                    HorizontalAlignment="Center"/>
 
-                        <TextBlock Text="v1.1.6 BETA"
-                                   Foreground="#666666"
+                        <TextBlock Text="v1.1.8 BETA"
+                                   Foreground="#888888"
                                    FontSize="11"
                                    HorizontalAlignment="Center"
                                    Margin="0,3,0,0"/>
@@ -358,11 +327,6 @@
 
             </Border>
 
-
-            <!-- ===================================================== -->
-            <!-- CONTENT                                               -->
-            <!-- ===================================================== -->
-
             <Grid Grid.Column="1">
 
                 <Border Background="#080808"
@@ -372,7 +336,6 @@
                        NavigationUIVisibility="Hidden"/>
 
             </Grid>
-
 
         </Grid>
 

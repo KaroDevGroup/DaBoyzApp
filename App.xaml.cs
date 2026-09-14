@@ -1,4 +1,7 @@
-﻿using System.Configuration;
+﻿// KaroDevGroup
+// Josh Karo
+
+using System.Configuration;
 using System.Data;
 using System.Windows;
 

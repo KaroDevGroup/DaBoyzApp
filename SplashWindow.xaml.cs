@@ -1,3 +1,6 @@
+// KaroDevGroup
+// Josh Karo
+
 using System;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -24,9 +27,6 @@ public partial class SplashWindow : Window
         RoutedEventArgs e)
     {
         VersionText.Text = $"v{GetCurrentVersion()} BETA";
-        // =========================================================
-        // LOGO FADE + SLIDE
-        // =========================================================
 
         DoubleAnimation logoFade =
             new DoubleAnimation
@@ -59,11 +59,6 @@ public partial class SplashWindow : Window
                 TranslateTransform.YProperty,
                 logoSlide);
 
-
-        // =========================================================
-        // SUBTITLE
-        // =========================================================
-
         await Task.Delay(300);
 
         DoubleAnimation subtitleFade =
@@ -77,11 +72,6 @@ public partial class SplashWindow : Window
         SubtitleText.BeginAnimation(
             OpacityProperty,
             subtitleFade);
-
-
-        // =========================================================
-        // STATUS
-        // =========================================================
 
         await Task.Delay(400);
 
@@ -99,11 +89,6 @@ public partial class SplashWindow : Window
 
         StatusText.Text =
             "INITIALIZING COMMUNITY HUB...";
-
-
-        // =========================================================
-        // LOADING
-        // =========================================================
 
         await AnimateLoadingBar(
             70,
@@ -123,20 +108,10 @@ public partial class SplashWindow : Window
             225,
             450);
 
-
-        // =========================================================
-        // CHECK FOR UPDATES
-        // =========================================================
-
         StatusText.Text =
             "CHECKING FOR UPDATES...";
 
         await CheckForUpdates();
-
-
-        // =========================================================
-        // SYSTEM READY
-        // =========================================================
 
         StatusText.Text =
             "SYSTEM READY";
@@ -145,17 +120,7 @@ public partial class SplashWindow : Window
             280,
             400);
 
-
-        // =========================================================
-        // PAUSE
-        // =========================================================
-
         await Task.Delay(350);
-
-
-        // =========================================================
-        // FADE OUT
-        // =========================================================
 
         DoubleAnimation fadeOut =
             new DoubleAnimation
@@ -176,11 +141,6 @@ public partial class SplashWindow : Window
             fadeOut);
     }
 
-
-    // =============================================================
-    // CHECK FOR UPDATES
-    // =============================================================
-
     private async Task CheckForUpdates()
     {
         try
@@ -193,16 +153,9 @@ public partial class SplashWindow : Window
         }
         catch
         {
-            // If GitHub cannot be reached,
-            // simply continue starting the application.
             _availableUpdate = null;
         }
     }
-
-
-    // =============================================================
-    // SHOW NEXT WINDOW
-    // =============================================================
 
     private void ShowNextWindow()
     {
@@ -222,11 +175,6 @@ public partial class SplashWindow : Window
             updateWindow.ShowDialog();
         }
 
-
-        // =========================================================
-        // MAIN WINDOW
-        // =========================================================
-
         MainWindow mainWindow =
             new MainWindow();
 
@@ -238,11 +186,6 @@ public partial class SplashWindow : Window
         Close();
     }
 
-
-    // =============================================================
-    // GET CURRENT APPLICATION VERSION
-    // =============================================================
-
     private string GetCurrentVersion()
     {
         Assembly assembly =
@@ -253,11 +196,6 @@ public partial class SplashWindow : Window
 
         return version?.ToString(3) ?? "Unknown";
     }
-
-
-    // =============================================================
-    // LOADING BAR ANIMATION
-    // =============================================================
 
     private async Task AnimateLoadingBar(
         double targetWidth,
