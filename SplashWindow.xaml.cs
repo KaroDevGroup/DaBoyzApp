@@ -181,6 +181,9 @@ public partial class SplashWindow : Window
         Application.Current.MainWindow =
             mainWindow;
 
+        Application.Current.ShutdownMode =
+            ShutdownMode.OnMainWindowClose;
+
         mainWindow.Show();
 
         Close();
