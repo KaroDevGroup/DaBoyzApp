@@ -1,0 +1,244 @@
+<!-- KaroDevGroup -->
+<!-- Josh Karo -->
+
+<Window x:Class="DaBoyzApp.AntiCheatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Da Boyz Anti-Cheat"
+        Width="620"
+        Height="360"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ShowInTaskbar="False"
+        Loaded="Window_Loaded">
+
+    <Grid>
+
+        <Border Background="#080808"
+                BorderBrush="#292929"
+                BorderThickness="1"
+                CornerRadius="14"
+                ClipToBounds="True">
+
+            <Grid>
+
+                <Border Background="#080808"/>
+
+                <Image Source="/Assets/SplashBackground.png"
+                       Stretch="UniformToFill"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Stretch"
+                       Opacity="0.40"/>
+
+                <Border Background="#30000000"/>
+
+                <Ellipse Width="460"
+                         Height="460"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         Opacity="0.08">
+
+                    <Ellipse.Fill>
+
+                        <RadialGradientBrush>
+
+                            <GradientStop Color="#E00000"
+                                          Offset="0"/>
+
+                            <GradientStop Color="#E00000"
+                                          Offset="0.35"/>
+
+                            <GradientStop Color="#00000000"
+                                          Offset="1"/>
+
+                        </RadialGradientBrush>
+
+                    </Ellipse.Fill>
+
+                </Ellipse>
+
+                <Grid Margin="38,30">
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="Auto"/>
+
+                        <RowDefinition Height="*"/>
+
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+
+                        <Grid.ColumnDefinitions>
+
+                            <ColumnDefinition Width="*"/>
+
+                            <ColumnDefinition Width="Auto"/>
+
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel>
+
+                            <TextBlock Text="DA BOYZ"
+                                       Foreground="White"
+                                       FontSize="14"
+                                       FontWeight="Bold"/>
+
+                            <TextBlock Text="ANTI-CHEAT"
+                                       Foreground="#E00000"
+                                       FontSize="28"
+                                       FontWeight="Bold"
+                                       Margin="0,2,0,0"/>
+
+                            <Border Width="72"
+                                    Height="2"
+                                    Background="#E00000"
+                                    HorizontalAlignment="Left"
+                                    Margin="0,12,0,0"/>
+
+                        </StackPanel>
+
+                        <Border Grid.Column="1"
+                                Background="#B0161616"
+                                BorderBrush="#404040"
+                                BorderThickness="1"
+                                CornerRadius="6"
+                                Padding="12,7"
+                                VerticalAlignment="Top">
+
+                            <TextBlock x:Name="SecurityStateText"
+                                       Text="INITIALIZING"
+                                       Foreground="#B0B0B0"
+                                       FontSize="10"
+                                       FontWeight="SemiBold"/>
+
+                        </Border>
+
+                    </Grid>
+
+                    <StackPanel Grid.Row="1"
+                                VerticalAlignment="Center">
+
+                        <TextBlock x:Name="MainStatusText"
+                                   Text="INITIALIZING SECURITY ENGINE..."
+                                   Foreground="White"
+                                   FontSize="16"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"/>
+
+                        <TextBlock x:Name="CurrentFileText"
+                                   Text="Preparing integrity scan..."
+                                   Foreground="#A0A0A0"
+                                   FontSize="10"
+                                   HorizontalAlignment="Center"
+                                   TextAlignment="Center"
+                                   TextTrimming="CharacterEllipsis"
+                                   Margin="0,9,0,0"
+                                   MaxWidth="500"/>
+
+                        <Border Height="6"
+                                Background="#80161616"
+                                BorderBrush="#404040"
+                                BorderThickness="1"
+                                CornerRadius="3"
+                                Margin="0,22,0,0"
+                                ClipToBounds="True">
+
+                            <ProgressBar x:Name="ScanProgressBar"
+                                         Minimum="0"
+                                         Maximum="100"
+                                         Value="0"
+                                         BorderThickness="0"
+                                         Background="Transparent"
+                                         Foreground="#E00000"/>
+
+                        </Border>
+
+                        <Grid Margin="0,10,0,0">
+
+                            <TextBlock x:Name="FilesCheckedText"
+                                       Text="FILES CHECKED: 0 / 0"
+                                       Foreground="#777777"
+                                       FontSize="9"
+                                       FontWeight="SemiBold"
+                                       HorizontalAlignment="Left"/>
+
+                            <TextBlock x:Name="PercentageText"
+                                       Text="0%"
+                                       Foreground="#E00000"
+                                       FontSize="9"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Right"/>
+
+                        </Grid>
+
+                        <Border x:Name="FailurePanel"
+                                Visibility="Collapsed"
+                                Background="#70180000"
+                                BorderBrush="#80E00000"
+                                BorderThickness="1"
+                                CornerRadius="6"
+                                Padding="12"
+                                Margin="0,18,0,0">
+
+                            <StackPanel>
+
+                                <TextBlock Text="INTEGRITY FAILURE DETECTED"
+                                           Foreground="#FF3B3B"
+                                           FontSize="10"
+                                           FontWeight="Bold"/>
+
+                                <TextBlock x:Name="FailureFileText"
+                                           Text=""
+                                           Foreground="#D0D0D0"
+                                           FontSize="10"
+                                           TextWrapping="Wrap"
+                                           Margin="0,5,0,0"/>
+
+                            </StackPanel>
+
+                        </Border>
+
+                    </StackPanel>
+
+                    <Grid Grid.Row="2">
+
+                        <TextBlock Text="DA BOYZ SECURITY"
+                                   Foreground="#606060"
+                                   FontSize="9"
+                                   FontWeight="SemiBold"
+                                   VerticalAlignment="Center"/>
+
+
+                        <Button x:Name="CloseButton"
+                                Content="CLOSE"
+                                Width="90"
+                                Height="32"
+                                HorizontalAlignment="Right"
+                                Background="#B0161616"
+                                Foreground="White"
+                                BorderBrush="#404040"
+                                BorderThickness="1"
+                                FontSize="10"
+                                FontWeight="SemiBold"
+                                Cursor="Hand"
+                                Visibility="Collapsed"
+                                Click="CloseButton_Click"/>
+
+                    </Grid>
+
+                </Grid>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+
+</Window>
