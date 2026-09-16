@@ -39,70 +39,6 @@ A Windows desktop application for the **DaBoyz Discord community**.
 
 ---
 
-## </> Project Structure
-
-```text
-DaBoyzApp/                            # Main Directory
-├── Assets/                
-│   ├── Beats/                        # Locally packaged music files
-│   ├── Games/                        # Game images 
-│   └── Icons/                        # UI Images and Graphics
-│
-├── Controls/                         # YouTube Player controller
-│  
-├── Pages/                            # Page Directory
-│   ├── Admin/              
-│   │    ├── Commands/                # Command Page Logic
-│   │    ├── Dashboard/               # Dashboard Page Logic
-│   │    ├── Decisions/               # Decision Page Logic
-│   │    ├── Punishments/             # Punishment Page Logic
-│   │    ├── Rules/                   # Rule Page Logic
-│   │    └── Staff/                   # Staff Page Logic
-│   │
-│   ├── Gaming/              
-│   │   ├── CallofDuty/               # Call of Duty Database
-│   │   ├── Destiny2/                 # Destiny 2 Database
-│   │   ├── FiveM/                    # FiveM Database
-│   │   ├── Helldivers2/              # Helldivers 2 Database
-│   │   ├── MarvelRivals/             # Marvel Rivals Database
-│   │   ├── Minecraft/                # Minecraft Database
-│   │   ├── Rainbow/                  # Rainbow 6 Siege Database
-│   │   └── RocketLeague/             # Rocket League Database
-│   │
-│   ├── Home/                         # Home Page Logic
-│   │
-│   ├── KDG/                 
-│   │   ├── KDGApp/                   # KDGApp Repository 
-│   │   ├── KDGBot/                   # KDGBot Repository
-│   │   ├── KDGPostal/                # KDGPostal Repository
-│   │   └── KDGTexture/               # KDGTexture Repository
-│   │
-│   ├── Music/                        # Music Page Logic
-│   │
-│   ├── PatchNotes/                   # Patch Note Page Logic
-│   │ 
-│   └── Settings/                     # Settings Page 
-│   
-├── Security/                         # Anti-Cheat Logic
-│   
-├── Services/                         # Database connections/rules
-│
-├── Windows/                          # Updater Logic/Anti-Cheat Window
-│
-├── App.xaml                          # Application-level XAML resources
-├── App.xaml.cs                       # Application startup logic
-├── AssemblyInfo.cs                   # Assembly metadata
-├── DaBoyzApp.cspoj                   # Project entry point
-├── Generate-IntegrityManifest.ps1    # Integrity manifest 
-├── MainWindow.xaml                   # Main application window
-├── MainWindow.xaml.cs                # Main application logic
-├── SettingsManager.cs                # Settings page logic
-├── SplashWindow.xaml                 # Startup window
-└── SplashWindow.xaml.cs              # Startup window logic
-```
-
----
-
 ## </> About DaBoyzApp
 
 **DaBoyzApp** is a Windows desktop application built for the **DaBoyz Discord server**.
@@ -298,3 +234,309 @@ git push -u origin feature/my-change
 You can then open a pull request on **GitHub.**
 
 > *Cloning does **NOT** mean you can claim the project as yours.*
+
+---
+
+## </> v1.1.9 Project Structure
+
+```text
+DaBoyzApp/                              
+├── Assets/                
+│   ├── Beats/                      
+│   ├── Games/                      
+│   └── Icons/                      
+│
+├── Controls/                       
+│   ├── YouTubePlayer.xaml
+│   └── YouTubePlayer.xaml.cs
+│
+├── Pages/                           
+│   ├── Admin/              
+│   │   ├── Commands/    
+│   │   │   ├── DiscordCommandsPage.xaml
+│   │   │   └── DiscordCommandsPage.xaml.cs
+│   │   │          
+│   │   ├── Dashboard/    
+│   │   │   ├── AdminDashboardPage.xaml
+│   │   │   └── AdminDashboardPage.xaml.cs
+│   │   │         
+│   │   ├── Decisions/  
+│   │   │   ├── Ban/
+│   │   │   │   ├── BanMemberPage.xaml
+│   │   │   │   └── BanMemberPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Clear/
+│   │   │   │   ├── ClearMessagesPage.xaml
+│   │   │   │   └── ClearMessagesPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Kick/
+│   │   │   │   ├── KickMemberPage.xaml
+│   │   │   │   └── KickMemberPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Lock/
+│   │   │   │   ├── LockChannelPage.xaml
+│   │   │   │   └── LockChannelPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Timeout/
+│   │   │   │   ├── TimeoutMemberPage.xaml
+│   │   │   │   └── TimeoutMemberPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Unban/
+│   │   │   │   ├── UnbanMemberPage.xaml
+│   │   │   │   └── UnbanMemberPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Unlock/
+│   │   │   │   ├── UnlockChannelPage.xaml
+│   │   │   │   └── UnlockChannelPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Warn/
+│   │   │   │   ├── WarnMemberPage.xaml
+│   │   │   │   └── WarnMemberPage.xaml.cs
+│   │   │   │
+│   │   │   ├── DecisionsPage.xaml
+│   │   │   └── DecisionsPage.xaml.cs
+│   │   │      
+│   │   ├── Punishments/
+│   │   │   ├── PunishmentSlatePage.xaml
+│   │   │   └── PunishmentSlatePage.xaml.cs
+│   │   │         
+│   │   ├── Rules/   
+│   │   │   ├── RulesPage.xaml
+│   │   │   └── RulesPage.xaml.cs
+│   │   │              
+│   │   ├── Staff/
+│   │   │   ├── StaffMembersPage.xaml
+│   │   │   └── StaffMembersPage.xaml.cs
+│   │   │               
+│   │   ├── AdminPage.xaml
+│   │   └── AdminPage.xaml.cs
+│   │
+│   ├── Gaming/              
+│   │   ├── CallofDuty/  
+│   │   │   ├── Loadouts/
+│   │   │   │   ├── LoadoutsPage.xaml
+│   │   │   │   └── LoadoutsPage.xaml.cs
+│   │   │   │
+│   │   │   ├── StatTracker/
+│   │   │   │   ├── StatTrackerPage.xaml
+│   │   │   │   └── StatTrackerPage.xaml.cs
+│   │   │   │
+│   │   │   ├── CallofDutyPage.xaml
+│   │   │   └── CallofDutyPage.xaml.cs
+│   │   │
+│   │   ├── Destiny2/ 
+│   │   │   ├── Builds/
+│   │   │   │   ├── BuildsPage.xaml
+│   │   │   │   └── BuildsPage.xaml.cs
+│   │   │   │
+│   │   │   ├── LightGG/
+│   │   │   │   ├── LightGGPage.xaml
+│   │   │   │   └── LightGGPage.xaml.cs
+│   │   │   │
+│   │   │   ├── RaidReport/
+│   │   │   │   ├── RaidReportPage.xaml
+│   │   │   │   └── RaidReportPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Raids/
+│   │   │   │   ├── DeepStoneCrypt/
+│   │   │   │   │   ├── Atraks1Page.xaml
+│   │   │   │   │   ├── Atraks1Page.xaml.cs
+│   │   │   │   │   ├── CryptSecurityPage.xaml
+│   │   │   │   │   ├── CryptSecurityPage.xaml.cs
+│   │   │   │   │   ├── DeepStoneCryptPage.xaml
+│   │   │   │   │   ├── DeepStoneCryptPage.xaml.cs
+│   │   │   │   │   ├── TaniksAbominationPage.xaml
+│   │   │   │   │   ├── TaniksAbominationPage.xaml.cs
+│   │   │   │   │   ├── TaniksRebornPage.xaml
+│   │   │   │   │   └── TaniksRebornPage.xaml.cs
+│   │   │   │   │
+│   │   │   │   ├── GardenOfSalvation/
+│   │   │   │   │   ├── DefeatConsecratedMindPage.xaml
+│   │   │   │   │   ├── DefeatConsecratedMindPage.xaml.cs
+│   │   │   │   │   ├── DefeatSanctifiedMindPage.xaml
+│   │   │   │   │   ├── DefeatSanctifiedMindPage.xaml.cs
+│   │   │   │   │   ├── EvadeConsecratedMindPage.xaml
+│   │   │   │   │   ├── EvadeConsecratedMindPage.xaml.cs
+│   │   │   │   │   ├── GardenOfSalvationPage.xaml
+│   │   │   │   │   ├── GardenOfSalvationPage.xaml.cs
+│   │   │   │   │   ├── SummonConsecratedMindPage.xaml
+│   │   │   │   │   └── SummonConsecratedMindPage.xaml.cs
+│   │   │   │   │
+│   │   │   │   ├── KingsFall/
+│   │   │   │   │   ├── DaughtersPage.xaml
+│   │   │   │   │   ├── DaughtersPage.xaml.cs
+│   │   │   │   │   ├── GolgorothPage.xaml
+│   │   │   │   │   ├── GolgorothPage.xaml.cs
+│   │   │   │   │   ├── KingsFallPage.xaml
+│   │   │   │   │   ├── KingsFallPage.xaml.cs
+│   │   │   │   │   ├── OryxPage.xaml
+│   │   │   │   │   ├── OryxPage.xaml.cs
+│   │   │   │   │   ├── TotemsPage.xaml
+│   │   │   │   │   ├── TotemsPage.xaml.cs
+│   │   │   │   │   ├── WarpriestPage.xaml
+│   │   │   │   │   └── WarpriestPage.xaml.cs
+│   │   │   │   │
+│   │   │   │   ├── LastWish/
+│   │   │   │   │   ├── KalliPage.xaml
+│   │   │   │   │   ├── KalliPage.xaml.cs
+│   │   │   │   │   ├── LastWishPage.xaml
+│   │   │   │   │   ├── LastWishPage.xaml.cs
+│   │   │   │   │   ├── MorgethPage.xaml
+│   │   │   │   │   ├── MorgethPage.xaml.cs
+│   │   │   │   │   ├── QueenswalkPage.xaml
+│   │   │   │   │   ├── QueenswalkPage.xaml.cs
+│   │   │   │   │   ├── RivenPage.xaml 
+│   │   │   │   │   ├── RivenPage.xaml.cs
+│   │   │   │   │   ├── ShuroChiPage.xaml
+│   │   │   │   │   ├── ShuroChiPage.xaml.cs
+│   │   │   │   │   ├── VaultPage.xaml
+│   │   │   │   │   └── VaultPage.xaml.cs
+│   │   │   │   │
+│   │   │   │   ├── Destiny2RaidsPage.xaml
+│   │   │   │   └── Destiny2RaidsPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Destiny2Page.xaml
+│   │   │   └── Destiny2Page.xaml.cs
+│   │   │
+│   │   ├── FiveM/   
+│   │   │   ├── CFX/
+│   │   │   │   ├── CFXPage.xaml
+│   │   │   │   └── CFXPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Servers/
+│   │   │   │   ├── FiveMServerPage.xaml
+│   │   │   │   └── FiveMServerPage.xaml.cs
+│   │   │   │
+│   │   │   ├── FiveMPage.xaml
+│   │   │   └── FiveMPage.xaml.cs
+│   │   │
+│   │   ├── Helldivers2/
+│   │   │   ├── InfoHub/
+│   │   │   │   ├── InfoHubPage.xaml
+│   │   │   │   └── InfoHubPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Map/
+│   │   │   │   ├── HelldiversMapPage.xaml
+│   │   │   │   └── HelldiversMapPage.xaml.cs
+│   │   │   │
+│   │   │   ├── HelldiversPage.xaml
+│   │   │   └── HelldiversPage.xaml.cs
+│   │   │
+│   │   ├── MarvelRivals/   
+│   │   │   ├── StatTracker/
+│   │   │   │   ├── RivalsTrackerPage.xaml
+│   │   │   │   └── RivalsTrackerPage.xaml.cs
+│   │   │   │
+│   │   │   ├── WiKi/
+│   │   │   │   ├── WiKiPage.xaml
+│   │   │   │   └── WiKiPage.xaml.cs
+│   │   │   │
+│   │   │   ├── MarvelRivalsPage.xaml
+│   │   │   └── MarvelRivalsPage.xaml.cs
+│   │   │
+│   │   ├── Minecraft/ 
+│   │   │   ├── Mods/
+│   │   │   │   ├── MCModsPage.xaml
+│   │   │   │   └── MCModsPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Servers/
+│   │   │   │   ├── MCServerPage.xaml
+│   │   │   │   └── MCServerPage.xaml.cs
+│   │   │   │
+│   │   │   ├── MinecraftPage.xaml
+│   │   │   └── MinecraftPage.xaml.cs
+│   │   │
+│   │   ├── Rainbow/  
+│   │   │   ├── Maps/
+│   │   │   │   ├── MapsPage.xaml
+│   │   │   │   └── MapsPage.xaml.cs
+│   │   │   │
+│   │   │   ├── StatTracker/
+│   │   │   │   ├── SiegeTrackerPage.xaml
+│   │   │   │   └── SiegeTrackerPage.xaml.cs
+│   │   │   │
+│   │   │   ├── Rainbow6SiegePage.xaml
+│   │   │   └── Rainbow6SiegePage.xaml.cs
+│   │   │
+│   │   ├── RocketLeague/ 
+│   │   │   ├── Garage/
+│   │   │   │   ├── GaragePage.xaml
+│   │   │   │   └── GaragePage.xaml.cs
+│   │   │   │
+│   │   │   ├── StatTracker/
+│   │   │   │   ├── RocketTrackerPage.xaml
+│   │   │   │   └── RocketTrackerPage.xaml.cs
+│   │   │   │
+│   │   │   ├── RocketLeaguePage.xaml
+│   │   │   └── RocketLeaguePage.xaml.cs
+│   │   │
+│   │   ├── GamingPage.xaml
+│   │   └── GamingPage.xaml.cs
+│   │
+│   ├── Home/                      
+│   │   ├── HomePage.xaml
+│   │   └── HomePage.xaml.cs
+│   │
+│   ├── KDG/                 
+│   │   ├── KDGApp/
+│   │   │   ├── KDGAppPage.xaml
+│   │   │   └── KDGAppPage.xaml.cs
+│   │   │  
+│   │   ├── KDGBot/
+│   │   │   ├── KDGBotPage.xaml
+│   │   │   └── KDGBotPage.xaml.cs
+│   │   │
+│   │   ├── KDGPostal/
+│   │   │   ├── KDGPostalPage.xaml
+│   │   │   └── KDGPostalPage.xaml.cs
+│   │   │
+│   │   ├── KDGTexture/
+│   │   │   ├── KDGTexturePage.xaml
+│   │   │   └── KDGTexturePage.xaml.cs
+│   │   │
+│   │   ├── KDGPage.xaml
+│   │   └── KDGPage.xaml.cs
+│   │
+│   ├── Music/                      
+│   │   ├── MusicPage.xaml
+│   │   └── MusicPage.xaml.cs
+│   │
+│   ├── PatchNotes/                
+│   │   ├── PatchNotesPage.xaml
+│   │   └── PatchNotesPage.xaml.cs
+│   │ 
+│   └── Settings/                 
+│       ├── SettingsPage.xaml
+│       └── SettingsPage.xaml.cs
+│   
+├── Security/                      
+│   ├── IntegrityManifest.cs
+│   ├── IntegrityResult.cs
+│   └── IntegrityService.cs
+│   
+├── Services/                      
+│   ├── AdminAuthService.cs
+│   ├── CardAnimationService.cs
+│   ├── ModerationService.cs
+│   ├── SupabaseAuthService.cs
+│   └── UpdateServices.cs
+│
+├── Windows/                       
+│   ├── AntiCheatWindow.xaml
+│   ├── AntiCheatWindow.xaml.cs
+│   ├── UpdateWindow.xaml
+│   └── UpdateWindow.xaml.cs
+│
+├── App.xaml                        # Application-level XAML resources
+├── App.xaml.cs                     # Application startup logic
+├── AssemblyInfo.cs                 # Assembly metadata
+├── DaBoyzApp.cspoj                 # Project entry point
+├── Generate-IntegrityManifest.ps1  # Integrity manifest 
+├── MainWindow.xaml                 # Main application window
+├── MainWindow.xaml.cs              # Main application logic
+├── SettingsManager.cs              # Settings page logic
+├── SplashWindow.xaml               # Startup window
+└── SplashWindow.xaml.cs            # Startup window logic
+```
+
+---
