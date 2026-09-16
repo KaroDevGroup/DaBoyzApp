@@ -1,12 +1,14 @@
 # DaBoyzApp Code of Conduct
 
-## My Commitment
+## </> My Commitment
 
 DaBoyzApp is built for the DaBoyz community, and I want the project to remain a respectful, welcoming, and productive place for everyone who interacts with it.
 
 Whether you are reporting bugs, suggesting features, contributing code, participating in discussions, or helping other users, you are expected to treat others with respect.
 
-## Expected Behavior
+---
+
+## </> Expected Behavior
 
 Participants are expected to:
 
@@ -15,7 +17,9 @@ Participants are expected to:
 - Respect differing opinions, experience levels, and technical backgrounds.
 - Report bugs and security issues responsibly.
 
-## Unacceptable Behavior
+---
+
+## </> Unacceptable Behavior
 
 The following behavior is not acceptable within DaBoyzApp project spaces:
 
@@ -29,7 +33,9 @@ The following behavior is not acceptable within DaBoyzApp project spaces:
 - Publicly disclosing security vulnerabilities before maintainers have had a reasonable opportunity to investigate them.
 - Any other behavior that project maintainers determine is harmful to the community or project.
 
-## Project Discussions
+---
+
+## </> Project Discussions
 
 GitHub issues, pull requests, discussions, and other project-related spaces should primarily be used for:
 
@@ -42,7 +48,9 @@ GitHub issues, pull requests, discussions, and other project-related spaces shou
 
 Off-topic discussion may be removed if it interferes with my project development or support.
 
-## Contributions
+---
+
+## </> Contributions
 
 Contributors are expected to submit work in good faith.
 
@@ -58,13 +66,17 @@ Contributions should not intentionally introduce:
 
 Pull requests or contributions that violate these expectations may be rejected or removed.
 
-## Security Issues
+---
+
+## </> Security Issues
 
 Security vulnerabilities should be reported privately whenever possible rather than being posted publicly.
 
 Please refer to the project's `SECURITY.md` file for vulnerability reporting instructions.
 
-## Enforcement
+---
+
+## </> Enforcement
 
 Project maintainers are responsible for interpreting and enforcing this Code of Conduct.
 
@@ -79,7 +91,9 @@ Depending on the severity of a violation, maintainers may take actions including
 
 Enforcement decisions may be made based on the severity, frequency, and impact of the behavior.
 
-## Scope
+---
+
+## </> Scope
 
 This Code of Conduct applies to official DaBoyzApp project spaces, including:
 
@@ -92,13 +106,17 @@ This Code of Conduct applies to official DaBoyzApp project spaces, including:
 
 Community spaces outside of the DaBoyzApp project may have their own separate rules.
 
-## Reporting Problems
+---
+
+## </> Reporting Problems
 
 If you experience or witness behavior that violates this Code of Conduct, contact the DaBoyzApp project maintainers privately.
 
 Reports will be reviewed as reasonably and confidentially as possible.
 
-## Maintainers
+---
+
+## </> Maintainers
 
 DaBoyzApp is maintained by **KaroDevGroup**.
 
