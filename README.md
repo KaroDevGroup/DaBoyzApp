@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="DaBoyzLogoPNG.png" width="180">
+<img src="Assets\DaBoyzLogoPNG.png" width="180">
 
 ---
 
