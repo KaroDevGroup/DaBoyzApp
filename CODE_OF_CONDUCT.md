@@ -1,8 +1,8 @@
 # DaBoyzApp Code of Conduct
 
-## Our Commitment
+## My Commitment
 
-DaBoyzApp is built for the DaBoyz community, and we want the project to remain a respectful, welcoming, and productive place for everyone who interacts with it.
+DaBoyzApp is built for the DaBoyz community, and I want the project to remain a respectful, welcoming, and productive place for everyone who interacts with it.
 
 Whether you are reporting bugs, suggesting features, contributing code, participating in discussions, or helping other users, you are expected to treat others with respect.
 
@@ -10,13 +10,10 @@ Whether you are reporting bugs, suggesting features, contributing code, particip
 
 Participants are expected to:
 
-- Treat other users, contributors, and maintainers with respect.
+- Treat other users, contributors, and myself with respect.
 - Provide constructive feedback and criticism.
-- Keep discussions relevant to the project when using project spaces.
 - Respect differing opinions, experience levels, and technical backgrounds.
-- Avoid unnecessary hostility, personal attacks, or harassment.
 - Report bugs and security issues responsibly.
-- Respect the work of contributors and properly credit others when appropriate.
 
 ## Unacceptable Behavior
 
@@ -43,7 +40,7 @@ GitHub issues, pull requests, discussions, and other project-related spaces shou
 - Technical support
 - Constructive feedback
 
-Off-topic discussion may be removed if it interferes with project development or support.
+Off-topic discussion may be removed if it interferes with my project development or support.
 
 ## Contributions
 
