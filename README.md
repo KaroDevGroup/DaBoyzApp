@@ -39,6 +39,68 @@ A Windows desktop application for the **DaBoyz Discord community**.
 
 ---
 
+## </> Project Structure
+
+```text
+DaBoyzApp/                            # Main Directory
+├── Assets/                
+│   ├── Beats/                        # Locally packaged music files
+│   ├── Games/                        # Game images 
+│   └── Icons/                        # UI Images and Graphics
+│
+├── Controls/                         # YouTube Player controller
+│  
+├── Pages/                            # Page Directory
+│   ├── Admin/              
+│   │    ├── Commands/                # Command Page Logic
+│   │    ├── Dashboard/               # Dashboard Page Logic
+│   │    ├── Decisions/               # Decision Page Logic
+│   │    ├── Punishments/             # Punishment Page Logic
+│   │    ├── Rules/                   # Rule Page Logic
+│   │    └── Staff/                   # Staff Page Logic
+│   │
+│   ├── Gaming/              
+│   │   ├── CallofDuty/               # Call of Duty Database
+│   │   ├── Destiny2/                 # Destiny 2 Database
+│   │   ├── FiveM/                    # FiveM Database
+│   │   ├── Helldivers2/              # Helldivers 2 Database
+│   │   ├── MarvelRivals/             # Marvel Rivals Database
+│   │   ├── Minecraft/                # Minecraft Database
+│   │   ├── Rainbow/                  # Rainbow 6 Siege Database
+│   │   └── RocketLeague/             # Rocket League Database
+│   │
+│   ├── Home/                         # Home Page Logic
+│   │
+│   ├── KDG/                 
+│   │   ├── KDGApp/                   # KDGApp Repository 
+│   │   ├── KDGBot/                   # KDGBot Repository
+│   │   ├── KDGPostal/                # KDGPostal Repository
+│   │   └── KDGTexture/               # KDGTexture Repository
+│   │
+│   ├── Music/                        # Music Page Logic
+│   │
+│   ├── PatchNotes/                   # Patch Note Page Logic
+│   │ 
+│   └── Settings/                     # Settings Page 
+│   
+├── Security/                         # Anti-Cheat Logic
+│   
+├── Services/                         # Database connections/rules
+│
+├── Windows/                          # Updater Logic/Anti-Cheat Window
+│
+├── App.xaml                          # Application-level XAML resources
+├── App.xaml.cs                       # Application startup logic
+├── AssemblyInfo.cs                   # Assembly metadata
+├── DaBoyzApp.cspoj                   # Project entry point
+├── Generate-IntegrityManifest.ps1    # Integrity manifest 
+├── MainWindow.xaml                   # Main application window
+├── MainWindow.xaml.cs                # Main application logic
+├── SettingsManager.cs                # Settings page logic
+├── SplashWindow.xaml                 # Startup window
+└── SplashWindow.xaml.cs              # Startup window logic
+```
+
 ## </> About DaBoyzApp
 
 **DaBoyzApp** is a Windows desktop application built for the **DaBoyz Discord server**.
