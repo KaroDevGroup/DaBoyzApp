@@ -8,7 +8,7 @@ Before contributing, please read this document so submissions can be reviewed as
 
 ---
 
-## Ways to Contribute
+## </> Ways to Contribute
 
 You can contribute to DaBoyzApp by:
 
@@ -24,7 +24,7 @@ You can contribute to DaBoyzApp by:
 
 ---
 
-## Before You Start
+## </> Before You Start
 
 Before creating an issue or pull request:
 
@@ -39,7 +39,7 @@ Please follow the instructions in `SECURITY.md`.
 
 ---
 
-# Reporting Bugs
+# </> Reporting Bugs
 
 When submitting a bug report, include as much useful information as possible.
 
