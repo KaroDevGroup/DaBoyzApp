@@ -1,4 +1,14 @@
+<div align="center">
+
+<img src="Assets\DaBoyzLogoPNG.png" width="180">
+
+---
+
 # DaBoyzApp Code of Conduct
+
+</div>
+
+---
 
 ## </> My Commitment
 
