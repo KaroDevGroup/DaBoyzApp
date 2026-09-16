@@ -2,11 +2,11 @@
 
 <img src="Assets\DaBoyzLogoPNG.png" Width="180">
 
-</div>
-
 ---
 
 # Contributing to DaBoyzApp
+
+</div>
 
 Thank you for your interest in contributing to **DaBoyzApp**.
 
