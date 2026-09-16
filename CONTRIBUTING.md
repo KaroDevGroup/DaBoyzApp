@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="Assets\DaBoyzLogoPNG.png" Width="180">
+
+---
+
 # Contributing to DaBoyzApp
 
 Thank you for your interest in contributing to **DaBoyzApp**.
