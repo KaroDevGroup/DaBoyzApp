@@ -26,6 +26,7 @@ A Windows desktop application for the **DaBoyz Discord community**.
 </div>
 
 ---
+<div align="center">
 
 ## Created By
 
@@ -33,6 +34,9 @@ A Windows desktop application for the **DaBoyz Discord community**.
 
 [![KaroDevGroup](https://img.shields.io/badge/GitHub-KaroDevGroup-181717?style=for-the-badge&logo=github)](https://github.com/KaroDevGroup)
 [![TheKaro](https://img.shields.io/badge/GitHub-TheKaro-181717?style=for-the-badge&logo=github)](https://github.com/TheKaro)
+
+</div>
+===
 
 ## About DaBoyzApp
 
