@@ -6,13 +6,14 @@
 
 # Contributing to DaBoyzApp
 
-</div>
 
 Thank you for your interest in contributing to **DaBoyzApp**.
 
 DaBoyzApp is a Windows desktop application built for the DaBoyz community. Contributions that improve stability, usability, documentation, performance, or features are welcome.
 
 Before contributing, please read this document so submissions can be reviewed as efficiently as possible.
+
+</div>
 
 ---
 
