@@ -57,9 +57,9 @@ The application provides a centralized and reliable location for:
 
 ---
 
-# </> Installation </>
+# </> Installation 
 
-## 1. ✦ Download DaBoyzApp ✦
+## 1. </> Download DaBoyzApp
 
 Open the official GitHub **Releases** page:
 
@@ -73,7 +73,7 @@ DaBoyzApp-Setup.exe
 
 ---
 
-## 2. ✦ Run the installer ✦
+## 2. </> Run the installer
 
 Open **DaBoyzApp-Setup.exe** and choose an install location.
 
@@ -85,13 +85,13 @@ C:\Program Files\DaBoyzApp
 
 ---
 
-# </> Developer Setup </>
+# </> Developer Setup 
 
 If you want to inspect, modify, or build **DaBoyzApp** from source, you can clone the repository.
 
 ---
 
-## ✦ Prerequisites ✦
+## </> Prerequisites 
 
 Before cloning the repository, install: 
 
@@ -103,7 +103,7 @@ Before cloning the repository, install:
 
 ---
 
-## ✦ Clone the Repository ✦
+## </> Clone the Repository 
 
 Open **Powershell**, **Command Prompt**, or **Git Bash** and run:
 
@@ -113,7 +113,7 @@ git clone https://github.com/KaroDevGroup/DaBoyzApp.git
 
 ---
 
-## ✦ Open the Project ✦
+## </> Open the Project 
 
 Inside the cloned repository, locate the **DaBoyzApp** solution or project file.
 
@@ -144,7 +144,7 @@ DaBoyzApp.sln
 
 ---
 
-## ✦ Build DaBoyzApp ✦
+## </> Build DaBoyzApp 
 
 From Visual Studio:
 
@@ -165,7 +165,7 @@ dotnet build
 
 ---
 
-## ✦ Run DaBoyzApp ✦
+## </> Run DaBoyzApp 
 
 From Visual Studio, press:
 ```text
@@ -195,7 +195,7 @@ code .
 
 ---
 
-## ✦ Creating your Own Branch ✦
+## </> Creating your Own Branch 
 
 If you plan to make changes to the build:
 ```bash
