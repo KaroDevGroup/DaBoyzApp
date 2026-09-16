@@ -45,15 +45,15 @@ A Windows desktop application for the **DaBoyz Discord community**.
 
 The application provides a centralized and reliable location for:
 
-- Gaming information and databases
-- Game guides
-- Music projects
-- Community updates
-- Patch notes
-- Administrative resources
-- Additional DaBoyz community tools
+- Gaming information and databases.
+- Game guides.
+- Music projects.
+- Community updates.
+- Patch notes.
+- Administrative resources.
+- Additional DaBoyz community tools.
 
-Much of the application's content is packaged locally, allowing many features to continue functioning without an active internet connection.
+> Much of the application's content is packaged locally, allowing many features to continue functioning without an active internet connection.
 
 ---
 
