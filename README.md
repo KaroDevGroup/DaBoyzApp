@@ -71,6 +71,8 @@ Download the latest:
 DaBoyzApp-Setup.exe
 ```
 
+> *If you receive a warning about the download - allow it to continue.*
+
 ---
 
 ## 2. </> Run the installer
@@ -82,6 +84,8 @@ Default location:
 ```text
 C:\Program Files\DaBoyzApp
 ```
+
+> *The installation will ask for administrator rights - allow.*
 
 ---
 
@@ -100,6 +104,8 @@ Before cloning the repository, install:
 - Visual Studio Code, or Visual Studio 2022 or newer.
 - The **.NET Desktop Development** workload in Visual Studio.
 - Microsoft Edge WebView2 Runtime.
+
+> *These are the minimum requirements - a manifest file will need to be generated as well.*
 
 ---
 
@@ -142,6 +148,8 @@ DaBoyzApp.sln
 ```
 5. Click **Open**.
 
+> *Visual Studio 22 or newer is recommended over VSCode - If you are less experienced, I'd suggest VSCode instead.*
+
 ---
 
 ## </> Build DaBoyzApp 
@@ -162,6 +170,8 @@ You can also build from the command line:
 ```bash
 dotnet build
 ```
+
+> *If it doesn't build - locate any errrors within the terminal.*
 
 ---
 
@@ -193,6 +203,8 @@ If using VSCode:
 code .
 ```
 
+> *Do not run with debugging enabled unless you plan on modifying parts of the project.*
+
 ---
 
 ## </> Creating your Own Branch 
@@ -220,3 +232,5 @@ Push your branch:
 git push -u origin feature/my-change
 ```
 You can then open a pull request on **GitHub.**
+
+> *Cloning does **NOT** mean you can claim the project as yours.*
