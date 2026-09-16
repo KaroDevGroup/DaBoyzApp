@@ -35,6 +35,14 @@ A Windows desktop application for the **DaBoyz Discord community**.
 [![KaroDevGroup](https://img.shields.io/badge/GitHub-KaroDevGroup-181717?style=for-the-badge&logo=github)](https://github.com/KaroDevGroup)
 [![TheKaro](https://img.shields.io/badge/GitHub-TheKaro-181717?style=for-the-badge&logo=github)](https://github.com/TheKaro)
 
+---
+
+## VirusTotal checks
+
+[![VirusTotal - Setup](https://img.shields.io/badge/VirusTotal-Setup-394EFF?style=for-the-badge&logo=virustotal&logoColor=white)](https://www.virustotal.com/gui/file/5d7dea8620340bac36f475dadb58fbb03dbde29461b934c26d827d715eda64a4?nocache=1)
+
+[![VirusTotal - Source Code](https://img.shields.io/badge/VirusTotal-Source_Code-394EFF?style=for-the-badge&logo=virustotal&logoColor=white)](https://www.virustotal.com/gui/file/5fd59fea3807f61edeee03640b2ee80a0f4c8c16c1ee22fd94473a4cb425df5d?nocache=1)
+
 </div>
 
 ---
