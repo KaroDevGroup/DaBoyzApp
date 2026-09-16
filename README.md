@@ -43,7 +43,7 @@ A Windows desktop application for the **DaBoyz Discord community**.
 
 **DaBoyzApp** is a Windows desktop application built for the **DaBoyz Discord server**.
 
-The application provides a centralized and reliable location for:
+The application provides a reliable location for:
 
 - Gaming information and databases.
 - Game guides.
