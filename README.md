@@ -180,3 +180,29 @@ If using VSCode:
 ```bash
 code .
 ```
+
+## Creating your Own Branch
+
+If you plan to make changes to the build:
+```bash
+git checkout -b feature/my-change
+```
+
+Examples:
+```text
+feature/music-player
+fix/updater-error
+docs/readme-update
+```
+
+Make your changes, then commit them:
+```bash
+git add .
+git commit -m "Changes"
+```
+
+Push your branch:
+```bash
+git push -u origin feature/my-change
+```
+You can then open a pull request on **GitHub.**
