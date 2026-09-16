@@ -2,6 +2,8 @@
 
 <img src="Assets\DaBoyzLogoPNG.png" Width="180">
 
+</div>
+
 ---
 
 # Contributing to DaBoyzApp
