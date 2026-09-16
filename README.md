@@ -80,3 +80,27 @@ Default location:
 ```text
 C:\Program Files\DaBoyzApp
 ```
+
+# </> Developer Setup
+
+If you want to inspect, modify, or build **DaBoyzApp** from source, you can clone the repository.
+
+## Prerequisites
+
+Before cloning the repository, install: 
+
+- Git.
+- .NET 10 SDK.
+- Visual Studio Code, or Visual Studio 2022 or newer.
+- The **.NET Desktop Development** workload in Visual Studio.
+- Microsoft Edge WebView2 Runtime.
+
+---
+
+## Clone the Repository
+
+Open **Powershell**, **Command Prompt**, or **Git Bash** and run:
+
+```bash
+git clone https://github.com/KaroDevGroup/DaBoyzApp.git
+```
