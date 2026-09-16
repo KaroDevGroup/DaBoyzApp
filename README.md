@@ -104,3 +104,32 @@ Open **Powershell**, **Command Prompt**, or **Git Bash** and run:
 ```bash
 git clone https://github.com/KaroDevGroup/DaBoyzApp.git
 ```
+
+## Open the Project
+
+Inside the cloned repository, locate the **DaBoyzApp** solution or project file.
+
+Depending on the repository structure, this will usually be:
+
+```text
+DaBoyzApp.sln
+```
+
+or:
+
+```text
+DaBoyzApp.csproj
+```
+
+Double-Click the **__.sln__** file to open the entire solution in Visual Studio.
+
+Alternatively:
+
+1. Open Visual Studio.
+2. Select **Open a project or solution**.
+3. Navigate to the cloned **__DaBoyzApp__** folder.
+4. Select:
+```text
+DaBoyzApp.sln
+```
+5. Click **Open**.
