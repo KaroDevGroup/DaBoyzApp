@@ -6,7 +6,7 @@
 
 # DaBoyzApp
 
-### Da Boyz — Community Hub
+### ✦ Da Boyz — Community Hub ✦
 
 A Windows desktop application for the **DaBoyz Discord community**.
 
@@ -57,9 +57,9 @@ The application provides a centralized and reliable location for:
 
 ---
 
-# </> Installation
+# </> Installation </>
 
-### 1. Download DaBoyzApp
+## 1. ✦ Download DaBoyzApp ✦
 
 Open the official GitHub **Releases** page:
 
@@ -71,7 +71,7 @@ Download the latest:
 DaBoyzApp-Setup.exe
 ```
 
-### 2. Run the installer
+## 2. ✦ Run the installer ✦
 
 Open **DaBoyzApp-Setup.exe** and choose an install location.
 
@@ -81,11 +81,11 @@ Default location:
 C:\Program Files\DaBoyzApp
 ```
 
-# </> Developer Setup
+# </> Developer Setup </>
 
 If you want to inspect, modify, or build **DaBoyzApp** from source, you can clone the repository.
 
-## Prerequisites
+## ✦ Prerequisites ✦
 
 Before cloning the repository, install: 
 
@@ -97,7 +97,7 @@ Before cloning the repository, install:
 
 ---
 
-## Clone the Repository
+## ✦ Clone the Repository ✦
 
 Open **Powershell**, **Command Prompt**, or **Git Bash** and run:
 
@@ -105,7 +105,7 @@ Open **Powershell**, **Command Prompt**, or **Git Bash** and run:
 git clone https://github.com/KaroDevGroup/DaBoyzApp.git
 ```
 
-## Open the Project
+## ✦ Open the Project ✦
 
 Inside the cloned repository, locate the **DaBoyzApp** solution or project file.
 
@@ -134,7 +134,7 @@ DaBoyzApp.sln
 ```
 5. Click **Open**.
 
-## Build DaBoyzApp
+## ✦ Build DaBoyzApp ✦
 
 From Visual Studio:
 
@@ -153,7 +153,7 @@ You can also build from the command line:
 dotnet build
 ```
 
-## Run DaBoyzApp
+## ✦ Run DaBoyzApp ✦
 
 From Visual Studio, press:
 ```text
@@ -181,7 +181,7 @@ If using VSCode:
 code .
 ```
 
-## Creating your Own Branch
+## ✦ Creating your Own Branch ✦
 
 If you plan to make changes to the build:
 ```bash
