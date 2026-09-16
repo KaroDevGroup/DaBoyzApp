@@ -133,3 +133,50 @@ Alternatively:
 DaBoyzApp.sln
 ```
 5. Click **Open**.
+
+## Build DaBoyzApp
+
+From Visual Studio:
+
+1. Open the solution.
+2. Select:
+```text
+Build > Build Solution
+```
+or press:
+```text
+Ctrl + Shift + B
+```
+
+You can also build from the command line:
+```bash
+dotnet build
+```
+
+## Run DaBoyzApp
+
+From Visual Studio, press:
+```text
+F5
+```
+tp run with debugging enabled.
+
+Or press:
+```text
+Ctrl + F5
+```
+to run without debugging.
+
+From the command line:
+```bash
+dotnet run
+```
+or specify:
+```bash
+dotnet run --project DaBoyzApp.csproj
+```
+
+If using VSCode:
+```bash
+code .
+```
