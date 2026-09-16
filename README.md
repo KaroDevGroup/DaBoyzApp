@@ -76,8 +76,6 @@ Much of the application's content is packaged locally, allowing many features to
 
 # Installation
 
-> Simple install. You can't fuck this up.
-
 ### 1. Download DaBoyzApp
 
 Open the official GitHub **Releases** page:
@@ -88,3 +86,6 @@ Download the latest:
 
 ```text
 DaBoyzApp-Setup.exe
+```
+
+Test 
