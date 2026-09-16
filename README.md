@@ -1,141 +1,85 @@
----
+<div align="center">
 
-# DaBoyzApp
-VirusTotal installer hash: 382ea4a0c4c83a2cdcfe40690232f31d24dba808c3c092e2841edcf4da82f7e0
-VirusTotal source code hash: 9d2420c1a710267d9c9ba52390df4200546e349f09a14771af864021cb85269a
+<img src="DaBoyzLogoPNG.png" width="180">
 
 ---
 
 # DaBoyzApp
 
----
+### Da Boyz — Community Hub
 
-### Created by: KaroDevGroup
+A Windows desktop application for the **DaBoyz Discord community**.
 
-- [KDG Github](https://github.com/KaroDevGroup)
-- [Karo Github](https://github.com/TheKaro)
-- [DaBoyz Discord](https://discord.gg/tpcbMxMJjv)
+<br>
 
----
+[![Latest Release](https://img.shields.io/badge/Download-Latest%20Release-C1121F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KaroDevGroup/DaBoyzApp/releases)
+[![Discord](https://img.shields.io/badge/Join-DaBoyz%20Discord-C1121F?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/tpcbMxMJjv)
 
-The DaBoyzApp is a Windows desktop application built for the **DaBoyz** discord server, providing a more reliable location for gaming information, game guides, music projects, updates, and more. 
+<br>
 
----
+![Windows](https://img.shields.io/badge/Windows-10%2B-C1121F?style=flat-square&logo=windows11&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-x64-C1121F?style=flat-square)
+![.NET](https://img.shields.io/badge/.NET-10-C1121F?style=flat-square&logo=dotnet&logoColor=white)
+![Framework](https://img.shields.io/badge/UI-WPF-C1121F?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Beta-C1121F?style=flat-square)
 
-## Please turn off Windows Smart App Control
-
-### Smart app control prevents updates from installing.
-
-**Go to:** 
-> *Settings -> Privacy & Security -> Windows Security -> App & Browser Control -> Smart App Control Settings -> Turn off*
+</div>
 
 ---
 
-## </> Installation 
+## Created By
 
-> Simple install, you can't fuck this up.
+**KaroDevGroup**
 
-### Recommended Installation
+[![KaroDevGroup](https://img.shields.io/badge/GitHub-KaroDevGroup-181717?style=for-the-badge&logo=github)](https://github.com/KaroDevGroup)
+[![TheKaro](https://img.shields.io/badge/GitHub-TheKaro-181717?style=for-the-badge&logo=github)](https://github.com/TheKaro)
 
-The easiest way to install **DaBoyzApp** is through the official Github release.
+## About DaBoyzApp
 
-### Step 1 — Open Releases
+**DaBoyzApp** is a Windows desktop application built for the **DaBoyz Discord server**.
 
-Navigate to the **Releases** section of the repository and download the latest:
+The application provides a centralized and reliable location for:
 
-> *DaBoyzApp-Setup.exe*
+- Gaming information and databases
+- Game guides
+- Music projects
+- Community updates
+- Patch notes
+- Administrative resources
+- Additional DaBoyz community tools
 
-### Step 2 — Run the Installer
-
-Open: 
-> *DaBoyzApp-Setup.exe*
-      
-*Windows may display a security warning depending upon your system configuration.*
-
-If prompted by Windows, verify the source of the download and continue. 
-
-### Step 3 — Launch
-
-After installation, launch:  **DaBoyzApp.exe**
-
-The application will display the DaBoyz splash screen before loading the main application. 
+Much of the application's content is packaged locally, allowing many features to continue functioning without an active internet connection.
 
 ---
 
-## </> Requirements
+## About DaBoyzApp
 
-> DaBoyzApp is currently designed for Windows x64 based systems.
+**DaBoyzApp** is a Windows desktop application built for the **DaBoyz Discord server**.
 
-### Recommended Requirements
+The application provides a centralized and reliable location for:
 
-- Windows 10 or newer
-- 64 bit Windows
-- 2 GB RAM
-- 500 MB Storage
-- Microsoft Edge WebView2 Runtime
+- Gaming information and databases
+- Game guides
+- Music projects
+- Community updates
+- Patch notes
+- Administrative resources
+- Additional DaBoyz community tools
 
---- 
-
-## </> Internet Requirements
-
-> Most of the application can operate using locally packaged resources, but certain features require an internet connection.
-
-### Internet access is required for:
-
-- Checking for updates
-- Embedded YouTube content
-- WebView webpages
-
-> The rest of the application may function normally without an available internet connection.
-
----
-
-## </> File Locations
-
-> It is recommended to clear your cache folder every now and then.
-
-### Main Directory:
-
-*C:\Program Files\DaBoyzApp*
-
-### Cache Directory:
-
-*C:\Users\user\AppData\Local\DaBoyzApp*
-
----
-
-## </> Front/Back Stack
-
-DaBoyzApp was created with the following stack:
-
-- C#
-- .NET 10
-- WPF
-- XAML
-- WebView2
-- EFCore
-- PostgreSQL
-- Supabase
-- Inno
-
----
-
-# Disclaimer
-
-- This project contains certain assets that were created by artificial intelligence tools. This includes icons and visual graphics. 
-- The application's source code, architecture, features, and bot integration were written and developed by me solely. 
-- AI tools were used strictly as visual assistance. 
-
----
+Much of the application's content is packaged locally, allowing many features to continue functioning without an active internet connection.
 
 
+# Installation
 
+> Simple install. You can't fuck this up.
 
+### 1. Download DaBoyzApp
 
+Open the official GitHub **Releases** page:
 
+[![Download](https://img.shields.io/badge/Download-DaBoyzApp--Setup.exe-C1121F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KaroDevGroup/DaBoyzApp/releases)
 
+Download the latest:
 
-
-
-
-
+```text
+DaBoyzApp-Setup.exe
