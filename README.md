@@ -71,6 +71,8 @@ Download the latest:
 DaBoyzApp-Setup.exe
 ```
 
+---
+
 ## 2. ✦ Run the installer ✦
 
 Open **DaBoyzApp-Setup.exe** and choose an install location.
@@ -81,9 +83,13 @@ Default location:
 C:\Program Files\DaBoyzApp
 ```
 
+---
+
 # </> Developer Setup </>
 
 If you want to inspect, modify, or build **DaBoyzApp** from source, you can clone the repository.
+
+---
 
 ## ✦ Prerequisites ✦
 
@@ -104,6 +110,8 @@ Open **Powershell**, **Command Prompt**, or **Git Bash** and run:
 ```bash
 git clone https://github.com/KaroDevGroup/DaBoyzApp.git
 ```
+
+---
 
 ## ✦ Open the Project ✦
 
@@ -134,6 +142,8 @@ DaBoyzApp.sln
 ```
 5. Click **Open**.
 
+---
+
 ## ✦ Build DaBoyzApp ✦
 
 From Visual Studio:
@@ -152,6 +162,8 @@ You can also build from the command line:
 ```bash
 dotnet build
 ```
+
+---
 
 ## ✦ Run DaBoyzApp ✦
 
@@ -180,6 +192,8 @@ If using VSCode:
 ```bash
 code .
 ```
+
+---
 
 ## ✦ Creating your Own Branch ✦
 
