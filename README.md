@@ -39,7 +39,7 @@ A Windows desktop application for the **DaBoyz Discord community**.
 
 ---
 
-## About DaBoyzApp
+## </> About DaBoyzApp
 
 **DaBoyzApp** is a Windows desktop application built for the **DaBoyz Discord server**.
 
@@ -57,7 +57,7 @@ The application provides a centralized and reliable location for:
 
 ---
 
-# Installation
+# </> Installation
 
 ### 1. Download DaBoyzApp
 
@@ -71,4 +71,12 @@ Download the latest:
 DaBoyzApp-Setup.exe
 ```
 
-Test 
+### 2. Run the installer
+
+Open **DaBoyzApp-Setup.exe** and choose an install location.
+
+Default location:
+
+```text
+C:\Program Files\DaBoyzApp
+```
