@@ -8,8 +8,6 @@
 
 </div>
 
----
-
 ## </> My Commitment
 
 DaBoyzApp is built for the DaBoyz community, and I want the project to remain a respectful, welcoming, and productive place for everyone who interacts with it.
