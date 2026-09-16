@@ -101,6 +101,8 @@ DaBoyzApp/                            # Main Directory
 └── SplashWindow.xaml.cs              # Startup window logic
 ```
 
+---
+
 ## </> About DaBoyzApp
 
 **DaBoyzApp** is a Windows desktop application built for the **DaBoyz Discord server**.
