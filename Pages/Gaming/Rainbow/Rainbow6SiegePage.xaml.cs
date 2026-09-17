@@ -27,5 +27,15 @@ namespace DaBoyzApp.Pages
         {
             NavigationService?.Navigate(new SiegeTrackerPage());
         }
+
+        private void Esports_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new EsportsPage());
+        }
+
+        private void SiegeWebsite_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new SiegeWebsitePage());
+        }
     }
 }

@@ -27,5 +27,15 @@ namespace DaBoyzApp.Pages
         {
             NavigationService?.Navigate(new StatTrackerPage());
         }
+
+        private void WarzoneMaps_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new WZMapsPage());
+        }
+
+        private void WarzoneWebsite_Click(object sender,RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new WZWebsitePage());
+        }
     }
 }

@@ -27,5 +27,15 @@ namespace DaBoyzApp.Pages
         {
             NavigationService?.Navigate(new MCServerPage());
         }
+
+        private void MinecraftSkins_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new MCSkinsPage());
+        }
+
+        private void MinecraftWebsite_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new MCWebsitePage());
+        }
     }
 }

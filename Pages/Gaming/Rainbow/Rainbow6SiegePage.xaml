@@ -139,6 +139,71 @@
 
                     </Button>
 
+                    <Button Grid.Row="1"
+                            Grid.Column="0"
+                            Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="Esports_Click"
+                            Background="#161616"
+                            BorderBrush="#161616"
+                            BorderThickness="0"
+                            Padding="0"
+                            Margin="0,0,8,0"
+                            Cursor="Hand">
+
+                        <StackPanel>
+
+                            <TextBlock Text="◆"
+                                       Foreground="{StaticResource DaBoyzRed}"
+                                       FontSize="26"
+                                       FontWeight="Bold"/>
+
+                            <TextBlock Text="ESPORTS"
+                                       Foreground="White"
+                                       FontSize="26"
+                                       FontWeight="Bold"/>
+
+                            <TextBlock Text="ESPORTS NEWS"
+                                       Foreground="#FF1A1A"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Margin="0,22,0,0"/>
+
+                        </StackPanel>
+
+                    </Button>
+
+                    <Button Grid.Row="1"
+                            Grid.Column="1"
+                            Style="{StaticResource AdminDashboardButtonStyle}"
+                            Click="SiegeWebsite_Click"
+                            Background="#161616"
+                            BorderBrush="#292929"
+                            Padding="0"
+                            Margin="8,0,0,0"
+                            Cursor="Hand">
+
+                        <StackPanel>
+
+                            <TextBlock Text="◆"
+                                       Foreground="{StaticResource DaBoyzRed}"
+                                       FontSize="26"
+                                       FontWeight="Bold"/>
+
+                            <TextBlock Text="OFFICIAL WEBSITE"
+                                       Foreground="White"
+                                       FontSize="26"
+                                       FontWeight="Bold"/>
+
+                            <TextBlock Text="ENTER WEB"
+                                       Foreground="#FF1A1A"
+                                       FontSize="11"
+                                       FontWeight="Bold"
+                                       Margin="0,22,0,0"/>
+
+                        </StackPanel>
+
+                    </Button>
+
                 </Grid>
 
                 <!-- FOOTER -->
