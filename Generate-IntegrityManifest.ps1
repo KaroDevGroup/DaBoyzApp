@@ -181,7 +181,6 @@ $ManifestPath = Join-Path `
     $BuildFolder `
     "integrity-manifest.json"
 
-
 $Manifest |
     ConvertTo-Json -Depth 10 |
     Set-Content `
